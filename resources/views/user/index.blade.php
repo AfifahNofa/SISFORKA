@@ -12,7 +12,7 @@
 
     <title>SDN JATIMULYO 1</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,9 +37,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light  navbarHome fixed-top">
         <div class="container">
-
             <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo SMK N 2 Purbalingga">
+                <img src="images/logo1.jpeg" alt="Logo SMK N 2 Purbalingga">
                 <h1>SD Negeri 1<br>Jatimulyo</h1>
             </a>
 
@@ -62,11 +61,14 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="ekstrakulikuler.html">Visi Misi</a>
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="kontak.html">Data Guru</a>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="kontak.html">Data Siswa</a>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="s{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            
                         </div>
                     </li>
 
@@ -77,9 +79,13 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakurikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="kontak.html">Prestasi</a>
+                            <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
                         </div>
                     </li>
 
@@ -98,7 +104,6 @@
                     
                 </ul>
             </div>
-
         </div>
     </nav>
 
@@ -113,11 +118,10 @@
                 <div class="container">
                     <div class="mainText">
                         <div class="garis"></div>
-                        <h3>Our Values</h3>
-                        <h1>TEAMWORK</h1>
+                        <h3> Selamat Datang</h3>
+                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
                     </div>
 
-                    <h3>Teamwork In Our Endeavours</h3>
                 </div>
             </section>
         </li>
@@ -129,11 +133,9 @@
                 <div class="container">
                     <div class="mainText">
                         <div class="garis"></div>
-                        <h3>Our Values</h3>
-                        <h1>humility</h1>
+                        <h3> Selamat Datang</h3>
+                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
                     </div>
-
-                    <h3>Humility In Our Accomplishments</h3>
                 </div>
             </section>
         </li>
@@ -145,11 +147,9 @@
                 <div class="container">
                     <div class="mainText">
                         <div class="garis"></div>
-                        <h3>Our Values</h3>
-                        <h1>Respect</h1>
+                        <h3> Selamat Datang</h3>
+                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
                     </div>
-
-                    <h3>Respect For One Another</h3>
                 </div>
             </section>
         </li>
@@ -161,11 +161,9 @@
                 <div class="container">
                     <div class="mainText">
                         <div class="garis"></div>
-                        <h3>Our Values</h3>
-                        <h1>integrity</h1>
+                        <h3> Selamat Datang</h3>
+                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
                     </div>
-
-                    <h3>Integrity In Our Relationships</h3>
                 </div>
             </section>
         </li>
@@ -177,11 +175,9 @@
                 <div class="container">
                     <div class="mainText">
                         <div class="garis"></div>
-                        <h3>Our Values</h3>
-                        <h1>commitment</h1>
+                        <h3> Selamat Datang</h3>
+                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
                     </div>
-
-                    <h3>Commitment To The Work We Undertake</h3>
                 </div>
             </section>
         </li>
@@ -194,11 +190,9 @@
                 <div class="container">
                     <div class="mainText">
                         <div class="garis"></div>
-                        <h3>Our Values</h3>
-                        <h1>excellence</h1>
+                        <h3> Selamat Datang</h3>
+                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
                     </div>
-
-                    <h3>Excellence In Whatever We Do</h3>
                 </div>
             </section>
         </li>
@@ -212,10 +206,10 @@
 
 
     <div class="sambutan">
-        <h1>WELCOME TO smakda</h1>
+        <h1>WELCOME TO SDN Jatimulyo 1 Kota Malang</h1>
         <p>
-            SMKN 2 Purbalingga merupakan sekolah terbagus dan terluas yang ada di Purbalingga<br>
-            Ada 5 jurusan yang siap mempersiapkan anda menjadi orang sukses
+            SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota Malang, Jawa Timur.<br>
+            Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan Kebudayaan.
         </p>
     </div>
 
@@ -223,104 +217,94 @@
     <div class="kepsek">
         <div class="container">
             <img src="images/darimun.jpeg" alt="Kepala SMK N 2 Purbalingga">
-
             <div class="visiMisi">
-
                 <div class="visi">
-                    <h5>Our Vision</h5>
-                    <h3>Nurturing Leaders for God, Country and Community</h3>
-                </div>
-
-                <div class="misi">
-                    <h5>Our Mission</h5>
+                    <h2>Sambutan Kepala Sekolah</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet cum id reiciendis laudantium esse
-                        fuga quo ullam possimus illum eum, quibusdam officiis perspiciatis aperiam sed sapiente incidunt
-                        sit veritatis fugiat quisquam eius odit. Iste sunt eius quos, earum harum cumque, quia quo,
-                        ipsam iusto enim inventore cupiditate nesciunt quisquam dolore!
+                        Sebagai lembaga pendidikan, SD Negeri Jatimulyo 1 
+                        tanggap dengan perkembangan teknologi tersebut. 
+                        Dengan dukungan SDM yang di miliki sekolah ini siap 
+                        untuk berkompetisi dengan sekolah lain dalam 
+                        pelayanan informasi publik. Teknologi Informasi Web 
+                        khususnya, menjadi sarana bagi SD Negeri Jatimulyo 1 
+                        untuk memberi pelayanan informasi secara cepat, jelas, 
+                        dan akuntable. Dari layanan ini pula, sekolah 
+                        siap menerima saran dari semua pihak yang akhirnya dapat menjawab Kebutuhan masyarakat.
                     </p>
                 </div>
-
             </div>
+
 
         </div>
     </div>
 
 
     <!-- jurusan -->
+    
+
     <div class="jurusan">
         <div class="container">
-            <h2>jurusan smakda</h2>
+            <div class="visi">
+                <h2>Sejarah Singkat</h2>
+                <p>
+                    SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota Malang, Jawa Timur.<br>
+                    Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan Kebudayaan.
+                </p>
+            </div>
 
             <div class="boxJurusan">
 
                 <div class="perBox">
-                    <img src="images/1.jpg" alt="RPL">
-                    <h3>Rekayasa Perangkat Lunak</h3>
+                    <a class="dropdown-item" href="{{ url('/visimisi') }}">
+                        <img src="images/1.jpg" alt="RPL">
+                        <h3>Visi dan Misi</h3>
+                    </a>
                 </div>
 
                 <div class="perBox">
-                    <img src="images/2.jpeg" alt="ATU">
-                    <h3>Agribisnis Ternak Unggas</h3>
+                    <a class="dropdown-item" href="{{ url('/dataguru') }}">
+                        <img src="images/2.jpeg" alt="ATU">
+                    <h3>Data Guru</h3>
+                    </a>
                 </div>
 
                 <div class="perBox">
-                    <img src="images/3.jpeg" alt="APHP">
-                    <h3>Agribisnis Pengolahan Hasil Pangan</h3>
+                    <a class="dropdown-item" href="{{ url('/datasiswa') }}">
+                        <img src="images/3.jpeg" alt="APHP">
+                        <h3>Data Siswa</h3>
+                    </a>
                 </div>
 
                 <div class="perBox">
-                    <img src="images/4.jpeg" alt="API">
-                    <h3>Agribisnis Perikanan Ikan</h3>
-                </div>
-
-                <!-- <div class="perBox">
-                    <img src="images/6.jpg" alt="AKUTANSI">
-                    <h3>Akutansi Keuangan & Lembaga</h3>
-                </div> -->
-
-
-                <div class="perBox">
-                    <img src="images/5.jpeg" alt="TKR">
-                    <h3>Teknik Kendaraan Ringan</h3>
+                    <a class="dropdown-item" href="{{ url('/sarana') }}">
+                        <img src="images/4.jpeg" alt="API">
+                        <h3>Sarana dan Prasarana</h3>
+                    </a>
                 </div>
 
             </div>
         </div>
     </div>
 
+    <div class="program">
+    <div class="containerProgramHome container">
+        <h2>Program</h2>
 
-    <div class="containerArtikelHome container">
-        <h2>Artikel Terbaru</h2>
-
-        <div class="artikelHome">
+        <div class="programHome">
 
 
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+            <a class="perProgramHome" href="{{ url('/ekstrakulikuler') }}">
+                <img src="images/1.jpg" alt="Foto Program">
+                <h3>Ekstrakulikuler</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
                     delectus quasi amet libero iusto sequi at.
                 </p>
             </a>
 
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                    delectus quasi amet libero iusto sequi at.
-                </p>
-            </a>
-
-
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+            <a class="perProgramHome" href="{{ url('/prestasi') }}">
+                <img src="images/1.jpg" alt="Foto Program">
+                <h3>Prestasi</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
                     delectus quasi amet libero iusto sequi at.
@@ -328,56 +312,56 @@
             </a>
 
 
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+            <a class="perProgramHome" href="{{ url('/PPDB') }}">
+                <img src="images/1.jpg" alt="Foto Program">
+                <h3>PPDB</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
-                    explicabo
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
                     delectus quasi amet libero iusto sequi at.
                 </p>
             </a>
-
-
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
-                    explicabo
-                    delectus quasi amet libero iusto sequi at.
-                </p>
-            </a>
-
-
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
-                    explicabo
-                    delectus quasi amet libero iusto sequi at.
-                </p>
-            </a>
-
-
-
         </div>
     </div>
+</div>
+
+<div class="containerArtikelHome container">
+    <h2>Artikel Terbaru</h2>
+
+    <div class="artikelHome">
 
 
+        <a class="perArtikelHome" >
+            <img src="images/1.jpg" alt="Foto Artikel">
+            <h3>Tutorial Login Laravel 8</h3>
+            <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
+                delectus quasi amet libero iusto sequi at.
+            </p>
+        </a>
+
+        <a class="perArtikelHome">
+            <img src="images/1.jpg" alt="Foto Artikel">
+            <h3>Tutorial Login Laravel 8</h3>
+            <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
+                delectus quasi amet libero iusto sequi at.
+            </p>
+        </a>
 
 
-
-
-
-
-
-
-
+        <a class="perArtikelHome">
+            <img src="images/1.jpg" alt="Foto Artikel">
+            <h3>Tutorial Login Laravel 8</h3>
+            <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
+                delectus quasi amet libero iusto sequi at.
+            </p>
+        </a>
+    </div>
+</div>
 
 
 
@@ -411,23 +395,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h4 class="my-4 text-white text-center">Contact Us</h4>
+                    <h4 class="my-4 text-white text-center">Kontak Kami</h4>
 
                     <div class="footerContactUs">
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">official@smkn2purbalingga.com</p>
+                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
                         </div>
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-phone-alt"></i>
-                            <p class="text-white">023423434234</p>
+                            <p class="text-white">0341406468</p>
                         </div>
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Raya Selaganggeng, Kec. Mrebet - Kab. Purbalingga</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04  Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
                     </div>
@@ -440,24 +424,24 @@
 
 
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">About</h4>
+                    <h4 class="my-4 text-center text-white">Tentang</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
+                        <a href="" class="text-white">Kontak</a>
                         <a href="" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
 
 
                 <div class="col-md-4 text-center">
-                    <h4 class="my-4 text-white">Newsletter</h4>
+                    <h4 class="my-4 text-white">Hubungi Kami</h4>
                     <form>
 
                         <div class="form-group">
                             <input class="form-control" type="search" placeholder="Example@gmail.com"
                                 aria-label="Search">
-                            <button class="btn btn-primary btn-newsletter" type="submit">Kirim</button>
+                            <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
                         </div>
 
                     </form>
@@ -467,21 +451,9 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>2021 By : <span>Rifki Romadhan</span>.&nbsp; Inspired by <a
-                href="https://www.acsjakarta.sch.id/">ACS
-                Jakarta</a>
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span> 
         </p>
     </div>
 

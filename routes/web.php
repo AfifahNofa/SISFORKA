@@ -14,20 +14,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.home');
+    return view('user.index');
 });
 
-Route::get('/ekstrakurikuler', function () {
-    return view('frontend.ekstrakurikuler');
+Route::get('/ekstrakulikuler', function () {
+    return view('user.ekstrakulikuler');
 });
+
+Route::get('/pramuka', function () {
+    return view('user.ekstra.pramuka');
+});
+
+Route::get('/sepakbola', function () {
+    return view('user.ekstra.sepakbola');
+});
+
 
 Route::get('/artikel', function () {
-    return view('frontend.artikel');
+    return view('user.artikel');
+});
+
+Route::get('/perArtikel', function () {
+    return view('user.perArtikel');
 });
 
 Route::get('/galeri', function () {
-    return view('frontend.galeri');
+    return view('user.galeri');
+});
+Route::get('/perGaleri', function () {
+    return view('user.perGaleri');
 });
 Route::get('/kontak', function () {
-    return view('frontend.kontak');
+    return view('user.kontak');
 });
