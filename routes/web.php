@@ -29,7 +29,6 @@ Route::get('/sepakbola', function () {
     return view('user.ekstra.sepakbola');
 });
 
-
 Route::get('/artikel', function () {
     return view('user.artikel');
 });
@@ -46,4 +45,19 @@ Route::get('/perGaleri', function () {
 });
 Route::get('/kontak', function () {
     return view('user.kontak');
+});
+Route::get('/visimisi', function () {
+    return view('user.visimisi');
+});
+Route::get('/dataguru', function () {
+    return view('user.dataguru');
+});
+Route::get('/datasiswa', function () {
+    return view('user.datasiswa');
+});
+Route::get('/sarana', function () {
+    return view('user.sarana');
+});
+Route::get('/prestasi', function () {
+    return view('user.prestasi');
 });

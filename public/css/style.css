@@ -422,7 +422,7 @@ body {
 .jurusan .boxJurusan .perBox {
   position: relative;
   margin: 10px;
-  width: 350px;
+  width: 200px;
   height: 200px;
   overflow: hidden;
 }
