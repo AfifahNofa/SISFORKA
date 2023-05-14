@@ -10,9 +10,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Hubungi Kami | SMK N 2 Purbalingga</title>
-<link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    
+    <title>SDN JATIMULYO 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -40,8 +41,8 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo SMK N 2 Purbalingga">
-                <h1>SMK Negeri 2<br>Purbalingga</h1>
+                <img src="images/logo1.jpeg" alt="Logo SMK N 2 Purbalingga">
+                <h1>SD Negeri 1<br>Jatimulyo</h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -52,41 +53,59 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="galeri.html">Galeri</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="artikel.html">Artikel</a>
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
+                            Profil
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="ekstrakulikuler.html">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kontak') }}">Contact Us</a>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="s{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            
                         </div>
                     </li>
+
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Program
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
+                    </li>
+
+                    
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-primary sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
-
         </div>
     </nav>
 
@@ -123,16 +142,10 @@
         </form>
     </div>
 
-
-
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.261891820223!2d109.3547129143214!3d-7.324453174061409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ff796ce6eef89%3A0xde04c4650a32443a!2sSMK%20Negeri%202%20Purbalingga!5e0!3m2!1sen!2sid!4v1617856310600!5m2!1sen!2sid"
-        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5479912219284!2d112.61358707397942!3d-7.942183679108393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788274cd9f7f05%3A0x743a345c22a00f78!2sSekolah%20Dasar%20Negeri%20Jatimulyo%201%20No.%20269!5e0!3m2!1sid!2sid!4v1684039542284!5m2!1sid!2sid" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-
-
-
-
 
     <!-- sosmed icon -->
     <div class="iconBox">
@@ -162,23 +175,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h4 class="my-4 text-white text-center">Contact Us</h4>
+                    <h4 class="my-4 text-white text-center">Kontak Kami</h4>
 
                     <div class="footerContactUs">
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">official@smkn2purbalingga.com</p>
+                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
                         </div>
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-phone-alt"></i>
-                            <p class="text-white">023423434234</p>
+                            <p class="text-white">0341406468</p>
                         </div>
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Raya Selaganggeng, Kec. Mrebet - Kab. Purbalingga</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04  Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
                     </div>
@@ -191,24 +204,24 @@
 
 
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">About</h4>
+                    <h4 class="my-4 text-center text-white">Tentang</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
+                        <a href="" class="text-white">Kontak</a>
                         <a href="" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
 
 
                 <div class="col-md-4 text-center">
-                    <h4 class="my-4 text-white">Newsletter</h4>
+                    <h4 class="my-4 text-white">Hubungi Kami</h4>
                     <form>
 
                         <div class="form-group">
                             <input class="form-control" type="search" placeholder="Example@gmail.com"
                                 aria-label="Search">
-                            <button class="btn btn-primary btn-newsletter" type="submit">Kirim</button>
+                            <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
                         </div>
 
                     </form>
@@ -218,21 +231,9 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>2021 By : <span>Rifki Romadhan</span>.&nbsp; Inspired by <a
-                href="https://www.acsjakarta.sch.id/">ACS
-                Jakarta</a>
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span> 
         </p>
     </div>
 

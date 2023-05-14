@@ -390,7 +390,7 @@
         </a>
     </div>
 
-    <div class="footer">
+    <div class="footer footerHubungiKami">
 
         <div class="container">
             <div class="row">
