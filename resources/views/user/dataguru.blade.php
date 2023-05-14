@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Artikel SDN Jatimulyo 1</title>
+    <title>SDN JATIMULYO 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -105,14 +105,19 @@
                     
                 </ul>
             </div>
-
         </div>
     </nav>
+
+    <div class="containerEkstra"></div>
 
     <div class="jurusan">
         <div class="container">
             <div class="visi">
-                <h2>Guru SDN Jatimulyo 1</h2>
+                <h2>Sejarah Singkat</h2>
+                <p>
+                    SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota Malang, Jawa Timur.<br>
+                    Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan Kebudayaan.
+                </p>
             </div>
 
             <div class="boxJurusan">
@@ -145,48 +150,13 @@
                     </a>
                 </div>
 
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <div class="perBox">
-                                        <a class="dropdown-item"">
-                                            <img src="images/4.jpeg" alt="API">
-                                            <h3>Sarana dan Prasarana</h3>
-                                        </a>
-                                    </div>
-                                </button>
-                            </h2>
-                        </div>
-        
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <div class="pembinaEkstrakulikuler">
-        
-                                    <div class="perPembina">
-                                        <ul>
-                                            <li><strong>Nama:</strong> John Doe</li>
-                                            <li><strong>Alamat:</strong> Jl. Raya No. 123</li>
-                                            <li><strong>Email:</strong> john.doe@example.com</li>
-                                            <li><strong>No. Telepon:</strong> 081234567890</li>
-                                            <li><strong>Tanggal Lahir:</strong> 1 Januari 2000</li>
-                                            <li><strong>Pendidikan Terakhir:</strong> Sarjana Teknik Informatika</li>
-                                        </ul>
-                                    </div>
-        
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- sosmed icon -->
     <div class="iconBox">
@@ -235,7 +205,6 @@
                             <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04  Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
-
                     </div>
 
                 </div>
@@ -246,11 +215,11 @@
 
 
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">About</h4>
+                    <h4 class="my-4 text-center text-white">Tentang</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
+                        <a href="" class="text-white">Kontak</a>
                         <a href="" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
@@ -279,6 +248,10 @@
         </p>
     </div>
 
+
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
