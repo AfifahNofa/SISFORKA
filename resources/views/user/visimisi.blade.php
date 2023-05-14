@@ -186,11 +186,7 @@
                         </div>
     
                     </div>
-    
-    
-    
-    
-    
+
     
                     <div class="col-md-4">
                         <h4 class="my-4 text-center text-white">About</h4>

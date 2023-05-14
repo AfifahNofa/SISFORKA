@@ -21,12 +21,28 @@ Route::get('/ekstrakulikuler', function () {
     return view('user.ekstrakulikuler');
 });
 
-Route::get('/pramuka', function () {
-    return view('user.ekstra.pramuka');
+Route::get('/visimisi', function () {
+    return view('user.visimisi');
 });
 
-Route::get('/sepakbola', function () {
-    return view('user.ekstra.sepakbola');
+Route::get('/karate', function () {
+    return view('user.ekstra.karate');
+});
+
+Route::get('/menari', function () {
+    return view('user.ekstra.menari');
+});
+
+Route::get('/inggris', function () {
+    return view('user.ekstra.inggris');
+});
+
+Route::get('/tik', function () {
+    return view('user.ekstra.tik');
+});
+
+Route::get('/twisada', function () {
+    return view('user.ekstra.twisada');
 });
 
 Route::get('/artikel', function () {
@@ -51,6 +67,9 @@ Route::get('/visimisi', function () {
 });
 Route::get('/dataguru', function () {
     return view('user.dataguru');
+});
+Route::get('/detailguru', function () {
+    return view('user.detailguru');
 });
 Route::get('/datasiswa', function () {
     return view('user.datasiswa');

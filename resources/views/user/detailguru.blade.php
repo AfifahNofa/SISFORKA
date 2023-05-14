@@ -10,42 +10,29 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler SDN Jatimulyo 1</title>
+    <title>Artikel SDN Jatimulyo 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <!-- boot -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 
     <!-- lightslider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
-        integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
-        integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -79,7 +66,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
@@ -95,38 +82,88 @@
 
                 </form>
             </div>
+
         </div>
     </nav>
 
-
-    <div class="title">
-        <h1 class="text-center">Ekstrakulikuler</h1>
-        <p class="text-center">Beberapa Ekstrakulikuler Yang Dimiliki SDN Jatimulyo 1</p>
+    <div class="container titleArtikel">
+        <!-- <h1>Latest Post</h1> -->
+        <h2>Detai Data Guru</h2>
     </div>
 
-    <div class="container ekstrakulikuler">
-        <a href="{{ url('/karate') }}" class="perEkstrakulikuler">
-            <p>Karate</p>
-        </a>
+    
 
-        <a href="{{ url('/menari') }}" class="perEkstrakulikuler">
-            <p>Menari</p>
-        </a>
+    <table class="table-bordered table table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>No</th>
+                <th>Data Diri</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
 
-        <a href="{{ url('/inggris') }}" class="perEkstrakulikuler">
-            <p>Bahasa Inggris</p>
-        </a>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nama</td>
+                <td>Bu Endah S.Pd</td>
+            </tr>
 
-        <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
-            <p>TIK</p>
-        </a>
+            <tr>
+                <td>2</td>
+                <td>NIP</td>
+                <td>19702787627</td>
+            </tr>
 
-        <a href="{{ url('/twisada') }}" class="perEkstrakulikuler">
-            <p>Twisada</p>
-        </a>
+            <tr>
+                <td>3</td>
+                <td>TTL</td>
+                <td>Malang, 17 Juni 1970</td>
+            </tr>
 
-        </a>
-    </div>
+            <tr>
+                <td>4</td>
+                <td>Jenis Kelamin</td>
+                <td>Perempuan</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Agama</td>
+                <td>Islam</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Alamat</td>
+                <td>Probolinggo</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>No.Hp</td>
+                <td>086789564340</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Email</td>
+                <td>endah@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 
+    <div class="container artikelPagination">
+        <i class="fas fa-angle-left"></i>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <i class="fas fa-angle-right"></i>
+    </div> -->
+
 
 
 
@@ -174,7 +211,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04  Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
 
@@ -188,7 +225,7 @@
 
 
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
+                    <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
@@ -215,11 +252,22 @@
     </div>
 
 
+
+
+
+
+
+
+
+
+
+
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span> 
         </p>
     </div>
+
 </body>
 
 </html>

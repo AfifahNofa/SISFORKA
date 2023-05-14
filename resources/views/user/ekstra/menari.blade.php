@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler SDN Jatimulyo 1</title>
+    <title>Ekstrakulikuler Sepak Bola SDN Jatimulyo 1 </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -99,34 +99,118 @@
     </nav>
 
 
-    <div class="title">
-        <h1 class="text-center">Ekstrakulikuler</h1>
-        <p class="text-center">Beberapa Ekstrakulikuler Yang Dimiliki SDN Jatimulyo 1</p>
+    <div class="containerEkstra"></div>
+
+
+
+    <div class="container">
+        <h3 class="titleEkstrakulikuler">Ekstrakulikuler Menari</h3>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            1. Pembina Ekstrakulikuler Menari
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="pembinaEkstrakulikuler">
+
+                            <div class="perPembina">
+                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
+                                <h5>Jabut Martono</h5>
+                            </div>
+
+                            <div class="perPembina">
+                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
+                                <h5>Jabut Martono</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            2. Materi Ekstrakulikuler Menari
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h4>Materi</h4>
+                        <p>
+                            Gerak dasar tari anak berkelompok Mengenal pola lantai
+                        </p>
+
+                        {{-- <h4>Target Ekstrakulikuler</h4>
+                        <div class="fasilitas d-flex my-4">
+
+                            <ul class="mx-3">
+                                <li>Rumput Sistetis</li>
+                                <li>Rumput Sistetis</li>
+                                <li>Rumput Sistetis</li>
+                                <li>Rumput Sistetis</li>
+                                <li>Rumput Sistetis</li>
+                            </ul> --}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. Target Ekstrakulikuler Menari
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h4>Target</h4>
+                    <p>
+                        <li>Siswa mampu menguasai gerak dasar tari anak dengan baik</li>
+                        <li>Siswa mampu menari untuk tari berkelompok dengan baik </li>
+                        <li>Siswa mampu mengenal pola lantai dengan baik </li>
+                    </p>
+
+                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <table class="table-bordered table table-hover table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kejuaraan</th>
+                                    <th>Atas Nama</th>
+                                </tr>
+                            </thead>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>Juara 1 Lomba Mancing</td>
+                                    <td>Kimak Bersaudara</td>
+                                </tr> --}}
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
-    <div class="container ekstrakulikuler">
-        <a href="{{ url('/karate') }}" class="perEkstrakulikuler">
-            <p>Karate</p>
-        </a>
-
-        <a href="{{ url('/menari') }}" class="perEkstrakulikuler">
-            <p>Menari</p>
-        </a>
-
-        <a href="{{ url('/inggris') }}" class="perEkstrakulikuler">
-            <p>Bahasa Inggris</p>
-        </a>
-
-        <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
-            <p>TIK</p>
-        </a>
-
-        <a href="{{ url('/twisada') }}" class="perEkstrakulikuler">
-            <p>Twisada</p>
-        </a>
-
-        </a>
-    </div>
 
 
 

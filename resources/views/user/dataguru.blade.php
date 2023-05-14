@@ -113,40 +113,36 @@
     <div class="jurusan">
         <div class="container">
             <div class="visi">
-                <h2>Sejarah Singkat</h2>
-                <p>
-                    SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota Malang, Jawa Timur.<br>
-                    Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan Kebudayaan.
-                </p>
+                <h2>Guru SDN Jatimulyo 1 </h2>
             </div>
 
             <div class="boxJurusan">
 
                 <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/visimisi') }}">
+                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
                         <img src="images/1.jpg" alt="RPL">
-                        <h3>Visi dan Misi</h3>
+                        <h3>Bu Endah</h3>
                     </a>
                 </div>
 
                 <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/dataguru') }}">
+                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
                         <img src="images/2.jpeg" alt="ATU">
-                    <h3>Data Guru</h3>
+                    <h3>Bu titik</h3>
                     </a>
                 </div>
 
                 <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/datasiswa') }}">
+                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
                         <img src="images/3.jpeg" alt="APHP">
-                        <h3>Data Siswa</h3>
+                        <h3>Pak dono</h3>
                     </a>
                 </div>
 
                 <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/sarana') }}">
+                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
                         <img src="images/4.jpeg" alt="API">
-                        <h3>Sarana dan Prasarana</h3>
+                        <h3>Bu Lisa</h3>
                     </a>
                 </div>
 
