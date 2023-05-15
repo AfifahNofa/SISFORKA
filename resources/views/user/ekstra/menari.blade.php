@@ -248,7 +248,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">

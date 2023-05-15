@@ -217,7 +217,7 @@
 
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
+            <i class="far fa-copyright"></i>copyright By : <span>sdnjatimulyo144@gmail.com</span>
         </p>
     </div>
 </body>
