@@ -80,8 +80,8 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="s{{ url('/sarana') }}">Sarana dan Prasarana</a>
-
+                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            
                         </div>
                     </li>
 

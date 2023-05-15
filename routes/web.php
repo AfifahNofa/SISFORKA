@@ -72,9 +72,6 @@ Route::get('/visimisi', function () {
 Route::get('/dataguru', function () {
     return view('user.dataguru');
 });
-Route::get('/detailguru', function () {
-    return view('user.detailguru');
-});
 Route::get('/datasiswa', function () {
     return view('user.datasiswa');
 });

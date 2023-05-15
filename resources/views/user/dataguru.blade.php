@@ -81,8 +81,8 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="s{{ url('/sarana') }}">Sarana dan Prasarana</a>
-
+                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            
                         </div>
                     </li>
 
@@ -121,8 +121,34 @@
         </div>
     </nav>
 
-    <div class="containerEkstra"></div>
+    <div class="containerGuru"></div>
 
+<<<<<<< HEAD
+    <div class="containerGuruHome container">
+        <h2>Guru SDN Jatimulyo 1</h2>
+    
+        <div class="guruHome">
+    
+    
+            <a class="perGuruHome" >
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Endah S.Pd</h3>
+                <p>Guru Ipa</p>
+            </a>
+    
+            <a class="perGuruHome" >
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Endah S.Pd</h3>
+                <p>Guru Ipa</p>
+            </a>
+    
+    
+            <a class="perGuruHome" >
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Endah S.Pd</h3>
+                <p>Guru Ipa</p>
+            </a>
+=======
     <div class="jurusan">
         <div class="container">
             <div class="visi">
@@ -144,27 +170,27 @@
                         <h3>Bu titik</h3>
                     </a>
                 </div>
+>>>>>>> 8faf4e6e07be480c8591f0df22b6d5dd90f85370
 
-                <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
-                        <img src="images/3.jpeg" alt="APHP">
-                        <h3>Pak dono</h3>
-                    </a>
-                </div>
+            <a class="perGuruHome" >
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Endah S.Pd</h3>
+                <p>Guru Ipa</p>
+            </a>
 
-                <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
-                        <img src="images/4.jpeg" alt="API">
-                        <h3>Bu Lisa</h3>
-                    </a>
-                </div>
+            <a class="perGuruHome" >
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Endah S.Pd</h3>
+                <p>Guru Ipa</p>
+            </a>
 
-            </div>
+            <a class="perGuruHome" >
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Endah S.Pd</h3>
+                <p>Guru Ipa</p>
+            </a>
         </div>
     </div>
-
-
-
 
 
     <!-- sosmed icon -->

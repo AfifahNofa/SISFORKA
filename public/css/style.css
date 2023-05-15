@@ -344,6 +344,78 @@ body {
 .artikel .perArtikel p {
   color: #000;
 }
+/* dataguru */
+
+.containerGuruHome {
+  padding-top: 50px;
+}
+
+.containerGuruHome h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.containerGuruHome .guruHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.containerGuruHome .guruHome .perGuruHome {
+  width: 200px;
+  margin: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.containerGuruHome .guruHome .perGuruHome:hover h3 {
+  color: #325540;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.containerGuruHome .guruHome .perGuruHome img {
+  width: 100%;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.containerGuruHome .guruHome .perGuruHome h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 900;
+  color: #000;
+}
+
+.containerGuruHome .guruHome .perGuruHome small {
+  color: #000;
+}
+
+.containerGuruHome .guruHome .perGuruHome small span {
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+}
+
+.containerGuruHome .guruHome .perGuruHome p {
+  font-size: .9rem;
+  color: #000;
+  text-align: center;
+}
+
+/* icon */
 
 .iconBox {
   position: fixed;
@@ -596,7 +668,7 @@ body {
 
 .containerArtikelHome .artikelHome .perArtikelHome p {
   font-size: .9rem;
-  color: #000;
+  color: rgb(14, 133, 231);
 }
 
 /* footer */
@@ -745,10 +817,21 @@ body {
 }
 
 .containerEkstra {
-  margin-top: 80px;
+  margin-top: 20px;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background-image: url("../images/basket.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.containerGuru {
+  margin-top: 20px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/sdn1.jpeg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;

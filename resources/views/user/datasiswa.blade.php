@@ -69,31 +69,54 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            
+                        </div>
                     </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
+                            Program
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
+                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
+                            <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
                         </div>
                     </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
+                    </li>
+
+                    
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
 
         </div>
@@ -101,7 +124,7 @@
 
     <div class="container titleArtikel">
         <!-- <h1>Latest Post</h1> -->
-        <h2>Detai Data Guru</h2>
+        <h2>Detai Data Siswa</h2>
     </div>
 
 
@@ -110,59 +133,48 @@
         <thead class="thead-dark">
             <tr>
                 <th>No</th>
-                <th>Data Diri</th>
-                <th>Keterangan</th>
+                <th>Kelas</th>
+                <th>Jumlah</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Nama</td>
-                <td>Bu Endah S.Pd</td>
+                <td>Kelas I</td>
+                <td>30</td>
             </tr>
 
             <tr>
                 <td>2</td>
-                <td>NIP</td>
-                <td>19702787627</td>
+                <td>Kelas II</td>
+                <td>30</td>
             </tr>
 
             <tr>
                 <td>3</td>
-                <td>TTL</td>
-                <td>Malang, 17 Juni 1970</td>
+                <td>Kelas III</td>
+                <td>32</td>
             </tr>
 
             <tr>
                 <td>4</td>
-                <td>Jenis Kelamin</td>
-                <td>Perempuan</td>
+                <td>Kelas IV</td>
+                <td>33</td>
             </tr>
 
             <tr>
                 <td>5</td>
-                <td>Agama</td>
-                <td>Islam</td>
+                <td>Kelas V</td>
+                <td>30</td>
             </tr>
 
             <tr>
                 <td>6</td>
-                <td>Alamat</td>
-                <td>Probolinggo</td>
+                <td>Kelas IV</td>
+                <td>32</td>
             </tr>
 
-            <tr>
-                <td>7</td>
-                <td>No.Hp</td>
-                <td>086789564340</td>
-            </tr>
-
-            <tr>
-                <td>8</td>
-                <td>Email</td>
-                <td>endah@gmail.com</td>
-            </tr>
         </tbody>
     </table>
 
@@ -256,15 +268,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
 
 
