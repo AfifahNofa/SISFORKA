@@ -273,28 +273,28 @@
 
                 <div class="perBox">
                     <a class="dropdown-item" href="{{ url('/visimisi') }}">
-                        <img src="images/1.jpg" alt="RPL">
+                        <img src="images/sekola.jpeg" alt="RPL">
                         <h3>Visi dan Misi</h3>
                     </a>
                 </div>
 
                 <div class="perBox">
                     <a class="dropdown-item" href="{{ url('/dataguru') }}">
-                        <img src="images/2.jpeg" alt="ATU">
+                        <img src="images/sdn2.jpeg" alt="ATU">
                         <h3>Data Guru</h3>
                     </a>
                 </div>
 
                 <div class="perBox">
                     <a class="dropdown-item" href="{{ url('/datasiswa') }}">
-                        <img src="images/3.jpeg" alt="APHP">
+                        <img src="images/pramuka.jpeg" alt="APHP">
                         <h3>Data Siswa</h3>
                     </a>
                 </div>
 
                 <div class="perBox">
                     <a class="dropdown-item" href="{{ url('/sarana') }}">
-                        <img src="images/4.jpeg" alt="API">
+                        <img src="images/1.jpg" alt="API">
                         <h3>Sarana dan Prasarana</h3>
                     </a>
                 </div>
@@ -311,7 +311,7 @@
 
 
                 <a class="perProgramHome" href="{{ url('/ekstrakulikuler') }}">
-                    <img src="images/1.jpg" alt="Foto Program">
+                    <img src="images/ekstra1.jpeg" alt="Foto Program">
                     <h3>Ekstrakulikuler</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
@@ -321,7 +321,7 @@
                 </a>
 
                 <a class="perProgramHome" href="{{ url('/prestasi') }}">
-                    <img src="images/1.jpg" alt="Foto Program">
+                    <img src="images/prestasi1.jpeg" alt="Foto Program">
                     <h3>Prestasi</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
@@ -332,7 +332,7 @@
 
 
                 <a class="perProgramHome" href="{{ url('/PPDB') }}">
-                    <img src="images/1.jpg" alt="Foto Program">
+                    <img src="images/ppdb1.jpeg" alt="Foto Program">
                     <h3>PPDB</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus

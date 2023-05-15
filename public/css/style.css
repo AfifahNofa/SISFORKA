@@ -106,23 +106,23 @@ body {
 }
 
 .slideshow .dua {
-  background-image: url("../images/sdn2.jpeg");
-}
-
-.slideshow .tiga {
   background-image: url("../images/sdn3.jpeg");
 }
 
+.slideshow .tiga {
+  background-image: url("../images/sdn7.jpeg");
+}
+
 .slideshow .empat {
-  background-image: url("../images/sdn4.jpeg");
+  background-image: url("../images/sdn8.jpeg");
 }
 
 .slideshow .lima {
-  background-image: url("../images/sdn5.jpeg");
+  background-image: url("../images/sdn9.jpeg");
 }
 
 .slideshow .enam {
-  background-image: url("../images/sdn6.jpeg");
+  background-image: url("../images/sdn2.jpeg");
 }
 
 .slideshow .container {
@@ -467,7 +467,7 @@ body {
 }
 
 .jurusan {
-  background-color: #cae1d9;
+  background-color: #f3f1f1;
   padding: 50px 0;
   margin-top: 40px;
 }

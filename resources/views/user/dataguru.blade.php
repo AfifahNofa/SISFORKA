@@ -123,7 +123,6 @@
 
     <div class="containerGuru"></div>
 
-<<<<<<< HEAD
     <div class="containerGuruHome container">
         <h2>Guru SDN Jatimulyo 1</h2>
     
@@ -148,29 +147,6 @@
                 <h3>Endah S.Pd</h3>
                 <p>Guru Ipa</p>
             </a>
-=======
-    <div class="jurusan">
-        <div class="container">
-            <div class="visi">
-                <h2>Guru SDN Jatimulyo 1 </h2>
-            </div>
-
-            <div class="boxJurusan">
-
-                <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
-                        <img src="images/1.jpg" alt="RPL">
-                        <h3>Bu Endah</h3>
-                    </a>
-                </div>
-
-                <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/detailguru') }}">
-                        <img src="images/2.jpeg" alt="ATU">
-                        <h3>Bu titik</h3>
-                    </a>
-                </div>
->>>>>>> 8faf4e6e07be480c8591f0df22b6d5dd90f85370
 
             <a class="perGuruHome" >
                 <img src="images/1.jpg" alt="Foto Artikel">
