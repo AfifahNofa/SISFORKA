@@ -15,23 +15,36 @@
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <!-- boot -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
 
 
     <!-- lightslider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
+        integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
+        integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -101,7 +114,7 @@
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
-                    
+
                 </ul>
             </div>
         </div>
@@ -208,8 +221,10 @@
     <div class="sambutan">
         <h1>WELCOME TO SDN Jatimulyo 1 Kota Malang</h1>
         <p>
-            SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota Malang, Jawa Timur.<br>
-            Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan Kebudayaan.
+            SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota
+            Malang, Jawa Timur.<br>
+            Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan
+            Kebudayaan.
         </p>
     </div>
 
@@ -221,14 +236,14 @@
                 <div class="visi">
                     <h2>Sambutan Kepala Sekolah</h2>
                     <p>
-                        Sebagai lembaga pendidikan, SD Negeri Jatimulyo 1 
-                        tanggap dengan perkembangan teknologi tersebut. 
-                        Dengan dukungan SDM yang di miliki sekolah ini siap 
-                        untuk berkompetisi dengan sekolah lain dalam 
-                        pelayanan informasi publik. Teknologi Informasi Web 
-                        khususnya, menjadi sarana bagi SD Negeri Jatimulyo 1 
-                        untuk memberi pelayanan informasi secara cepat, jelas, 
-                        dan akuntable. Dari layanan ini pula, sekolah 
+                        Sebagai lembaga pendidikan, SD Negeri Jatimulyo 1
+                        tanggap dengan perkembangan teknologi tersebut.
+                        Dengan dukungan SDM yang di miliki sekolah ini siap
+                        untuk berkompetisi dengan sekolah lain dalam
+                        pelayanan informasi publik. Teknologi Informasi Web
+                        khususnya, menjadi sarana bagi SD Negeri Jatimulyo 1
+                        untuk memberi pelayanan informasi secara cepat, jelas,
+                        dan akuntable. Dari layanan ini pula, sekolah
                         siap menerima saran dari semua pihak yang akhirnya dapat menjawab Kebutuhan masyarakat.
                     </p>
                 </div>
@@ -240,15 +255,17 @@
 
 
     <!-- jurusan -->
-    
+
 
     <div class="jurusan">
         <div class="container">
             <div class="visi">
                 <h2>Sejarah Singkat</h2>
                 <p>
-                    SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru, Kota Malang, Jawa Timur.<br>
-                    Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan dan Kebudayaan.
+                    SDN Jatimulyo 1 adalah salah satu satuan pendidikan dengan jenjang SD di JATIMULYO, Kec. Lowokwaru,
+                    Kota Malang, Jawa Timur.<br>
+                    Dalam menjalankan kegiatannya, SD NEGERI JATIMULYO 01 berada di bawah naungan Kementerian Pendidikan
+                    dan Kebudayaan.
                 </p>
             </div>
 
@@ -264,7 +281,7 @@
                 <div class="perBox">
                     <a class="dropdown-item" href="{{ url('/dataguru') }}">
                         <img src="images/2.jpeg" alt="ATU">
-                    <h3>Data Guru</h3>
+                        <h3>Data Guru</h3>
                     </a>
                 </div>
 
@@ -287,24 +304,66 @@
     </div>
 
     <div class="program">
-    <div class="containerProgramHome container">
-        <h2>Program</h2>
+        <div class="containerProgramHome container">
+            <h2>Program</h2>
 
-        <div class="programHome">
+            <div class="programHome">
 
 
-            <a class="perProgramHome" href="{{ url('/ekstrakulikuler') }}">
-                <img src="images/1.jpg" alt="Foto Program">
-                <h3>Ekstrakulikuler</h3>
+                <a class="perProgramHome" href="{{ url('/ekstrakulikuler') }}">
+                    <img src="images/1.jpg" alt="Foto Program">
+                    <h3>Ekstrakulikuler</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
+                        explicabo
+                        delectus quasi amet libero iusto sequi at.
+                    </p>
+                </a>
+
+                <a class="perProgramHome" href="{{ url('/prestasi') }}">
+                    <img src="images/1.jpg" alt="Foto Program">
+                    <h3>Prestasi</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
+                        explicabo
+                        delectus quasi amet libero iusto sequi at.
+                    </p>
+                </a>
+
+
+                <a class="perProgramHome" href="{{ url('/PPDB') }}">
+                    <img src="images/1.jpg" alt="Foto Program">
+                    <h3>PPDB</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
+                        explicabo
+                        delectus quasi amet libero iusto sequi at.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerArtikelHome container">
+        <h2>Artikel Terbaru</h2>
+
+        <div class="artikelHome">
+
+
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
                     delectus quasi amet libero iusto sequi at.
                 </p>
             </a>
 
-            <a class="perProgramHome" href="{{ url('/prestasi') }}">
-                <img src="images/1.jpg" alt="Foto Program">
-                <h3>Prestasi</h3>
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
                     delectus quasi amet libero iusto sequi at.
@@ -312,9 +371,10 @@
             </a>
 
 
-            <a class="perProgramHome" href="{{ url('/PPDB') }}">
-                <img src="images/1.jpg" alt="Foto Program">
-                <h3>PPDB</h3>
+            <a class="perArtikelHome">
+                <img src="images/1.jpg" alt="Foto Artikel">
+                <h3>Tutorial Login Laravel 8</h3>
+                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
                     delectus quasi amet libero iusto sequi at.
@@ -322,46 +382,6 @@
             </a>
         </div>
     </div>
-</div>
-
-<div class="containerArtikelHome container">
-    <h2>Artikel Terbaru</h2>
-
-    <div class="artikelHome">
-
-
-        <a class="perArtikelHome" >
-            <img src="images/1.jpg" alt="Foto Artikel">
-            <h3>Tutorial Login Laravel 8</h3>
-            <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                delectus quasi amet libero iusto sequi at.
-            </p>
-        </a>
-
-        <a class="perArtikelHome">
-            <img src="images/1.jpg" alt="Foto Artikel">
-            <h3>Tutorial Login Laravel 8</h3>
-            <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                delectus quasi amet libero iusto sequi at.
-            </p>
-        </a>
-
-
-        <a class="perArtikelHome">
-            <img src="images/1.jpg" alt="Foto Artikel">
-            <h3>Tutorial Login Laravel 8</h3>
-            <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                delectus quasi amet libero iusto sequi at.
-            </p>
-        </a>
-    </div>
-</div>
 
 
 
@@ -401,7 +421,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -411,7 +431,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04  Kec.Lowokwaru Kota.Malang</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
                     </div>
@@ -453,7 +473,7 @@
 
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span> 
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
 

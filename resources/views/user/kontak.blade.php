@@ -10,30 +10,43 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    
+
     <title>SDN JATIMULYO 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <!-- boot -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
 
 
     <!-- lightslider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
+        integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
+        integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -70,7 +83,7 @@
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="s{{ url('/sarana') }}">Sarana dan Prasarana</a>
-                            
+
                         </div>
                     </li>
 
@@ -103,7 +116,7 @@
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
-                    
+
                 </ul>
             </div>
         </div>
@@ -143,8 +156,9 @@
     </div>
 
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5479912219284!2d112.61358707397942!3d-7.942183679108393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788274cd9f7f05%3A0x743a345c22a00f78!2sSekolah%20Dasar%20Negeri%20Jatimulyo%201%20No.%20269!5e0!3m2!1sid!2sid!4v1684039542284!5m2!1sid!2sid" 
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5479912219284!2d112.61358707397942!3d-7.942183679108393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788274cd9f7f05%3A0x743a345c22a00f78!2sSekolah%20Dasar%20Negeri%20Jatimulyo%201%20No.%20269!5e0!3m2!1sid!2sid!4v1684039542284!5m2!1sid!2sid"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 
     <!-- sosmed icon -->
@@ -181,7 +195,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -191,7 +205,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04  Kec.Lowokwaru Kota.Malang</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
                     </div>
@@ -233,7 +247,7 @@
 
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span> 
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
 
