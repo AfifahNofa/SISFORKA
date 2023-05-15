@@ -163,25 +163,19 @@
 
     <!-- sosmed icon -->
     <div class="iconBox">
-        <a href="" class="perIconBox wa">
-            <i class="fab fa-whatsapp"></i>
-        </a>
 
-        <a href="" class="perIconBox fb">
+        <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
             <i class="fab fa-facebook-f"></i>
         </a>
 
-        <a href="" class="perIconBox ig">
+        <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
             <i class="fab fa-instagram"></i>
         </a>
 
-        <a href="" class="perIconBox yt">
+        <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
             <i class="fab fa-youtube"></i>
         </a>
 
-        <a href="" class="perIconBox linkin">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
     </div>
 
     <div class="footer footerHubungiKami">
