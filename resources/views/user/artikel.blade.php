@@ -68,9 +68,6 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
-                    </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
