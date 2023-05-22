@@ -81,7 +81,7 @@
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
-                            
+
                         </div>
                     </li>
 
@@ -112,6 +112,10 @@
 
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
 
 
@@ -231,7 +235,7 @@
 
     <div class="kepsek">
         <div class="container">
-            <img src="images/ida.jpeg" alt="Kepala SDN Jatimulyo 1">
+            <img src="images/bkepsek.jpeg" alt="Kepala SDN Jatimulyo 1">
             <div class="visiMisi">
                 <div class="visi">
                     <h2>Sambutan Kepala Sekolah</h2>
