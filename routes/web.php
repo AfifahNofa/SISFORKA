@@ -49,6 +49,10 @@ Route::get('/artikel', function () {
     return view('user.artikel');
 });
 
+Route::get('/ppdb', function () {
+    return view('user.ppdb');
+});
+
 Route::get('/perArtikel', function () {
     return view('user.perArtikel');
 });

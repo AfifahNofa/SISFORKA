@@ -115,6 +115,10 @@
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
 
                 </ul>
             </div>
@@ -127,7 +131,6 @@
     <div class="containerGuruHome container">
 
         <div class="guruHome">
-
 
             <a class="perGuruHome" >
                 <img src="images/ida.jpeg" alt="Foto Artikel">
@@ -185,13 +188,13 @@
             </a>
 
             <a class="perGuruHome" >
-                <img src="images/sulaiman.jpeg" alt="Foto Artikel">
+                <img src="images/user.png" alt="Foto Artikel">
                 <h3>MAHSUSUS SARIFAH, S. Pd</h3>
                 <p>Guru Bahasa Jawa</p>
             </a>
 
             <a class="perGuruHome" >
-                <img src="images/sulaiman.jpeg" alt="Foto Artikel">
+                <img src="images/user.png" alt="Foto Artikel">
                 <h3>MAHSUSUS SARIFAH, S. Pd</h3>
                 <p>Guru Bahasa Jawa</p>
             </a>
@@ -203,25 +206,19 @@
 
     <!-- sosmed icon -->
     <div class="iconBox">
-        <a href="" class="perIconBox wa">
-            <i class="fab fa-whatsapp"></i>
-        </a>
 
-        <a href="" class="perIconBox fb">
+        <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
             <i class="fab fa-facebook-f"></i>
         </a>
 
-        <a href="" class="perIconBox ig">
+        <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
             <i class="fab fa-instagram"></i>
         </a>
 
-        <a href="" class="perIconBox yt">
+        <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
             <i class="fab fa-youtube"></i>
         </a>
 
-        <a href="" class="perIconBox linkin">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
     </div>
 
     <div class="footer">

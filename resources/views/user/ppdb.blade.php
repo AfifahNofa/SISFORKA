@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler SDN Jatimulyo 1</title>
+    <title>PPDB</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -79,7 +79,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
@@ -95,38 +95,31 @@
 
                 </form>
             </div>
+
         </div>
     </nav>
 
-
-    <div class="title">
-        <h1 class="text-center">Ekstrakulikuler</h1>
-        <p class="text-center">Beberapa Ekstrakulikuler Yang Dimiliki SDN Jatimulyo 1</p>
+    <div class="container titleArtikel" style="text-align: center;">
+        <h1 style="font-size: 45px;">INFORMASI PPDB 2023</h1>
     </div>
 
-    <div class="container ekstrakulikuler">
-        <a href="{{ url('/karate') }}" class="perEkstrakulikuler">
-            <p>Karate</p>
-        </a>
 
-        <a href="{{ url('/menari') }}" class="perEkstrakulikuler">
-            <p>Menari</p>
+    <div class="container ppdb">
+        <a href="{{ url('/ppdb') }}" class="text-decoration-none">
+            <div class="poster" style="text-align: center;">
+                <img src="images/ppdb1.jpeg" alt="poster1" width="800" height="500">
+            </div>
         </a>
-
-        <a href="{{ url('/inggris') }}" class="perEkstrakulikuler">
-            <p>Bahasa Inggris</p>
-        </a>
-
-        <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
-            <p>TIK</p>
-        </a>
-
-        <a href="{{ url('/twisada') }}" class="perEkstrakulikuler">
-            <p>Twisada</p>
-        </a>
-
+        <p></p>
+        <p></p>
+        <a href="{{ url('/ppdb') }}" class="text-decoration-none">
+            <div class="poster" style="text-align: center;">
+                <img src="images/ppdb2.jpeg" alt="poster1" width="800" height="500">
+            </div>
         </a>
     </div>
+
+
 
 
 
@@ -158,7 +151,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -168,7 +161,8 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
+                            </p>
                         </div>
 
 
@@ -182,7 +176,7 @@
 
 
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
+                    <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
@@ -208,12 +202,12 @@
         </div>
     </div>
 
-
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>sdnjatimulyo144@gmail.com</span>
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
+
 </body>
 
 </html>
