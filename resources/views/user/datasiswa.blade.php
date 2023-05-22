@@ -82,7 +82,7 @@
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
-                            
+
                         </div>
                     </li>
 
@@ -115,16 +115,18 @@
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
-                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
                 </ul>
             </div>
 
         </div>
     </nav>
 
-    <div class="container titleArtikel">
-        <!-- <h1>Latest Post</h1> -->
-        <h2>Detai Data Siswa</h2>
+    <div class="title">
+        <h1 class="text-center">Detail Data Siswa</h1>
     </div>
 
 

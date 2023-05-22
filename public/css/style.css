@@ -314,6 +314,7 @@ body {
   font-weight: 600;
 }
 
+
 .artikel .perArtikel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,12 +389,12 @@ body {
 .containerGuruHome .guruHome .perGuruHome img {
   width: 100%;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 5%;
   margin-bottom: 10px;
 }
 
 .containerGuruHome .guruHome .perGuruHome h3 {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-align: center;
   font-weight: 900;
   color: #000;

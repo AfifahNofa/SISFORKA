@@ -81,6 +81,11 @@
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
                     </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
 

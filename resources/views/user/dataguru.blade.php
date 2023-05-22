@@ -82,7 +82,7 @@
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
-                            
+
                         </div>
                     </li>
 
@@ -115,56 +115,91 @@
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
 
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="containerGuru"></div>
-
+    <div class="title">
+        <h1 class="text-center">Data Guru SDN Jatimulyo 1</h1>
+    </div>
     <div class="containerGuruHome container">
-        <h2>Guru SDN Jatimulyo 1</h2>
-    
+
         <div class="guruHome">
-    
-    
+
             <a class="perGuruHome" >
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Endah S.Pd</h3>
-                <p>Guru Ipa</p>
-            </a>
-    
-            <a class="perGuruHome" >
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Endah S.Pd</h3>
-                <p>Guru Ipa</p>
-            </a>
-    
-    
-            <a class="perGuruHome" >
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Endah S.Pd</h3>
-                <p>Guru Ipa</p>
+                <img src="images/ida.jpeg" alt="Foto Artikel">
+                <h3>NUR FAIDAH, S.Pd., M.Si</h3>
+                <p>Kepala Sekolah</p>
             </a>
 
             <a class="perGuruHome" >
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Endah S.Pd</h3>
-                <p>Guru Ipa</p>
+                <img src="images/erna.jpeg" alt="Foto Artikel">
+                <h3>ERNA,S.Pd</h3>
+                <p>Guru Kelas 1</p>
+            </a>
+
+
+            <a class="perGuruHome" >
+                <img src="images/naning.jpeg" alt="Foto Artikel">
+                <h3>NANING WAHYUNINGSIH, S.Pd </h3>
+                <p>Guru Kelas 2</p>
             </a>
 
             <a class="perGuruHome" >
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Endah S.Pd</h3>
-                <p>Guru Ipa</p>
+                <img src="images/tri.jpeg" alt="Foto Artikel">
+                <h3>TRIONO RIADIANTO, S.Pd</h3>
+                <p>Guru Kelas 3</p>
             </a>
 
             <a class="perGuruHome" >
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Endah S.Pd</h3>
-                <p>Guru Ipa</p>
+                <img src="images/yuni.jpeg" alt="Foto Artikel">
+                <h3>TITIS WAHYUNI, S.Pd</h3>
+                <p>Guru Kelas 4</p>
             </a>
+
+            <a class="perGuruHome" >
+                <img src="images/eva.jpeg" alt="Foto Artikel">
+                <h3>EVA LIA MITANIA DEWI, S.Pd</h3>
+                <p>Guru Kelas 5</p>
+            </a>
+
+            <a class="perGuruHome" >
+                <img src="images/tina.jpeg" alt="Foto Artikel">
+                <h3>TITIN AGUSTINA, S.Pd. SD</h3>
+                <p>Guru Kelas 6</p>
+            </a>
+
+            <a class="perGuruHome" >
+                <img src="images/ajeng.jpeg" alt="Foto Artikel">
+                <h3>DEAJENG PUTRI DEVI, S.Pd</h3>
+                <p>Guru Pendidikan Agama Islam </p>
+            </a>
+
+            <a class="perGuruHome" >
+                <img src="images/sulaiman.jpeg" alt="Foto Artikel">
+                <h3>SULAIMAN, S.Hum</h3>
+                <p>Guru Bahasa Inggris</p>
+            </a>
+
+            <a class="perGuruHome" >
+                <img src="images/user.png" alt="Foto Artikel">
+                <h3>MAHSUSUS SARIFAH, S. Pd</h3>
+                <p>Guru Bahasa Jawa</p>
+            </a>
+
+            <a class="perGuruHome" >
+                <img src="images/user.png" alt="Foto Artikel">
+                <h3>MAHSUSUS SARIFAH, S. Pd</h3>
+                <p>Guru Bahasa Jawa</p>
+            </a>
+
+
         </div>
     </div>
 
