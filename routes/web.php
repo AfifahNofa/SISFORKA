@@ -33,6 +33,4 @@ Route::get('/dataguru', [IndexController::class, 'dataguru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/sarana', [IndexController::class, 'sarana']);
 Route::get('/prestasi', [IndexController::class, 'prestasi']);
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 

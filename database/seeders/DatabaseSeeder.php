@@ -20,5 +20,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        // $this->call([
+        //     DataSiswaSeeder::class,
+        //     DataGuruSeeder::class, 
+        //     EkstraSeeder::class, 
+        //     SaranaSeeder::class, 
+        //     PrestasiSeeder::class, 
+        //     ArtikelSeeder::class, 
+        //     GaleriSeeder::class
+        // ]);
     }
 }
