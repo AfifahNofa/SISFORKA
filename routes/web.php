@@ -52,8 +52,8 @@ Route::get('/tes', function () {
 });
 Route::middleware(['auth'])->group(function () {
     Route::resource('/guru', GuruController::class);
-    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    // Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 });
 
 
