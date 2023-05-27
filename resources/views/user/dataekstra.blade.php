@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler Karate SDN Jatimulyo 1 </title>
+    <title>Ekstrakulikuler SDN Jatimulyo 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -84,6 +84,11 @@
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
                     </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
 
@@ -99,117 +104,44 @@
     </nav>
 
 
-    <div class="containerEkstra"></div>
-
-
-
-    <div class="container">
-        <h3 class="titleEkstrakulikuler">Ekstrakulikuler TIK</h3>
-
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            1. Pembina Ekstrakulikuler TIK
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <div class="pembinaEkstrakulikuler">
-
-                            <div class="perPembina">
-                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
-                                <h5>Jabut Martono</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            2. Materi Ekstrakulikuler TIK
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <h4>Materi</h4>
-                        <p>
-                            <li>Pengenalan komputer hardware </li>
-                            <li>Microsoft word </li>
-                            <li>Microsoft Excel</li>
-                            <li>Power point interaktif </li>
-                        </p>
-
-                        {{-- <h4>Target Ekstrakulikuler</h4>
-                        <div class="fasilitas d-flex my-4">
-
-                            <ul class="mx-3">
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                            </ul> --}}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        3. Target Ekstrakulikuler TIK
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h4>Target</h4>
-                    <p>
-                        <li>Siswa mampu mengenal hardware komputer</li>
-                        <li>Siswa mampu mengoperasionalkan microsoft dan microsoft excel </li>
-                        <li>Siswa mampu menoperasionalkan power point interaktif </li>
-
-
-                    </p>
-
-                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table-bordered table table-hover table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Kejuaraan</th>
-                                    <th>Atas Nama</th>
-                                </tr>
-                            </thead>
-
-                                <tr>
-                                    <td>5</td>
-                                    <td>Juara 1 Lomba Mancing</td>
-                                    <td>Kimak Bersaudara</td>
-                                </tr> --}}
-                    </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="title">
+        <h1 class="text-center">Ekstrakulikuler</h1>
+        <p class="text-center">Beberapa Ekstrakulikuler Yang Dimiliki SDN Jatimulyo 1</p>
     </div>
 
+
+
+    @if ($ekstrakulikuler->count() > 0)
+        @foreach ($ekstrakulikuler as $e)
+            <div class="container ekstrakulikuler">
+                <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+                    <div class="gambarEkstrakulikuler">
+                        <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
+                    </div>
+                    <p>{{ $e->nama }}</p>
+                </a>
+
+                {{-- <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+            <p>Baca & Tulis Al-Qur'an</p>
+        </a>
+
+        <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
+            <p>TIK</p>
+        </a>
+
+        <a href="{{ url('/pramuka') }}" class="perEkstrakulikuler">
+            <p>Pramuka</p>
+        </a>
+
+        <a href="{{ url('/drumband') }}" class="perEkstrakulikuler">
+            <p>Drumband</p> --}}
+                {{-- </a> --}}
+
+            </div>
+        @endforeach
+    @endif
+    </div>
+    </div>
 
 
 
@@ -241,7 +173,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
+                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -294,7 +226,7 @@
 
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
+            <i class="far fa-copyright"></i>copyright By : <span>sdnjatimulyo144@gmail.com</span>
         </p>
     </div>
 </body>

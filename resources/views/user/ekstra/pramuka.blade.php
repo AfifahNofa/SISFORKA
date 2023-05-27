@@ -99,60 +99,56 @@
     </nav>
 
 
-    <div class="title">
-        <h1 class="text-center">Ekstrakulikuler Karate</h1>
-        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
-        {{-- <p class="text-center">Pilih Kategori Untuk Melihat Galeri Kami</p> --}}
-    </div>
+    <div class="containerEkstra"></div>
 
-    <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        1. Ekstrakulikuler Karate
-                    </button>
-                </h2>
-            </div>
 
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div class="pembinaEkstrakulikuler">
 
-                        <div class="perPembina">
-                            <img src="images/karate1.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
+    <div class="container">
+        <h3 class="titleEkstrakulikuler">Ekstrakulikuler Pramuka</h3>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            1. Pembina Ekstrakulikuler Pramuka
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="pembinaEkstrakulikuler">
+
+                            <div class="perPembina">
+                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
+                                <h5>Jabut Martono</h5>
+                            </div>
                         </div>
-
-                        <div class="perPembina">
-                            <img src="images/karate2.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        2. Materi Ekstrakulikuler Karate
-                    </button>
-                </h2>
-            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            2. Materi Ekstrakulikuler Pramuka
+                        </button>
+                    </h2>
+                </div>
 
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h4>Materi</h4>
-                    <p>
-                        <li>Gerakan Dasar Pukulan Ouzuki Jodan dan Gerakan Tendangan Maigeri Mawashi Keikomi Geri</li>
-                    </p>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h4>Materi</h4>
+                        <p>
+                            <li>Dasa Dharma Pramuka</li>
+                            <li>Perkemahan </li>
+                        </p>
 
-                    {{-- <h4>Target Ekstrakulikuler</h4>
+                        {{-- <h4>Target Ekstrakulikuler</h4>
                         <div class="fasilitas d-flex my-4">
 
                             <ul class="mx-3">
@@ -163,31 +159,29 @@
                                 <li>Rumput Sistetis</li>
                             </ul> --}}
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    3. Target Ekstrakulikuler Karate
-                </button>
-            </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-                <h4>Target Ekstrakulikuler Karate</h4>
-                <p>
-                    Siswa mampu menguasai dan mempraktikkan gerakan dasar
-                    ouzuki chudan,ouzuki jodan, gerakan tendangan maegeri
-                    dengan baik dan benar
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. Target Ekstrakulikuler Pramuka
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h4>Target</h4>
+                    <p>
+                        <li>Siswa mampu mengenal dasa dharma pramuka </li>
+                        <li>siswa mampu mengerti alat bahan perkemahan dan melaksanakannya ketika kelas 5 </li>
+                    </p>
 
-                </p>
-
-                {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
                         <table class="table-bordered table table-hover table-striped">
                             <thead class="thead-dark">
@@ -203,11 +197,11 @@
                                     <td>Juara 1 Lomba Mancing</td>
                                     <td>Kimak Bersaudara</td>
                                 </tr> --}}
-                </tbody>
-                </table>
+                    </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\GuruModel;
+use App\Models\EkstraModel;
 use Illuminate\Http\Request;
 
-class GuruController extends Controller
+class EkstraController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class GuruController extends Controller
      */
     public function index()
     {
-        $guru = GuruModel::all();
-        return view('admin.guru.guru')
-            ->with('guru', $guru);
+        $ekstrakulikuler = EkstraModel::all();
+        return view('admin.ekstra.ekstra')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
     }
 
     /**
@@ -26,8 +26,8 @@ class GuruController extends Controller
      */
     public function create()
     {
-        return view('admin.guru.create_guru')
-            ->with('url_form', route('guru.store'));
+        return view('admin.ekstra.create_ekstra')
+            ->with('url_form', url('/ekstrakulikuler'));
     }
 
     /**
@@ -40,10 +40,11 @@ class GuruController extends Controller
     {
 
         $request->validate([
-            'kode' => 'required|string|max:6|unique:guru,kode',
+            'kode' => 'required|string|max:6|unique:ekstrakulikuler,kode',
             'nama' => 'required|string|max:225',
             'foto' => 'required|image|max:2048',
-            'jabatan' => 'required|string',
+            'materi' => 'required|string',
+            'target' => 'required|string',
         ]);
 
         $foto_name = null;
@@ -54,16 +55,17 @@ class GuruController extends Controller
         }
 
         // Menyimpan foto jika ada
-        $guru = new GuruModel();
-        $guru->kode = $request->get('kode');
-        $guru->nama = $request->get('nama');
-        $guru->foto = $foto_name;
-        $guru->jabatan = $request->get('jabatan');
-        $guru->save();
+        $ekstrakulikuler = new EkstraModel();
+        $ekstrakulikuler->kode = $request->get('kode');
+        $ekstrakulikuler->nama = $request->get('nama');
+        $ekstrakulikuler->foto = $foto_name;
+        $ekstrakulikuler->materi = $request->get('materi');
+        $ekstrakulikuler->target = $request->get('target');
+        $ekstrakulikuler->save();
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect('guru')
-            ->with('success', 'Data Guru Berhasil Ditambahkan');
+        return redirect('ekstrakulikuler')
+            ->with('success', 'Data Ekstrakulikuler Berhasil Ditambahkan');
     }
 
     /**
@@ -108,8 +110,8 @@ class GuruController extends Controller
      */
     public function destroy($id)
     {
-        GuruModel::where('id', '=', $id)->delete();
-        return redirect('guru')
-            ->with('success', 'Data Guru Berhasil Dihapus');
+        EkstraModel::where('id', '=', $id)->delete();
+        return redirect('ekstrakulikuler')
+            ->with('success', 'Data Ekstrakulikuler Berhasil Dihapus');
     }
 }

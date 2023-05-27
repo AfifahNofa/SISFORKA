@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler SDN Jatimulyo 1</title>
+    <title>Ekstrakulikuler Karate SDN Jatimulyo 1 </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -84,11 +84,6 @@
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
                     </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
-                    </li>
-
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
 
@@ -105,33 +100,91 @@
 
 
     <div class="title">
-        <h1 class="text-center">Ekstrakulikuler</h1>
-        <p class="text-center">Beberapa Ekstrakulikuler Yang Dimiliki SDN Jatimulyo 1</p>
+        <h1 class="text-center">Ekstrakulikuler Baca & Tulis Al-Qur'an</h1>
+        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
+        {{-- <p class="text-center">Pilih Kategori Untuk Melihat Galeri Kami</p> --}}
     </div>
 
-    <div class="container ekstrakulikuler">
-        <a href="{{ url('/karate') }}" class="perEkstrakulikuler">
-            <p>Karate</p>
-        </a>
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        1. Ekstrakulikuler Baca & Tulis Al-Qur'an
+                    </button>
+                </h2>
+            </div>
 
-        <a href="{{ url('/menari') }}" class="perEkstrakulikuler">
-            <p>Menari</p>
-        </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="pembinaEkstrakulikuler">
+                        @if ($ekstrakulikuler->count() > 0)
+                            @php
+                                $e = $ekstrakulikuler->first();
+                            @endphp
+                            <div class="perPembina">
+                                <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
+                                <h5>{{ $e->nama }}</h5>
+                            </div>
+                        @endif
 
-        <a href="{{ url('/inggris') }}" class="perEkstrakulikuler">
-            <p>Bahasa Inggris</p>
-        </a>
+                        <div class="perPembina">
+                            <img src="images/karate2.jpeg" alt="Pembina Ekstrakulikuler">
+                            <h5>Tulis Al-Qur'an</h5>
+                        </div>
 
-        <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
-            <p>TIK</p>
-        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <a href="{{ url('/twisada') }}" class="perEkstrakulikuler">
-            <p>Twisada</p>
-        </a>
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        2. Materi Ekstrakulikuler Baca & Tulis Al-Qur'an
+                    </button>
+                </h2>
+            </div>
 
-        </a>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h4>Materi</h4>
+                    <p>
+                        <li>Membaca Iqra
+                        <li>Tulis Huruf Hijaiyah</li>
+                    </p>
+
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    3. Target Ekstrakulikuler Baca & Tulis Al-Qur'an
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                <h4>Target Ekstrakulikuler Baca & Tulis Al-Qur'an</h4>
+                <p>
+                    Siswa mampu membaca dan menulis Al-Qur'an
+                </p>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
 
 
 
@@ -163,7 +216,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo01@yahoo.co.id </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -216,7 +269,7 @@
 
     <div class="footerCopyright">
         <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>sdnjatimulyo144@gmail.com</span>
+            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
 </body>

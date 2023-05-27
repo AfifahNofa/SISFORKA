@@ -28,7 +28,8 @@
                                         {{ session('success') }}
                                     </div>
                                 @endif
-                                <a href="{{ url('guru/create') }}" class="btn btn-sm btn-success my-2">Tambah Data</a>
+                                <a href="{{ url('ekstrakulikuler/create') }}" class="btn btn-sm btn-success my-2">Tambah
+                                    Data</a>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
@@ -36,24 +37,26 @@
                                             <th>Kode</th>
                                             <th>Nama</th>
                                             <th>Foto</th>
-                                            <th>Jabatan</th>
+                                            <th>Materi</th>
+                                            <th>Target</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if ($guru->count() > 0)
-                                            @foreach ($guru as $g => $t)
+                                        @if ($ekstrakulikuler->count() > 0)
+                                            @foreach ($ekstrakulikuler as $e => $k)
                                                 <tr>
-                                                    <td>{{ ++$g }}</td>
-                                                    <td>{{ $t->kode }}</td>
-                                                    <td>{{ $t->nama }}</td>
+                                                    <td>{{ ++$e }}</td>
+                                                    <td>{{ $k->kode }}</td>
+                                                    <td>{{ $k->nama }}</td>
                                                     <td>
-                                                        @if ($t->foto)
+                                                        @if ($k->foto)
                                                             <img style="max-width:100px;max-height:100px"
-                                                                src="{{ asset('storage/' . $t->foto) }}" />
+                                                                src="{{ asset('storage/' . $k->foto) }}" />
                                                         @endif
                                                     </td>
-                                                    <td>{{ $t->jabatan }}</td>
+                                                    <td>{{ $k->materi }}</td>
+                                                    <td>{{ $k->target }}</td>
 
                                                     <td>
                                                         <!-- Bikin tombol edit dan delete -->
@@ -64,7 +67,8 @@
                                                       class="btn btn-sm btn-primary mr-2">show</a>
                                                   <a href="{{ route('mahasiswamatakuliah.show', [$m->id]) }}"
                                                       class="btn btn-sm btn-success mr-2">nilai</a> --}}
-                                                            <form method="POST" action="{{ url('/guru/' . $t->id) }}">
+                                                            <form method="POST"
+                                                                action="{{ url('/ekstrakulikuler/' . $k->id) }}">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button type="submit"
