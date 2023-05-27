@@ -141,7 +141,20 @@
         </thead>
 
         <tbody>
+            @if ($siswa->count() > 0)
+            @foreach ($siswa as $s => $st)
+                <tr>
+                    <td>{{ ++$s }}</td>
+                    <td>{{ $st->kelas }}</td>
+                    <td>{{ $st->jumlah }}</td>
+                </tr>
+            @endforeach
+        @else
             <tr>
+                <td colspan="6" class="text-center">Data tidak ada</td>
+            </tr>
+        @endif
+            {{-- <tr>
                 <td>1</td>
                 <td>Kelas I</td>
                 <td>30</td>
@@ -175,7 +188,7 @@
                 <td>6</td>
                 <td>Kelas IV</td>
                 <td>32</td>
-            </tr>
+            </tr> --}}
 
         </tbody>
     </table>
