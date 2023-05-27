@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
+use App\Models\SiswaModel;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -55,6 +56,10 @@ class IndexController extends Controller
     public function ppdb()
     {
         return view('user.ppdb');
+    }
+    public function kalender()
+    {
+        return view('user.kalender');
     }
     public function galeri()
     {

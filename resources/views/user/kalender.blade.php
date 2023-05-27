@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Artikel SDN Jatimulyo 1</title>
+    <title>Kalender</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -69,140 +69,60 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profil
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
-
-                        </div>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Program
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
-                    </li>
-
-                    <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
+                        </div>
                     </li>
 
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
-
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+
+                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
+
+                    <button class="btn btn-success sm-0" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                </form>
             </div>
 
         </div>
     </nav>
 
-    <div class="title">
-        <h1 class="text-center">Detail Data Siswa</h1>
+    <div class="container titleArtikel" style="text-align: center;">
+        <h1 style="font-size: 30px;">INFORMASI KALENDER AKADEMIK TAHUN AJARAN 2022-2023</h1>
     </div>
 
 
+    <div class="container kalender">
+        <a href="{{ url('/kalender') }}" class="text-decoration-none">
+            <div class="poster" style="text-align: center;">
+                <img src="images/kalender1.jpg" alt="poster1" width="800" height="500">
+            </div>
+        </a>
+        <p></p>
+        <p></p>
+        <a href="{{ url('/kalender') }}" class="text-decoration-none">
+            <div class="poster" style="text-align: center;">
+                <img src="images/kalender2.jpg" alt="poster1" width="800" height="500">
+            </div>
+        </a>
+    </div>
 
-    <table class="table-bordered table table-hover table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>No</th>
-                <th>Kelas</th>
-                <th>Jumlah</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @if ($siswa->count() > 0)
-            @foreach ($siswa as $s => $st)
-                <tr>
-                    <td>{{ ++$s }}</td>
-                    <td>{{ $st->kelas }}</td>
-                    <td>{{ $st->jumlah }}</td>
-                </tr>
-            @endforeach
-        @else
-            <tr>
-                <td colspan="6" class="text-center">Data tidak ada</td>
-            </tr>
-        @endif
-            {{-- <tr>
-                <td>1</td>
-                <td>Kelas I</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Kelas II</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Kelas III</td>
-                <td>32</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Kelas IV</td>
-                <td>33</td>
-            </tr>
-
-            <tr>
-                <td>5</td>
-                <td>Kelas V</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>6</td>
-                <td>Kelas IV</td>
-                <td>32</td>
-            </tr> --}}
-
-        </tbody>
-    </table>
-
-    <!--
-    <div class="container artikelPagination">
-        <i class="fas fa-angle-left"></i>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <i class="fas fa-angle-right"></i>
-    </div> -->
 
 
 
@@ -223,6 +143,7 @@
         </a>
 
     </div>
+
     <div class="footer">
 
         <div class="container">
@@ -234,7 +155,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -244,7 +165,8 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
+                            </p>
                         </div>
 
 
@@ -283,8 +205,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="footerCopyright">
         <p class="text-white">

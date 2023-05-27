@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Artikel SDN Jatimulyo 1</title>
+    <title>SDN JATIMULYO 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -119,90 +119,84 @@
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
 
+
                 </ul>
             </div>
-
         </div>
     </nav>
 
     <div class="title">
-        <h1 class="text-center">Detail Data Siswa</h1>
+        <h1 class="text-center">Sarana Dan Prasarana SDN Jatimulyo 1</h1>
     </div>
+    <div class="containerGuruHome container">
+        <div class="guruHome">
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+            <h3>Tempat Ibadah</h3>
+            <p>Jumlah 1</p>
+        </a>
 
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Kelas</h3>
+        <p>Jumlah 1</p>
+         </a>
 
+         <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lab.Komputer</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-    <table class="table-bordered table table-hover table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>No</th>
-                <th>Kelas</th>
-                <th>Jumlah</th>
-            </tr>
-        </thead>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lab.Komputer</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-        <tbody>
-            @if ($siswa->count() > 0)
-            @foreach ($siswa as $s => $st)
-                <tr>
-                    <td>{{ ++$s }}</td>
-                    <td>{{ $st->kelas }}</td>
-                    <td>{{ $st->jumlah }}</td>
-                </tr>
-            @endforeach
-        @else
-            <tr>
-                <td colspan="6" class="text-center">Data tidak ada</td>
-            </tr>
-        @endif
-            {{-- <tr>
-                <td>1</td>
-                <td>Kelas I</td>
-                <td>30</td>
-            </tr>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lab.Bahasa Inggris</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-            <tr>
-                <td>2</td>
-                <td>Kelas II</td>
-                <td>30</td>
-            </tr>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Perpustakaan</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-            <tr>
-                <td>3</td>
-                <td>Kelas III</td>
-                <td>32</td>
-            </tr>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Perpustakaan</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-            <tr>
-                <td>4</td>
-                <td>Kelas IV</td>
-                <td>33</td>
-            </tr>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Ruang Kesehatan</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-            <tr>
-                <td>5</td>
-                <td>Kelas V</td>
-                <td>30</td>
-            </tr>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lapangan Olahraga</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-            <tr>
-                <td>6</td>
-                <td>Kelas IV</td>
-                <td>32</td>
-            </tr> --}}
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lapangan Olahraga</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-        </tbody>
-    </table>
-
-    <!--
-    <div class="container artikelPagination">
-        <i class="fas fa-angle-left"></i>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <i class="fas fa-angle-right"></i>
-    </div> -->
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Ruang Pertemuan</h3>
+        <p>Jumlah 1</p>
+        </a>
+        </div>
+    </div>
 
 
 
@@ -223,6 +217,7 @@
         </a>
 
     </div>
+
     <div class="footer">
 
         <div class="container">
@@ -247,7 +242,6 @@
                             <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
-
                     </div>
 
                 </div>
@@ -258,11 +252,11 @@
 
 
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">About</h4>
+                    <h4 class="my-4 text-center text-white">Tentang</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
+                        <a href="" class="text-white">Kontak</a>
                         <a href="" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
@@ -285,13 +279,16 @@
     </div>
 
 
-
     <div class="footerCopyright">
         <p class="text-white">
             <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
 
+
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
