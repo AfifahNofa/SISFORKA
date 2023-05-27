@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -29,8 +30,10 @@ Route::get('/ppdb', [IndexController::class, 'ppdb']);
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
-Route::get('/dataguru', [IndexController::class, 'dataguru']);
+Route::get('/dataguru', [IndexController::class, 'showGuru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/sarana', [IndexController::class, 'sarana']);
 Route::get('/prestasi', [IndexController::class, 'prestasi']);
+Route::get('/welcome', [IndexController::class, 'welcome']);
+Route::resource('/guru', GuruController::class);
 

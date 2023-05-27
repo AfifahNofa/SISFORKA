@@ -110,9 +110,9 @@
 
         <a href="{{ url('/perArtikel') }}" class="text-decoration-none">
             <div class="perArtikel">
-                <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Artikel">
+                <img src="images/ppdb1.jpeg" alt="Artikel">
                 <div class="textArtikel">
-                    <h3>Cara Membuat Website</h3>
+                    <h3>Pengumuman Pendaftaran Siswa Baru Tahun 2023/2024</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
                         temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
@@ -124,9 +124,9 @@
 
         <a href="perArtikel.html" class="text-decoration-none">
             <div class="perArtikel">
-                <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Artikel">
+                <img src="images/sdn5.jpeg" alt="Artikel">
                 <div class="textArtikel">
-                    <h3>Cara Membuat Website</h3>
+                    <h3>Pelatihan Perilaku Ramah Lingkungan Hidup</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
                         temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
@@ -138,9 +138,9 @@
 
         <a href="perArtikel.html" class="text-decoration-none">
             <div class="perArtikel">
-                <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Artikel">
+                <img src="images/sdn10.jpeg" alt="Artikel">
                 <div class="textArtikel">
-                    <h3>Cara Membuat Website</h3>
+                    <h3>Kunjungan Panti Asuhan</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
                         temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
@@ -152,9 +152,9 @@
 
         <a href="perArtikel.html" class="text-decoration-none">
             <div class="perArtikel">
-                <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Artikel">
+                <img src="images/artikel1.jpeg" alt="Artikel">
                 <div class="textArtikel">
-                    <h3>Cara Membuat Website</h3>
+                    <h3>Menyambut Tahun Baru Islam</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
                         temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis

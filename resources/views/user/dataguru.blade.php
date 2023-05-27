@@ -129,10 +129,22 @@
         <h1 class="text-center">Data Guru SDN Jatimulyo 1</h1>
     </div>
     <div class="containerGuruHome container">
-
         <div class="guruHome">
+            @if($guru->count() > 0)
+            @foreach ($guru as $g)
+            <a class="perGuruHome">
+                <img src="{{ asset('storage/'.$g->foto) }}" alt="Foto Guru">
+                <h3>{{ $g->nama }}</h3>
+                <p>{{ $g->jabatan }}</p>
+            </a>
+            @endforeach
+            @endif
+        </div>
 
-            <a class="perGuruHome" >
+
+    
+
+            {{-- <a class="perGuruHome" >
                 <img src="images/ida.jpeg" alt="Foto Artikel">
                 <h3>NUR FAIDAH, S.Pd., M.Si</h3>
                 <p>Kepala Sekolah</p>
@@ -197,7 +209,7 @@
                 <img src="images/user.png" alt="Foto Artikel">
                 <h3>MAHSUSUS SARIFAH, S. Pd</h3>
                 <p>Guru Bahasa Jawa</p>
-            </a>
+            </a> --}}
 
 
         </div>

@@ -329,10 +329,10 @@ body {
 }
 
 .artikel .perArtikel img {
-  width: 250px;
-  height: 150px;
-  margin-right: 20px;
-  border-radius: 10px;
+  width: 90%;
+  height: 210px;
+  border-radius: 2%;
+  margin-bottom: 10px;
 }
 
 .artikel .perArtikel h3 {
@@ -1116,7 +1116,7 @@ iframe {
   .artikel .perArtikel img {
     width: 100%;
     height: 250px;
-    margin-right: 0;
+    margin-right:0;
     margin-bottom: 10px;
   }
   .artikel .perArtikel .textArtikel h3 {
@@ -1155,6 +1155,18 @@ iframe {
   .shareArtikel img,
   .penulis img {
     width: 50%;
+  }
+  .slideshow .container .mainText .garis {
+    
+    background-color: #fff;
+  }
+  .slideshow .container .mainText h3 {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+  .slideshow .container .mainText h1 {
+    margin: 20px 0 30px 20px;
+    font-size: 1.8rem;
   }
 }
 
@@ -1218,6 +1230,7 @@ iframe {
   }
   .slideshow .container .mainText .garis {
     height: 70px;
+    background-color: #fff;
   }
   .slideshow .container .mainText h3 {
     font-size: 1.2rem;

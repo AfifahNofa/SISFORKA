@@ -136,7 +136,7 @@
                     <div class="mainText">
                         <div class="garis"></div>
                         <h3> Selamat Datang</h3>
-                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
+                        <h1> SDN Jatimulyo 1</h1>
                     </div>
 
                 </div>
@@ -151,7 +151,7 @@
                     <div class="mainText">
                         <div class="garis"></div>
                         <h3> Selamat Datang</h3>
-                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
+                        <h1> SDN Jatimulyo 1 </h1>
                     </div>
                 </div>
             </section>
@@ -165,7 +165,7 @@
                     <div class="mainText">
                         <div class="garis"></div>
                         <h3> Selamat Datang</h3>
-                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
+                        <h1> SDN Jatimulyo 1 </h1>
                     </div>
                 </div>
             </section>
@@ -179,7 +179,7 @@
                     <div class="mainText">
                         <div class="garis"></div>
                         <h3> Selamat Datang</h3>
-                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
+                        <h1> SDN Jatimulyo 1</h1>
                     </div>
                 </div>
             </section>
@@ -193,7 +193,7 @@
                     <div class="mainText">
                         <div class="garis"></div>
                         <h3> Selamat Datang</h3>
-                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
+                        <h1> SDN Jatimulyo 1 </h1>
                     </div>
                 </div>
             </section>
@@ -208,7 +208,7 @@
                     <div class="mainText">
                         <div class="garis"></div>
                         <h3> Selamat Datang</h3>
-                        <h1> SDN Jatimulyo 1 Kota Malang</h1>
+                        <h1> SDN Jatimulyo 1 </h1>
                     </div>
                 </div>
             </section>

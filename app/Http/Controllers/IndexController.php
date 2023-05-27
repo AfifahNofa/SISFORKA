@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GuruModel;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -78,4 +79,14 @@ class IndexController extends Controller
     {
         return view('user.prestasi');
     }
+    public function welcome()
+    {
+        return view('welcome');
+    }
+    public function showGuru()
+{
+    $guru = GuruModel::all(); 
+
+    return view('user.dataguru', ['guru' => $guru]);
+}
 }

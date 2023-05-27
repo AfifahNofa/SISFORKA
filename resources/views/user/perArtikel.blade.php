@@ -106,7 +106,7 @@
         <h2>Cara Membuat Blog dengan Laravel untuk Pemula (Terlengkap!)</h2>
     </div>
 
-    <img src="images/pramuka.jpeg" alt="Img Artikel" class="imgArtikel">
+    <img src="images/ppdb1.jpeg" alt="Img Artikel" class="imgArtikel">
 
 
     <div class="container mainDetailArtikel">
