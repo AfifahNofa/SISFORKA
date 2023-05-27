@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GuruModel;
+use App\Models\SiswaModel;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -84,9 +85,15 @@ class IndexController extends Controller
         return view('welcome');
     }
     public function showGuru()
-{
+    {
     $guru = GuruModel::all(); 
 
     return view('user.dataguru', ['guru' => $guru]);
-}
+    }
+    public function showSiswa()
+    {
+    $siswa = SiswaModel::all(); 
+
+    return view('user.datasiswa', ['siswa' => $siswa]);
+    }
 }

@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\SiswaController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,9 +35,25 @@ Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
 Route::get('/dataguru', [IndexController::class, 'showGuru']);
-Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
+Route::get('/datasiswa', [IndexController::class, 'showSiswa']);
 Route::get('/sarana', [IndexController::class, 'sarana']);
 Route::get('/prestasi', [IndexController::class, 'prestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
-Route::resource('/guru', GuruController::class);
+// Route::resource('/guru', GuruController::class);
+Route::resource('/siswa', SiswaController::class);
+
+Auth::routes();
+Route::get('/logout', [LoginController::class, 'logout']);
+
+Route::get('/tes', function () {
+    echo Hash::make('1') . "<br>";
+    echo Hash::make('1') . "<br>";
+    echo Hash::make('1') . "<br>";
+});
+Route::middleware(['auth'])->group(function () {
+    Route::resource('/guru', GuruController::class);
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+});
+
 
