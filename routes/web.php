@@ -4,6 +4,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +30,7 @@ Route::get('/twisada', [IndexController::class, 'twisada']);
 Route::get('/artikel', [IndexController::class, 'artikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
 Route::get('/ppdb', [IndexController::class, 'ppdb']);
+Route::get('/kalender', [IndexController::class, 'kalender']);
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
@@ -35,5 +39,7 @@ Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/sarana', [IndexController::class, 'sarana']);
 Route::get('/prestasi', [IndexController::class, 'prestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
-Route::resource('/guru', GuruController::class);
+// Route::resource('/guru', GuruController::class);
+
+
 

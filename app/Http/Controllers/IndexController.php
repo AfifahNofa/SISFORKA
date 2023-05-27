@@ -51,6 +51,10 @@ class IndexController extends Controller
     {
         return view('user.ppdb');
     }
+    public function kalender()
+    {
+        return view('user.kalender');
+    }
     public function galeri()
     {
         return view('user.galeri');
@@ -85,7 +89,7 @@ class IndexController extends Controller
     }
     public function showGuru()
 {
-    $guru = GuruModel::all(); 
+    $guru = GuruModel::all();
 
     return view('user.dataguru', ['guru' => $guru]);
 }
