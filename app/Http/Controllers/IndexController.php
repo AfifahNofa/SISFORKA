@@ -73,14 +73,14 @@ class IndexController extends Controller
     {
         return view('user.kontak');
     }
-    public function dataguru()
-    {
-        return view('user.dataguru');
-    }
-    public function datasiswa()
-    {
-        return view('user.datasiswa');
-    }
+    // public function dataguru()
+    // {
+    //     return view('user.dataguru');
+    // }
+    // public function datasiswa()
+    // {
+    //     return view('user.datasiswa');
+    // }
     public function sarana()
     {
         return view('user.sarana');
@@ -99,10 +99,22 @@ class IndexController extends Controller
 
         return view('user.dataguru', ['guru' => $guru]);
     }
+    public function showSiswa()
+    {
+        $siswa = SiswaModel::all();
+
+        return view('user.datasiswa', ['siswa' => $siswa]);
+    }
     public function showBaca()
     {
         $ekstrakulikuler = EkstraModel::all();
         return view('user.ekstra.baca')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showPramuka()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.pramuka')
             ->with('ekstrakulikuler', $ekstrakulikuler);
     }
     public function showKarate()
@@ -123,10 +135,10 @@ class IndexController extends Controller
     //     return view('user.ekstra.baca')
     //     ->with('ekstrakulikuler', $ekstrakulikuler);
     // }
-    public function showEkstra()
-    {
-        $ekstrakulikuler = EkstraModel::all();
-        return view('user.dataekstra')
-            ->with('ekstrakulikuler', $ekstrakulikuler);
-    }
+    // public function showEkstra()
+    // {
+    //     $ekstrakulikuler = EkstraModel::all();
+    //     return view('user.dataekstra')
+    //         ->with('ekstrakulikuler', $ekstrakulikuler);
+    // }
 }

@@ -79,7 +79,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
@@ -100,9 +100,7 @@
 
 
     <div class="title">
-        <h1 class="text-center">Ekstrakulikuler Baca & Tulis Al-Qur'an</h1>
-        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
-        {{-- <p class="text-center">Pilih Kategori Untuk Melihat Galeri Kami</p> --}}
+        <h3 class="titleEkstrakulikuler">Ekstrakulikuler Baca Tulis Al-Qur'an</h3>
     </div>
 
     <div class="accordion" id="accordionExample">
@@ -121,7 +119,8 @@
                     <div class="pembinaEkstrakulikuler">
                         @if ($ekstrakulikuler->count() > 0)
                             @php
-                                $e = $ekstrakulikuler->first();
+                               $id = 1; 
+                                $e = $ekstrakulikuler->find($id);
                             @endphp
                             <div class="perPembina">
                                 <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
@@ -129,10 +128,10 @@
                             </div>
                         @endif
 
-                        <div class="perPembina">
+                        {{-- <div class="perPembina">
                             <img src="images/karate2.jpeg" alt="Pembina Ekstrakulikuler">
                             <h5>Tulis Al-Qur'an</h5>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
@@ -151,11 +150,18 @@
 
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <h4>Materi</h4>
+                    @if ($ekstrakulikuler->count() > 0)
+                    @php
+                        $id = 1; 
+                        $e = $ekstrakulikuler->find($id);
+                    @endphp
+                    <div class="perPembina">
+                        <h4>Materi</h4>
                     <p>
-                        <li>Membaca Iqra
-                        <li>Tulis Huruf Hijaiyah</li>
+                        <li>{{ $e->materi }}</li>
                     </p>
+                    </div>
+                    @endif
 
                 </div>
             </div>
@@ -173,12 +179,14 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
-                <h4>Target Ekstrakulikuler Baca & Tulis Al-Qur'an</h4>
-                <p>
-                    Siswa mampu membaca dan menulis Al-Qur'an
-                </p>
-                </tbody>
-                </table>
+                @if ($ekstrakulikuler->count() > 0)
+                @php
+                    $id = 1; 
+                    $e = $ekstrakulikuler->find($id);
+                @endphp
+                <h4>Target</h4>
+                <p>{{$e->target}}</p>
+                @endif
             </div>
         </div>
     </div>

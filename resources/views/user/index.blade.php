@@ -92,7 +92,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
@@ -314,7 +314,7 @@
             <div class="programHome">
 
 
-                <a class="perProgramHome" href="{{ url('/ekstrakulikuler') }}">
+                <a class="perProgramHome" href="{{ url('/dataekstra') }}">
                     <img src="images/ekstra1.jpeg" alt="Foto Program">
                     <h3>Ekstrakulikuler</h3>
                     <p>

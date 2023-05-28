@@ -79,7 +79,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
@@ -110,9 +110,10 @@
     </div>
 
 
-
-    @if ($ekstrakulikuler->count() > 0)
-        @foreach ($ekstrakulikuler as $e)
+    {{-- @if ($ekstrakulikuler->count() > 0)
+            @php
+            $e = $ekstrakulikuler->first();
+            @endphp
             <div class="container ekstrakulikuler">
                 <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
                     <div class="gambarEkstrakulikuler">
@@ -120,28 +121,58 @@
                     </div>
                     <p>{{ $e->nama }}</p>
                 </a>
-
-                {{-- <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
-            <p>Baca & Tulis Al-Qur'an</p>
-        </a>
-
-        <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
-            <p>TIK</p>
-        </a>
-
-        <a href="{{ url('/pramuka') }}" class="perEkstrakulikuler">
-            <p>Pramuka</p>
-        </a>
-
-        <a href="{{ url('/drumband') }}" class="perEkstrakulikuler">
-            <p>Drumband</p> --}}
-                {{-- </a> --}}
-
             </div>
-        @endforeach
-    @endif
-    </div>
-    </div>
+    @endif --}}
+
+
+   
+        <div class="container ekstrakulikuler">
+
+            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+                <div class="gambarEkstrakulikuler">
+                <img src="images/baca-tulis.jpeg" alt="FotoEkstra">
+                </div>
+                <p>Baca & Tulis Al-Qur'an</p>
+            </a>
+
+            <a href="{{ url('/pramuka') }}" class="perEkstrakulikuler">
+                <div class="gambarEkstrakulikuler">
+                <img src="images/pramuka.jpeg" alt="FotoEkstra">
+                </div>
+                <p>Pramuka</p>
+            </a>
+
+            <a href="{{ url('/karate') }}" class="perEkstrakulikuler">
+                <div class="gambarEkstrakulikuler">
+                <img src="images/karatee.jpg" alt="FotoEkstra">
+                </div>
+                <p>Karate</p>
+            </a>
+
+            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+                <div class="gambarEkstrakulikuler">
+                <img src="images/ekstra1.jpeg" alt="FotoEkstra">
+                </div>
+                <p>Tari</p>
+            </a>
+
+            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+                <div class="gambarEkstrakulikuler">
+                <img src="images/komputer.jpeg" alt="FotoEkstra">
+                </div>
+                <p>Komputer</p>
+            </a>
+
+            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+                <div class="gambarEkstrakulikuler">
+                <img src="images/drumband1.jpeg" alt="FotoEkstra">
+                </div>
+                <p>DrumBand</p>
+            </a>
+
+        </div>
+   
+     
 
 
 

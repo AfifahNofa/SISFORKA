@@ -209,7 +209,7 @@
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
                         <a href="" class="text-white">Contact Us</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
+                        <a href="" class="text-white">dataekstrar</a>
                     </div>
                 </div>
 

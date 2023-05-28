@@ -79,7 +79,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
@@ -98,13 +98,9 @@
         </div>
     </nav>
 
-
-    <div class="containerEkstra"></div>
-
-
-
-    <div class="container">
+    <div class="title">
         <h3 class="titleEkstrakulikuler">Ekstrakulikuler Pramuka</h3>
+    </div>
 
         <div class="accordion" id="accordionExample">
             <div class="card">
@@ -121,10 +117,17 @@
                     <div class="card-body">
                         <div class="pembinaEkstrakulikuler">
 
+                            @if ($ekstrakulikuler->count() > 0)
+                            @php
+                               $id = 2; 
+                                $e = $ekstrakulikuler->find($id);
+                            @endphp
                             <div class="perPembina">
-                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
-                                <h5>Jabut Martono</h5>
+                                <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
+                                <h5>{{ $e->nama }}</h5>
                             </div>
+                            @endif
+
                         </div>
                     </div>
                 </div>
@@ -142,11 +145,18 @@
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                        <h4>Materi</h4>
+                        @if ($ekstrakulikuler->count() > 0)
+                        @php
+                            $id = 2; 
+                            $e = $ekstrakulikuler->find($id);
+                        @endphp
+                        <div class="perPembina">
+                            <h4>Materi</h4>
                         <p>
-                            <li>Dasa Dharma Pramuka</li>
-                            <li>Perkemahan </li>
+                            <li>{{ $e->materi }}</li>
                         </p>
+                        </div>
+                        @endif
 
                         {{-- <h4>Target Ekstrakulikuler</h4>
                         <div class="fasilitas d-flex my-4">
@@ -175,11 +185,14 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
+                    @if ($ekstrakulikuler->count() > 0)
+                    @php
+                        $id = 2; 
+                        $e = $ekstrakulikuler->find($id);
+                    @endphp
                     <h4>Target</h4>
-                    <p>
-                        <li>Siswa mampu mengenal dasa dharma pramuka </li>
-                        <li>siswa mampu mengerti alat bahan perkemahan dan melaksanakannya ketika kelas 5 </li>
-                    </p>
+                    <p>{{$e->target}}</p>
+                    @endif
 
                     {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
