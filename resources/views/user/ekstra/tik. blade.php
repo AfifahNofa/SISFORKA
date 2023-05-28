@@ -15,37 +15,26 @@
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <!-- boot -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 
 
     <!-- lightslider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
-        integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
-        integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -57,8 +46,7 @@
                 <h1>SD Negeri 1<br>Jatimulyo</h1>
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -73,8 +61,7 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             More
                         </a>
 
@@ -99,60 +86,56 @@
     </nav>
 
 
-    <div class="title">
-        <h1 class="text-center">Ekstrakulikuler Karate</h1>
-        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
-        {{-- <p class="text-center">Pilih Kategori Untuk Melihat Galeri Kami</p> --}}
-    </div>
+    <div class="containerEkstra"></div>
 
-    <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        1. Ekstrakulikuler Karate
-                    </button>
-                </h2>
-            </div>
 
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div class="pembinaEkstrakulikuler">
 
-                        <div class="perPembina">
-                            <img src="images/karate1.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
+    <div class="container">
+        <h3 class="titleEkstrakulikuler">Ekstrakulikuler TIK</h3>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            1. Pembina Ekstrakulikuler TIK
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="pembinaEkstrakulikuler">
+
+                            <div class="perPembina">
+                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
+                                <h5>Jabut Martono</h5>
+                            </div>
                         </div>
-
-                        <div class="perPembina">
-                            <img src="images/karate2.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        2. Materi Ekstrakulikuler Karate
-                    </button>
-                </h2>
-            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            2. Materi Ekstrakulikuler TIK
+                        </button>
+                    </h2>
+                </div>
 
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h4>Materi</h4>
-                    <p>
-                        <li>Gerakan Dasar Pukulan Ouzuki Jodan dan Gerakan Tendangan Maigeri Mawashi Keikomi Geri</li>
-                    </p>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h4>Materi</h4>
+                        <p>
+                            <li>Pengenalan komputer hardware </li>
+                            <li>Microsoft word </li>
+                            <li>Microsoft Excel</li>
+                            <li>Power point interaktif </li>
+                        </p>
 
-                    {{-- <h4>Target Ekstrakulikuler</h4>
+                        {{-- <h4>Target Ekstrakulikuler</h4>
                         <div class="fasilitas d-flex my-4">
 
                             <ul class="mx-3">
@@ -163,31 +146,31 @@
                                 <li>Rumput Sistetis</li>
                             </ul> --}}
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    3. Target Ekstrakulikuler Karate
-                </button>
-            </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-                <h4>Target Ekstrakulikuler Karate</h4>
-                <p>
-                    Siswa mampu menguasai dan mempraktikkan gerakan dasar
-                    ouzuki chudan,ouzuki jodan, gerakan tendangan maegeri
-                    dengan baik dan benar
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. Target Ekstrakulikuler TIK
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h4>Target</h4>
+                    <p>
+                        <li>Siswa mampu mengenal hardware komputer</li>
+                        <li>Siswa mampu mengoperasionalkan microsoft dan microsoft excel </li>
+                        <li>Siswa mampu menoperasionalkan power point interaktif </li>
 
-                </p>
 
-                {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    </p>
+
+                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
                         <table class="table-bordered table table-hover table-striped">
                             <thead class="thead-dark">
@@ -203,11 +186,11 @@
                                     <td>Juara 1 Lomba Mancing</td>
                                     <td>Kimak Bersaudara</td>
                                 </tr> --}}
-                </tbody>
-                </table>
+                    </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
 
@@ -281,8 +264,7 @@
                     <form>
 
                         <div class="form-group">
-                            <input class="form-control" type="search" placeholder="Example@gmail.com"
-                                aria-label="Search">
+                            <input class="form-control" type="search" placeholder="Example@gmail.com" aria-label="Search">
                             <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
                         </div>
 

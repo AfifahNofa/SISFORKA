@@ -104,7 +104,7 @@
 
 
     <div class="container">
-        <h3 class="titleEkstrakulikuler">Ekstrakulikuler Twisada</h3>
+        <h3 class="titleEkstrakulikuler">Ekstrakulikuler Drumband</h3>
 
         <div class="accordion" id="accordionExample">
             <div class="card">
@@ -112,7 +112,7 @@
                     <h2 class="mb-0">
                         <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            1. Pembina Ekstrakulikuler Twisada
+                            1. Pembina Ekstrakulikuler Drumband
                         </button>
                     </h2>
                 </div>
@@ -135,7 +135,7 @@
                     <h2 class="mb-0">
                         <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            2. Materi Ekstrakulikuler Twisada
+                            2. Materi Ekstrakulikuler Drumband
                         </button>
                     </h2>
                 </div>
@@ -143,10 +143,8 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <h4>Materi</h4>
-                        <p>
-                            <li> Pengenalan UKS</li>
-                            <li>Pencegahan pertolongan pertama di rumah (segala penyakit) </li>
-                        </p>
+                        <p> Bermain alat musik pianika, drum</p>
+
 
                         {{-- <h4>Target Ekstrakulikuler</h4>
                         <div class="fasilitas d-flex my-4">
@@ -169,7 +167,7 @@
                 <h2 class="mb-0">
                     <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        3. Target Ekstrakulikuler Twisada
+                        3. Target Ekstrakulikuler Drumband
                     </button>
                 </h2>
             </div>
@@ -177,9 +175,8 @@
                 <div class="card-body">
                     <h4>Target</h4>
                     <p>
-                        <li>Siswa mampu mengenal dan memahami tentang UKS </li>
-                        <li>siswa mampu melakukan pencegahan dan dirumah tindakan pertlongan pertama ketika ada kendala
-                            sakit </li>
+                        <li> Siswa mampu menggunakan alat musik sesuai bagiannya masing-masing</li>
+
                     </p>
 
                     {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">

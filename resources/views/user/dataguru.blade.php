@@ -93,7 +93,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
@@ -130,89 +130,17 @@
     </div>
     <div class="containerGuruHome container">
         <div class="guruHome">
-            @if($guru->count() > 0)
-            @foreach ($guru as $g)
-            <a class="perGuruHome">
-                <img src="{{ asset('storage/'.$g->foto) }}" alt="Foto Guru">
-                <h3>{{ $g->nama }}</h3>
-                <p>{{ $g->jabatan }}</p>
-            </a>
-            @endforeach
+            @if ($guru->count() > 0)
+                @foreach ($guru as $g)
+                    <a class="perGuruHome">
+                        <img src="{{ asset('storage/' . $g->foto) }}" alt="Foto Guru">
+                        <h3>{{ $g->nama }}</h3>
+                        <p>{{ $g->jabatan }}</p>
+                    </a>
+                @endforeach
             @endif
         </div>
-
-
-    
-
-            {{-- <a class="perGuruHome" >
-                <img src="images/ida.jpeg" alt="Foto Artikel">
-                <h3>NUR FAIDAH, S.Pd., M.Si</h3>
-                <p>Kepala Sekolah</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/erna.jpeg" alt="Foto Artikel">
-                <h3>ERNA,S.Pd</h3>
-                <p>Guru Kelas 1</p>
-            </a>
-
-
-            <a class="perGuruHome" >
-                <img src="images/naning.jpeg" alt="Foto Artikel">
-                <h3>NANING WAHYUNINGSIH, S.Pd </h3>
-                <p>Guru Kelas 2</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/tri.jpeg" alt="Foto Artikel">
-                <h3>TRIONO RIADIANTO, S.Pd</h3>
-                <p>Guru Kelas 3</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/yuni.jpeg" alt="Foto Artikel">
-                <h3>TITIS WAHYUNI, S.Pd</h3>
-                <p>Guru Kelas 4</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/eva.jpeg" alt="Foto Artikel">
-                <h3>EVA LIA MITANIA DEWI, S.Pd</h3>
-                <p>Guru Kelas 5</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/tina.jpeg" alt="Foto Artikel">
-                <h3>TITIN AGUSTINA, S.Pd. SD</h3>
-                <p>Guru Kelas 6</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/ajeng.jpeg" alt="Foto Artikel">
-                <h3>DEAJENG PUTRI DEVI, S.Pd</h3>
-                <p>Guru Pendidikan Agama Islam </p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/sulaiman.jpeg" alt="Foto Artikel">
-                <h3>SULAIMAN, S.Hum</h3>
-                <p>Guru Bahasa Inggris</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/user.png" alt="Foto Artikel">
-                <h3>MAHSUSUS SARIFAH, S. Pd</h3>
-                <p>Guru Bahasa Jawa</p>
-            </a>
-
-            <a class="perGuruHome" >
-                <img src="images/user.png" alt="Foto Artikel">
-                <h3>MAHSUSUS SARIFAH, S. Pd</h3>
-                <p>Guru Bahasa Jawa</p>
-            </a> --}}
-
-
-        </div>
+    </div>
     </div>
 
 

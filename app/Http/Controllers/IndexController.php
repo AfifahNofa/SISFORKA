@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EkstraModel;
 use App\Models\GuruModel;
 use App\Models\SiswaModel;
 use Illuminate\Http\Request;
@@ -12,13 +13,21 @@ class IndexController extends Controller
     {
         return view('user.index');
     }
-    public function ekstrakulikuler()
+    public function dataekstra()
     {
-        return view('user.ekstrakulikuler');
+        return view('user.dataekstra');
     }
     public function visimisi()
     {
         return view('user.visimisi');
+    }
+    public function baca()
+    {
+        return view('user.ekstra.baca');
+    }
+    public function drumband()
+    {
+        return view('user.ekstra.drumband');
     }
     public function karate()
     {
@@ -28,17 +37,13 @@ class IndexController extends Controller
     {
         return view('user.ekstra.menari');
     }
-    public function inggris()
+    public function pramuka()
     {
-        return view('user.ekstra.inggris');
+        return view('user.ekstra.pramuka');
     }
     public function tik()
     {
         return view('user.ekstra.tik');
-    }
-    public function twisada()
-    {
-        return view('user.ekstra.twisada');
     }
     public function artikel()
     {
@@ -51,6 +56,10 @@ class IndexController extends Controller
     public function ppdb()
     {
         return view('user.ppdb');
+    }
+    public function kalender()
+    {
+        return view('user.kalender');
     }
     public function galeri()
     {
@@ -86,14 +95,38 @@ class IndexController extends Controller
     }
     public function showGuru()
     {
-    $guru = GuruModel::all(); 
+        $guru = GuruModel::all();
 
-    return view('user.dataguru', ['guru' => $guru]);
+        return view('user.dataguru', ['guru' => $guru]);
     }
-    public function showSiswa()
+    public function showBaca()
     {
-    $siswa = SiswaModel::all(); 
-
-    return view('user.datasiswa', ['siswa' => $siswa]);
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.baca')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showKarate()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.karate')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    // public function showBaca()
+    // {
+    //     $ekstrakulikuler = EkstraModel::all();
+    //     return view('user.ekstra.baca')
+    //     ->with('ekstrakulikuler', $ekstrakulikuler);
+    // }
+    // public function showBaca()
+    // {
+    //     $ekstrakulikuler = EkstraModel::all();
+    //     return view('user.ekstra.baca')
+    //     ->with('ekstrakulikuler', $ekstrakulikuler);
+    // }
+    public function showEkstra()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.dataekstra')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
     }
 }

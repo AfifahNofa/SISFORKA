@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler Karate SDN Jatimulyo 1 </title>
+    <title>Prestasi SDN Jatimulyo 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
@@ -69,21 +68,21 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
-                    </li>
-
-                    <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             More
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
                     </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
 
@@ -95,119 +94,66 @@
 
                 </form>
             </div>
+
         </div>
     </nav>
 
 
-    <div class="containerEkstra"></div>
-
-
+    <div class="title">
+        <h1 class="text-center">PRESTASI</h1>
+        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
+        <p class="text-center">Prestasi SDN Jatimulyo 1</p>
+    </div>
 
     <div class="container">
-        <h3 class="titleEkstrakulikuler">Ekstrakulikuler Bahasa Inggris</h3>
+        <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Foto Kegiatan</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
 
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            1. Pembina Ekstrakulikuler Bahasa Inggris
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <div class="pembinaEkstrakulikuler">
-
-                            <div class="perPembina">
-                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
-                                <h5>Jabut Martono</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            2. Materi Ekstrakulikuler Bahasa Inggris
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <h4>Materi</h4>
-                        <p>
-                            English For Children,
-                            meliputi: Dasar pengetahuan Bahasa Inggris dalam hal
-                            speaking skill, listening skill, reading skill dan writing skill
-                        </p>
-
-                        {{-- <h4>Target Ekstrakulikuler</h4>
-                        <div class="fasilitas d-flex my-4">
-
-                            <ul class="mx-3">
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                            </ul> --}}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        3. Target Ekstrakulikuler Bahasa Inggris
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h4>Target</h4>
-                    <p>
-                        <li>Siswa mampu berkomunikasi Bahasa Inggris dengan lancar dan percaya diri </li>
-                        <li>Siswa mempunyai dasar Bahasa Inggris secara akademik </li>
+            <tbody>
+                <tr>
+                    <td><img width="400" height="300" src="images/5e72f65c1f909-teamwork-desktop2.jpg"
+                            alt=""></td>
+                    <td>Pramuka</td>
+                </tr>
 
 
-                    </p>
+                <tr>
+                    <td><img width="100" height="50" src="images/5e72f68fbd34a-excellent-desktop2.jpg"
+                            alt=""></td>
+                    <td>Pramuka</td>
+                </tr>
 
-                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table-bordered table table-hover table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Kejuaraan</th>
-                                    <th>Atas Nama</th>
-                                </tr>
-                            </thead>
+                <tr>
+                    <td><img width="100" height="50" src="images/5e72f68fbd34a-excellent-desktop2.jpg"
+                            alt=""></td>
+                    <td>Pramuka</td>
+                </tr>
 
-                                <tr>
-                                    <td>5</td>
-                                    <td>Juara 1 Lomba Mancing</td>
-                                    <td>Kimak Bersaudara</td>
-                                </tr> --}}
-                    </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+                <tr>
+                    <td><img width="100" height="50" src="images/5e72f68fbd34a-excellent-desktop2.jpg"
+                            alt=""></td>
+                    <td>Pramuka</td>
+                </tr>
+
+                <tr>
+                    <td><img width="100" height="50" src="images/5e72f68fbd34a-excellent-desktop2.jpg"
+                            alt=""></td>
+                    <td>Pramuka</td>
+                </tr>
+
+                <tr>
+                    <td><img width="100" height="50" src="images/5e72f68fbd34a-excellent-desktop2.jpg"
+                            alt=""></td>
+                    <td>Pramuka</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    </div>
-
 
 
 
@@ -239,7 +185,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -252,18 +198,13 @@
                             <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
-
                     </div>
 
                 </div>
 
 
-
-
-
-
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
+                    <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
@@ -288,6 +229,7 @@
             </div>
         </div>
     </div>
+
 
 
     <div class="footerCopyright">

@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Ekstrakulikuler Karate SDN Jatimulyo 1 </title>
+    <title>SDN JATIMULYO 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -69,146 +69,133 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+
+                        </div>
                     </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
+                            Program
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
                             <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
+                            <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
                         </div>
                     </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    </li>
+
+
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
         </div>
     </nav>
 
-
     <div class="title">
-        <h1 class="text-center">Ekstrakulikuler Karate</h1>
-        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
-        {{-- <p class="text-center">Pilih Kategori Untuk Melihat Galeri Kami</p> --}}
+        <h1 class="text-center">Sarana Dan Prasarana SDN Jatimulyo 1</h1>
     </div>
+    <div class="containerGuruHome container">
+        <div class="guruHome">
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+            <h3>Tempat Ibadah</h3>
+            <p>Jumlah 1</p>
+        </a>
 
-    <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        1. Ekstrakulikuler Karate
-                    </button>
-                </h2>
-            </div>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Kelas</h3>
+        <p>Jumlah 1</p>
+         </a>
 
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div class="pembinaEkstrakulikuler">
+         <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lab.Komputer</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-                        <div class="perPembina">
-                            <img src="images/karate1.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
-                        </div>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lab.Komputer</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-                        <div class="perPembina">
-                            <img src="images/karate2.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
-                        </div>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lab.Bahasa Inggris</h3>
+        <p>Jumlah 1</p>
+        </a>
 
-                    </div>
-                </div>
-            </div>
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Perpustakaan</h3>
+        <p>Jumlah 1</p>
+        </a>
+
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Perpustakaan</h3>
+        <p>Jumlah 1</p>
+        </a>
+
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Ruang Kesehatan</h3>
+        <p>Jumlah 1</p>
+        </a>
+
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lapangan Olahraga</h3>
+        <p>Jumlah 1</p>
+        </a>
+
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Lapangan Olahraga</h3>
+        <p>Jumlah 1</p>
+        </a>
+
+        <a class="perGuruHome">
+            <img src="images/erna.jpeg" alt="Foto Artikel">
+        <h3>Ruang Pertemuan</h3>
+        <p>Jumlah 1</p>
+        </a>
         </div>
-
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        2. Materi Ekstrakulikuler Karate
-                    </button>
-                </h2>
-            </div>
-
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h4>Materi</h4>
-                    <p>
-                        <li>Gerakan Dasar Pukulan Ouzuki Jodan dan Gerakan Tendangan Maigeri Mawashi Keikomi Geri</li>
-                    </p>
-
-                    {{-- <h4>Target Ekstrakulikuler</h4>
-                        <div class="fasilitas d-flex my-4">
-
-                            <ul class="mx-3">
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                            </ul> --}}
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    3. Target Ekstrakulikuler Karate
-                </button>
-            </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-                <h4>Target Ekstrakulikuler Karate</h4>
-                <p>
-                    Siswa mampu menguasai dan mempraktikkan gerakan dasar
-                    ouzuki chudan,ouzuki jodan, gerakan tendangan maegeri
-                    dengan baik dan benar
-
-                </p>
-
-                {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table-bordered table table-hover table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Kejuaraan</th>
-                                    <th>Atas Nama</th>
-                                </tr>
-                            </thead>
-
-                                <tr>
-                                    <td>5</td>
-                                    <td>Juara 1 Lomba Mancing</td>
-                                    <td>Kimak Bersaudara</td>
-                                </tr> --}}
-                </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    </div>
     </div>
 
 
@@ -255,7 +242,6 @@
                             <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
 
-
                     </div>
 
                 </div>
@@ -270,7 +256,7 @@
                     <div class="footerAbout">
                         <a href="" class="text-white">Artikel</a>
                         <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
+                        <a href="" class="text-white">Kontak</a>
                         <a href="" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
@@ -298,6 +284,11 @@
             <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
+
+
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
