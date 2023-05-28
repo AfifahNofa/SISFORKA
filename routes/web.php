@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/visimisi', [IndexController::class, 'visimisi']);
 Route::get('/karate', [IndexController::class, 'karate']);
@@ -61,4 +62,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/ekstrakulikuler', EkstraController::class);
 });
 
+Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
