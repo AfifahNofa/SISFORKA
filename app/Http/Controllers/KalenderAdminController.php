@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SiswaModel;
 use Illuminate\Http\Request;
 
-class SiswaController extends Controller
+class KalenderAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $siswa = SiswaModel::all();
-        return view('admin.siswa.siswa', ['siswa' => $siswa]);
+        //
     }
 
     /**
@@ -25,8 +23,7 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        return view('admin.siswa.create_siswa')
-            ->with('url_form', route('siswa.store'));
+        //
     }
 
     /**
@@ -37,15 +34,7 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-
-        $request->validate([
-            'kelas' => 'required|string|max:6',
-            'jumlah' => 'required|integer',
-        ]);
-        $data = SiswaModel::create($request->except(['_token']));
-        //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect('siswa')
-            ->with('success', 'Data Siswa Berhasil Ditambahkan');
+        //
     }
 
     /**
@@ -67,10 +56,7 @@ class SiswaController extends Controller
      */
     public function edit($id)
     {
-        $siswa = SiswaModel::find($id);
-        return view('admin.siswa.create_siswa')
-            ->with('siswa', $siswa)
-            ->with('url_form', url('/siswa/' . $id));
+        //
     }
 
     /**
@@ -82,14 +68,7 @@ class SiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'kelas' => 'required|string|max:6' . $id,
-            'jumlah' => 'required|integer',
-        ]);
-
-        $data = SiswaModel::where('id', '=', $id)->update($request->except(['_token', '_method', 'submit']));
-        return redirect('siswa')
-            ->with('success', 'Data Siswa Berhasil Diedit');
+        //
     }
 
     /**
@@ -100,8 +79,6 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        SiswaModel::where('id', '=', $id)->delete();
-        return redirect('siswa')
-            ->with('success', 'Siswa Berhasil Dihapus');
+        //
     }
 }
