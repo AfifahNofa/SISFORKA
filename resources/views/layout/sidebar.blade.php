@@ -43,6 +43,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Ekstrakulikuler</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/prestasi') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Prestasi</span></a>
+    </li>
 
 
 

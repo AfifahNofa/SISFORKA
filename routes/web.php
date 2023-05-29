@@ -6,6 +6,7 @@ use App\Http\Controllers\EkstraController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -42,9 +43,8 @@ Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/dataekstra', [IndexController::class, 'dataekstra']);
 Route::get('/datasiswa', [IndexController::class, 'showSiswa']);
 Route::get('/sarana', [IndexController::class, 'sarana']);
-Route::get('/prestasi', [IndexController::class, 'prestasi']);
+Route::get('/dataprestasi', [IndexController::class, 'showPrestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
-// Route::resource('/guru', GuruController::class);
 
 
 Auth::routes();
@@ -60,6 +60,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/guru', GuruController::class);
     Route::resource('/siswa', SiswaController::class);
     Route::resource('/ekstrakulikuler', EkstraController::class);
+    Route::resource('/prestasi', PrestasiController::class);
 });
 
 Auth::routes();

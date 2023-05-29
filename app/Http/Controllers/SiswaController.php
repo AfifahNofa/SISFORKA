@@ -26,7 +26,7 @@ class SiswaController extends Controller
     public function create()
     {
         return view('admin.siswa.create_siswa')
-        ->with('url_form', route('siswa.store'));
+            ->with('url_form', route('siswa.store'));
     }
 
     /**
@@ -37,15 +37,15 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-    
-    $request->validate([
-        'kelas' => 'required|string|max:6',
-        'jumlah' => 'required|integer',
-    ]);
-    $data = SiswaModel::create($request->except(['_token']));
-    //jika data berhasil ditambahkan, akan kembali ke halaman utama
-    return redirect('siswa')
-        ->with('success', 'Data Siswa Berhasil Ditambahkan');
+
+        $request->validate([
+            'kelas' => 'required|string|max:6',
+            'jumlah' => 'required|integer',
+        ]);
+        $data = SiswaModel::create($request->except(['_token']));
+        //jika data berhasil ditambahkan, akan kembali ke halaman utama
+        return redirect('siswa')
+            ->with('success', 'Data Siswa Berhasil Ditambahkan');
     }
 
     /**
@@ -83,7 +83,7 @@ class SiswaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'kelas' => 'required|string|max:6'.$id,
+            'kelas' => 'required|string|max:6' . $id,
             'jumlah' => 'required|integer',
         ]);
 
@@ -102,6 +102,6 @@ class SiswaController extends Controller
     {
         SiswaModel::where('id', '=', $id)->delete();
         return redirect('siswa')
-        ->with('success', 'Siswa Berhasil Dihapus');
+            ->with('success', 'Siswa Berhasil Dihapus');
     }
 }

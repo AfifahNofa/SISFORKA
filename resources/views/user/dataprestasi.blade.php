@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Artikel SDN Jatimulyo 1</title>
+    <title>Prestasi SDN Jatimulyo 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -125,170 +125,104 @@
         </div>
     </nav>
 
-    <div class="title">
-        <h1 class="text-center">Detail Data Siswa</h1>
-    </div>
-    <table class="table-bordered table table-hover table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>No</th>
-                <th>Kelas</th>
-                <th>Jumlah</th>
-            </tr>
-        </thead>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light navbarKu fixed-top">
+            <!-- navbar content -->
+        </nav>
 
-        <tbody>
-            @if ($siswa->count() > 0)
-            @foreach ($siswa as $s => $st)
-                <tr>
-                    <td>{{ ++$s }}</td>
-                    <td>{{ $st->kelas }}</td>
-                    <td>{{ $st->jumlah }}</td>
-                </tr>
-            @endforeach
-        @else
-            <tr>
-                <td colspan="6" class="text-center">Data tidak ada</td>
-            </tr>
-        @endif
-            {{-- <tr>
-                <td>1</td>
-                <td>Kelas I</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Kelas II</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Kelas III</td>
-                <td>32</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Kelas IV</td>
-                <td>33</td>
-            </tr>
-
-            <tr>
-                <td>5</td>
-                <td>Kelas V</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>6</td>
-                <td>Kelas IV</td>
-                <td>32</td>
-            </tr> --}}
-
-        </tbody>
-    </table>
-
-    <!--
-    <div class="container artikelPagination">
-        <i class="fas fa-angle-left"></i>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <i class="fas fa-angle-right"></i>
-    </div> -->
-
-
-
-
-    <!-- sosmed icon -->
-    <div class="iconBox">
-
-        <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
-            <i class="fab fa-youtube"></i>
-        </a>
-
-    </div>
-    <div class="footer">
-
+        <div class="title">
+            <h1 class="text-center">Data Prestasi SDN Jatimulyo 1</h1>
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4 class="my-4 text-white text-center">Kontak Kami</h4>
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($prestasi->count() > 0)
+                        @foreach ($prestasi as $p)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td><img src="{{ asset('storage/' . $p->foto) }}" alt="foto"
+                                        style="max-width: 250px; max-height: 200px;"></td>
+                                <td>{{ $p->keterangan }}</td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="3" class="text-center">Data tidak ada</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+        </div>
 
-                    <div class="footerContactUs">
+        <!-- sosmed icon -->
+        <div class="iconBox">
+            <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
 
-                        <div class="perFooterContactUs">
-                            <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="my-4 text-white text-center">Kontak Kami</h4>
+                        <div class="footerContactUs">
+                            <div class="perFooterContactUs">
+                                <i class="fas text-white fa-envelope"></i>
+                                <p class="text-white">sdnjatimulyo144@gmail.com</p>
+                            </div>
+                            <div class="perFooterContactUs">
+                                <i class="fas text-white fa-phone-alt"></i>
+                                <p class="text-white">0341406468</p>
+                            </div>
+                            <div class="perFooterContactUs">
+                                <i class="fas text-white fa-road"></i>
+                                <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
+                                </p>
+                            </div>
                         </div>
-
-                        <div class="perFooterContactUs">
-                            <i class="fas text-white fa-phone-alt"></i>
-                            <p class="text-white">0341406468</p>
-                        </div>
-
-                        <div class="perFooterContactUs">
-                            <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
-                        </div>
-
-
                     </div>
-
-                </div>
-
-
-
-
-
-
-                <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">About</h4>
-                    <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 text-center">
-                    <h4 class="my-4 text-white">Hubungi Kami</h4>
-                    <form>
-
-                        <div class="form-group">
-                            <input class="form-control" type="search" placeholder="Example@gmail.com"
-                                aria-label="Search">
-                            <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
+                    <div class="col-md-4">
+                        <h4 class="my-4 text-center text-white">About</h4>
+                        <div class="footerAbout">
+                            <a href="" class="text-white">Artikel</a>
+                            <a href="" class="text-white">Galeri</a>
+                            <a href="" class="text-white">Contact Us</a>
+                            <a href="" class="text-white">dataekstrar</a>
                         </div>
-
-                    </form>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h4 class="my-4 text-white">Hubungi Kami</h4>
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="search" placeholder="Example@gmail.com"
+                                    aria-label="Search">
+                                <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
-    <div class="footerCopyright">
-        <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
-        </p>
-    </div>
-
-</body>
+        <div class="footerCopyright">
+            <p class="text-white">
+                <i class="far fa-copyright"></i>
+                copyright By : <span>SDN Jatimulyo 1</span>
+            </p>
+        </div>
+    </body>
 
 </html>

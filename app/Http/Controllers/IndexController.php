@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
+use App\Models\PrestasiModel;
 use App\Models\SiswaModel;
 use Illuminate\Http\Request;
 
@@ -85,9 +86,9 @@ class IndexController extends Controller
     {
         return view('user.sarana');
     }
-    public function prestasi()
+    public function dataprestasi()
     {
-        return view('user.prestasi');
+        return view('user.dataprestasi');
     }
     public function welcome()
     {
@@ -104,6 +105,12 @@ class IndexController extends Controller
         $siswa = SiswaModel::all();
 
         return view('user.datasiswa', ['siswa' => $siswa]);
+    }
+    public function showPrestasi()
+    {
+        $prestasi = PrestasiModel::all();
+
+        return view('user.dataprestasi', ['prestasi' => $prestasi]);
     }
     public function showBaca()
     {
@@ -123,6 +130,7 @@ class IndexController extends Controller
         return view('user.ekstra.karate')
             ->with('ekstrakulikuler', $ekstrakulikuler);
     }
+
     // public function showBaca()
     // {
     //     $ekstrakulikuler = EkstraModel::all();
