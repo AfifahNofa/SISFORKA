@@ -79,7 +79,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
+                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>

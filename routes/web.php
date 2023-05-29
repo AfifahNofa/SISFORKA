@@ -1,11 +1,15 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EkstraController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\KalenderController;
+use App\Http\Controllers\KontakAdminController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -36,6 +40,9 @@ Route::get('/kalender', [IndexController::class, 'kalender']);
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
+Route::get('/kontak', [KontakController::class, 'index'])->name('kontak.index');
+// Route::get('/kontak', [KontakController::class, 'create'])->name('kontak.create');
+Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
 Route::get('/dataguru', [IndexController::class, 'showGuru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/dataekstra', [IndexController::class, 'dataekstra']);
@@ -59,6 +66,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/guru', GuruController::class);
     Route::resource('/siswa', SiswaController::class);
     Route::resource('/ekstrakulikuler', EkstraController::class);
+    Route::resource('/artikeladmin', ArtikelController::class);
+    Route::resource('/kontakadmin', KontakAdminController::class);
+    Route::resource('/kalenderadmin', KalenderController::class);
 });
 
 

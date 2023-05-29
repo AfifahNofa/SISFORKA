@@ -129,24 +129,25 @@
     <div class="container kontak">
 
         <h3 class="mb-4">Hubungi Kami</h3>
-        <form action="">
+        <form method="POST" action="{{ route('kontak.store') }}">
+            @csrf
+
             <div class="formKontakKiri">
                 <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama">
+                    <input type="text" class="form-control" id="nama" name="nama">
                 </div>
 
                 <div class="form-group">
-                    <label for="nama">Email</label>
-                    <input type="email" class="form-control" id="nama">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
 
                 <div class="form-group">
-                    <label for="nama">No Telp</label>
-                    <input type="number" class="form-control" id="nama">
+                    <label for="notelp">No Telp</label>
+                    <input type="number" class="form-control" id="notelp" name="no_telp">
                 </div>
             </div>
-
 
             <div class="formKontakKanan">
                 <div class="form-group">
@@ -154,9 +155,10 @@
                     <textarea name="pesan" id="pesan" cols="30" rows="8" class="form-control"></textarea>
                 </div>
 
-                <button class="btn btn-primary float-right">Kirim</button>
+                <button class="btn btn-primary float-right" type="submit">Kirim</button>
             </div>
         </form>
+
     </div>
 
     <iframe

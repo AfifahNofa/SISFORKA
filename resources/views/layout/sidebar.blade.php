@@ -43,6 +43,23 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Ekstrakulikuler</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/artikeladmin') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Artikel</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/kontakadmin') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Kontak</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/kalenderadmin') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Kalender</span></a>
+    </li>
 
 
 
