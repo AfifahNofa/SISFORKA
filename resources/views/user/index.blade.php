@@ -324,7 +324,7 @@
                     </p>
                 </a>
 
-                <a class="perProgramHome" href="{{ url('/prestasi') }}">
+                <a class="perProgramHome" href="{{ url('/dataprestasi') }}">
                     <img src="images/prestasi1.jpeg" alt="Foto Program">
                     <h3>Prestasi</h3>
                     <p>

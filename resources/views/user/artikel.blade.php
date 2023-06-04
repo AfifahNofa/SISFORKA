@@ -68,34 +68,59 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
 
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+
+                        </div>
+                    </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
+                            Program
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
+                            <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
                         </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
 
+
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
 
         </div>
@@ -163,37 +188,12 @@
                 </div>
             </div>
         </a>
-
-        <a href="perArtikel.html" class="text-decoration-none">
-            <div class="perArtikel">
-                <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Artikel">
-                <div class="textArtikel">
-                    <h3>Cara Membuat Website</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
-                        temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
-                        eveniet! Repellat architecto eos aut, ipsum laborum ratione?
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        <a href="perArtikel.html" class="text-decoration-none">
-            <div class="perArtikel">
-                <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Artikel">
-                <div class="textArtikel">
-                    <h3>Cara Membuat Website</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
-                        temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
-                        eveniet! Repellat architecto eos aut, ipsum laborum ratione?
-                    </p>
-                </div>
-            </div>
-        </a>
     </div>
 
-    <!--
+
+       
+
+{{--     
     <div class="container artikelPagination">
         <i class="fas fa-angle-left"></i>
         <span>1</span>
@@ -202,7 +202,7 @@
         <span>4</span>
         <span>5</span>
         <i class="fas fa-angle-right"></i>
-    </div> -->
+    </div>  --}}
 
 
 
@@ -235,7 +235,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -284,16 +284,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
 
     <div class="footerCopyright">

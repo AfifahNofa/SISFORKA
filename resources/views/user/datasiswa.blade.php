@@ -93,9 +93,9 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/prestasi') }}">Prestasi</a>
+                            <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
                             <div class="dropdown-divider"></div>

@@ -13,6 +13,7 @@ use App\Http\Controllers\KalenderAdminController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\KontakAdminController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -41,7 +42,7 @@ Route::get('/artikel', [IndexController::class, 'artikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
 Route::get('/ppdb', [IndexController::class, 'ppdb']);
 Route::get('/kalender', [IndexController::class, 'kalender']);
-Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');
+// Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');
 
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
@@ -72,6 +73,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/siswa', SiswaController::class);
     Route::resource('/ekstrakulikuler', EkstraController::class);
     Route::resource('/pembina', PembinaController::class);
+    Route::resource('/prestasi', PrestasiController::class);
     Route::resource('/jadwalekstra', JadwalEkstrakulikulerController::class);
     Route::resource('/artikeladmin', ArtikelController::class);
     Route::resource('/kontakadmin', KontakAdminController::class);
