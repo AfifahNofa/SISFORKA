@@ -10,8 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-
-    <title>SDN JATIMULYO 1</title>
+    <title>Prestasi SDN Jatimulyo 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
 
@@ -54,7 +53,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="images/logo1.jpeg" alt="Logo SMK N 2 Purbalingga">
+                <img src="images/logo1.jpeg" alt="Logo SDN 1 Jatimulyo">
                 <h1>SD Negeri 1<br>Jatimulyo</h1>
             </a>
 
@@ -82,7 +81,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="s{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
 
                         </div>
                     </li>
@@ -120,137 +119,110 @@
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
 
-
                 </ul>
             </div>
+
         </div>
     </nav>
 
-    <div class="container kontak">
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light navbarKu fixed-top">
+            <!-- navbar content -->
+        </nav>
 
-        <h3 class="mb-4">Hubungi Kami</h3>
-        <form method="POST" action="{{ route('kontak.store') }}">
-            @csrf
-
-            <div class="formKontakKiri">
-                <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email">
-                </div>
-
-                <div class="form-group">
-                    <label for="notelp">No Telp</label>
-                    <input type="number" class="form-control" id="notelp" name="no_telp">
-                </div>
-            </div>
-
-            <div class="formKontakKanan">
-                <div class="form-group">
-                    <label for="pesan">Pesan</label>
-                    <textarea name="pesan" id="pesan" cols="30" rows="8" class="form-control"></textarea>
-                </div>
-
-                <button class="btn btn-primary float-right" type="submit">Kirim</button>
-            </div>
-        </form>
-
-    </div>
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5479912219284!2d112.61358707397942!3d-7.942183679108393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788274cd9f7f05%3A0x743a345c22a00f78!2sSekolah%20Dasar%20Negeri%20Jatimulyo%201%20No.%20269!5e0!3m2!1sid!2sid!4v1684039542284!5m2!1sid!2sid"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-
-    <!-- sosmed icon -->
-    <div class="iconBox">
-
-        <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
-            <i class="fab fa-youtube"></i>
-        </a>
-
-    </div>
-
-    <div class="footer footerHubungiKami">
-
+        <div class="title">
+            <h1 class="text-center">Data Prestasi SDN Jatimulyo 1</h1>
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4 class="my-4 text-white text-center">Kontak Kami</h4>
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if ($prestasi->count() > 0)
+                        @foreach ($prestasi as $p)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td><img src="{{ asset('storage/' . $p->foto) }}" alt="foto"
+                                        style="max-width: 250px; max-height: 200px;"></td>
+                                <td>{{ $p->keterangan }}</td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="3" class="text-center">Data tidak ada</td>
+                        </tr>
+                    @endif
+                </tbody>
+            </table>
+        </div>
 
-                    <div class="footerContactUs">
+        <!-- sosmed icon -->
+        <div class="iconBox">
+            <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
 
-                        <div class="perFooterContactUs">
-                            <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="my-4 text-white text-center">Kontak Kami</h4>
+                        <div class="footerContactUs">
+                            <div class="perFooterContactUs">
+                                <i class="fas text-white fa-envelope"></i>
+                                <p class="text-white">sdnjatimulyo144@gmail.com</p>
+                            </div>
+                            <div class="perFooterContactUs">
+                                <i class="fas text-white fa-phone-alt"></i>
+                                <p class="text-white">0341406468</p>
+                            </div>
+                            <div class="perFooterContactUs">
+                                <i class="fas text-white fa-road"></i>
+                                <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
+                                </p>
+                            </div>
                         </div>
-
-                        <div class="perFooterContactUs">
-                            <i class="fas text-white fa-phone-alt"></i>
-                            <p class="text-white">0341406468</p>
-                        </div>
-
-                        <div class="perFooterContactUs">
-                            <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
-                        </div>
-
                     </div>
-
-                </div>
-
-
-
-
-
-
-                <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
-                    <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Kontak</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 text-center">
-                    <h4 class="my-4 text-white">Hubungi Kami</h4>
-                    <form>
-
-                        <div class="form-group">
-                            <input class="form-control" type="search" placeholder="Example@gmail.com"
-                                aria-label="Search">
-                            <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
+                    <div class="col-md-4">
+                        <h4 class="my-4 text-center text-white">About</h4>
+                        <div class="footerAbout">
+                            <a href="" class="text-white">Artikel</a>
+                            <a href="" class="text-white">Galeri</a>
+                            <a href="" class="text-white">Contact Us</a>
+                            <a href="" class="text-white">dataekstrar</a>
                         </div>
-
-                    </form>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h4 class="my-4 text-white">Hubungi Kami</h4>
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" type="search" placeholder="Example@gmail.com"
+                                    aria-label="Search">
+                                <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <div class="footerCopyright">
-        <p class="text-white">
-            <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
-        </p>
-    </div>
-
-</body>
+        <div class="footerCopyright">
+            <p class="text-white">
+                <i class="far fa-copyright"></i>
+                copyright By : <span>SDN Jatimulyo 1</span>
+            </p>
+        </div>
+    </body>
 
 </html>

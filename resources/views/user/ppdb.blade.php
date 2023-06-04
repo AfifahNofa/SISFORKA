@@ -115,7 +115,6 @@
             </div>
         </a>
         <p></p>
-        <p></p>
         <a href="{{ url('/ppdb') }}" class="text-decoration-none">
             <div class="poster" style="text-align: center;">
                 <img src="images/ppdb2.jpeg" alt="poster1" width="800" height="500">

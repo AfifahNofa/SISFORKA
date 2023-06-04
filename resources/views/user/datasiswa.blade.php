@@ -128,9 +128,6 @@
     <div class="title">
         <h1 class="text-center">Detail Data Siswa</h1>
     </div>
-
-
-
     <table class="table-bordered table table-hover table-striped">
         <thead class="thead-dark">
             <tr>
