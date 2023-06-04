@@ -85,20 +85,7 @@
                         </div>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
-                    </li>
-
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
         </div>
     </nav>
@@ -149,21 +136,21 @@
                 <p>Karate</p>
             </a>
 
-            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+            <a href="{{ url('/menari') }}" class="perEkstrakulikuler">
                 <div class="gambarEkstrakulikuler">
                 <img src="images/ekstra1.jpeg" alt="FotoEkstra">
                 </div>
                 <p>Tari</p>
             </a>
 
-            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+            <a href="{{ url('/tik') }}" class="perEkstrakulikuler">
                 <div class="gambarEkstrakulikuler">
                 <img src="images/komputer.jpeg" alt="FotoEkstra">
                 </div>
-                <p>Komputer</p>
+                <p>TIK</p>
             </a>
 
-            <a href="{{ url('/baca') }}" class="perEkstrakulikuler">
+            <a href="{{ url('/drumband') }}" class="perEkstrakulikuler">
                 <div class="gambarEkstrakulikuler">
                 <img src="images/drumband1.jpeg" alt="FotoEkstra">
                 </div>

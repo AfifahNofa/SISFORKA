@@ -20,40 +20,66 @@
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Data Guru</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Data Pembina</h6>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ $url_form }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ $url_form }}">
                             @csrf
-                            @if(isset($guru))
+                            @if(isset($pembina))
                                 @method('PUT')
                             @endif
                             <div class="form-group">
                                 <label>Kode</label>
-                                <input class="form-control @error('kode') is-invalid @enderror" value="{{ isset($guru) ? $guru->kode : old('kode') }}" name="kode" type="text" />
+                                <input class="form-control @error('kode') is-invalid @enderror" value="{{ isset($pembina) ? $pembina->kode : old('kode') }}" name="kode" type="text" />
                                 @error('kode')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Nama</label>
-                                <input class="form-control @error('nama') is-invalid @enderror" value="{{ isset($guru) ? $guru->nama : old('nama') }}" name="nama" type="text" />
-                                @error('nama')
+                                <label>Nama Pembina</label>
+                                <input class="form-control @error('nama_pembina') is-invalid @enderror" value="{{ isset($pembina) ? $pembina->nama_pembina : old('nama_pembina') }}" name="nama_pembina" type="text" />
+                                @error('nama_pembina')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="image">Foto</label>
-                                <input type="file" class="form-control" required="required" name="foto" value="{{$guru->foto}}"/><br>
-                                <img width="100px" src="{{asset('storage/'.$guru->foto)}}">
+                                <label>Tempat Tanggal Lahir</label>
+                                <input class="form-control @error('ttl') is-invalid @enderror" value="{{ isset($pembina)? $pembina->ttl :old('ttl') }}" name="ttl" type="text"/>
+                                @error('ttl')
+                                    <span class="error invalid-feedback">{{$message}}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
-                                <label>Jabatan</label>
-                                <input class="form-control @error('jabatan') is-invalid @enderror" value="{{ isset($guru) ? $guru->jabatan : old('jabatan') }}" name="jabatan" type="text" />
-                                @error('jabatan')
+                                <label>Alamat</label>
+                                <input class="form-control @error('alamat') is-invalid @enderror" value="{{ isset($pembina) ? $pembina->alamat : old('alamat') }}" name="alamat" type="text" />
+                                @error('alamat')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label>No Hp</label>
+                                <input class="form-control @error('hp') is-invalid @enderror" value="{{ isset($pembina)? $pembina->no_hp :old('hp') }}" name="no_hp" type="text"/>
+                                @error('no_hp')
+                                    <span class="error invalid-feedback">{{$message}}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="Guru">Ekstrakulikuler</label>
+                                <select class="form-control" name="ekstrakulikuler_id">
+                                @foreach ($ekstrakulikuler as $ex)
+                                  <option value="{{$ex->id}}">{{$ex->nama}}</option>
+                                @endforeach
+                              </select>
+                            </div>
+                             <div class="form-group">
+                                <label for="Guru"> Jadwal Ekstrakulikuler</label>
+                                <select class="form-control" name="jadwalekstra_id">
+                                @foreach ($jadwalekstra as $ex)
+                                  <option value="{{$ex->id}}">{{$ex->hari}}</option>
+                                @endforeach
+                              </select>
+                            </div>
+                            
                             <div class="form-group">
                                 <input type="submit" value="Submit">
                             </div>

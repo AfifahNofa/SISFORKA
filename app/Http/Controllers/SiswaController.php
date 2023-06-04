@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GuruModel;
 use App\Models\SiswaModel;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $siswa = SiswaModel::all();
+        $siswa = SiswaModel::with('guru')->get();
         return view('admin.siswa.siswa', ['siswa' => $siswa]);
     }
 
@@ -25,7 +26,9 @@ class SiswaController extends Controller
      */
     public function create()
     {
+        $guru = GuruModel::all();
         return view('admin.siswa.create_siswa')
+        ->with('guru', $guru)
         ->with('url_form', route('siswa.store'));
     }
 
@@ -41,8 +44,19 @@ class SiswaController extends Controller
     $request->validate([
         'kelas' => 'required|string|max:6',
         'jumlah' => 'required|integer',
+        'guru_id' => 'required',
     ]);
-    $data = SiswaModel::create($request->except(['_token']));
+
+    $siswa = new SiswaModel();
+    $siswa->kelas = $request->get('kelas');
+    $siswa->jumlah = $request->get('jumlah');
+    $siswa->save();
+
+    $guru = new GuruModel;
+    $guru->id = $request->get('guru_id');
+
+    $siswa->guru()->associate($guru);
+    $siswa->save();
     //jika data berhasil ditambahkan, akan kembali ke halaman utama
     return redirect('siswa')
         ->with('success', 'Data Siswa Berhasil Ditambahkan');
@@ -67,10 +81,12 @@ class SiswaController extends Controller
      */
     public function edit($id)
     {
-        $siswa = SiswaModel::find($id);
+        $siswa = SiswaModel::with('guru')->where('id', $id)->first();
+        $guru = GuruModel::all(); //mendapatkan data dari tabel kelas
         return view('admin.siswa.create_siswa')
-            ->with('siswa', $siswa)
-            ->with('url_form', url('/siswa/' . $id));
+                    ->with('siswa', $siswa)
+                    ->with('guru', $guru)
+                    ->with('url_form', url('/siswa/'. $id));
     }
 
     /**
@@ -87,9 +103,23 @@ class SiswaController extends Controller
             'jumlah' => 'required|integer',
         ]);
 
-        $data = SiswaModel::where('id', '=', $id)->update($request->except(['_token', '_method', 'submit']));
+        // Mengambil data siswa yang ada berdasarkan $id
+        $siswa = SiswaModel::find($id);
+
+        // Mengisi data siswa dengan nilai baru
+        $siswa->kelas = $request->get('kelas');
+        $siswa->jumlah = $request->get('jumlah');
+        $siswa->save();
+
+
+        $guru = new GuruModel();
+        $guru->id = $request->get('guru_id');
+        
+        $siswa->guru()->associate($guru);
+        $siswa->save();
+
         return redirect('siswa')
-            ->with('success', 'Data Siswa Berhasil Diedit');
+            ->with('success', 'Siswa Berhasil Diedit');
     }
 
     /**

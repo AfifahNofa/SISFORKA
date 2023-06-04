@@ -43,6 +43,14 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="Guru">Wali Kelas</label>
+                                <select class="form-control" name="guru_id">
+                                @foreach ($guru as $gr)
+                                  <option value="{{$gr->id}}">{{$gr->nama}}</option>
+                                @endforeach
+                              </select>
+                            </div>
+                            <div class="form-group">
                                 <input type="submit" value="Submit">
                             </div>
                         </form>

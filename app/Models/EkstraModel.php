@@ -18,4 +18,7 @@ class EkstraModel extends Model
         'materi',
         'target',
     ];
+    public function pembina(){
+        return $this->hasMany(PembinaModel::class);
+    }
 }

@@ -18,4 +18,8 @@ class GuruModel extends Model
         'jabatan',
     ];
 
+    public function siswa(){
+        return $this->hasOne(SiswaModel::class);
+    }
+
 }

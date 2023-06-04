@@ -14,7 +14,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tabel Data Guru </h1>
+                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -28,40 +28,40 @@
                                         {{ session('success') }}
                                     </div>
                                 @endif
-                                <a href="{{ url('guru/create') }}" class="btn btn-sm btn-success my-2">Tambah Data</a>
+                                <a href="{{ url('pembina/create') }}" class="btn btn-sm btn-success my-2">Tambah Data</a>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
                                             <th>Kode</th>
-                                            <th>Nama</th>
-                                            <th>Foto</th>
-                                            <th>Jabatan</th>
+                                            <th>Nama Pembina</th>
+                                            <th>Tempat Tanggal Lahir</th>
+                                            <th>Alamat</th>
+                                            <th>No hp</th>
+                                            <th>Ekstrakulikuler</th>
+                                            <th>Jadwal Ekstrakulikuler</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if ($guru->count() > 0)
-                                            @foreach ($guru as $g => $t)
+                                        @if ($pembina->count() > 0)
+                                            @foreach ($pembina as $pm => $p)
                                                 <tr>
-                                                    <td>{{ ++$g }}</td>
-                                                    <td>{{ $t->kode }}</td>
-                                                    <td>{{ $t->nama }}</td>
-                                                    <td>
-                                                        @if ($t->foto)
-                                                            <img style="max-width:100px;max-height:100px"
-                                                                src="{{ asset('storage/' . $t->foto) }}" />
-                                                        @endif
-                                                    </td>
-                                                    <td>{{ $t->jabatan }}</td>
+                                                    <td>{{ ++$pm }}</td>
+                                                    <td>{{ $p->kode }}</td>
+                                                    <td>{{ $p->nama_pembina }}</td>
+                                                    <td>{{ $p->ttl }}</td>
+                                                    <td>{{ $p->alamat }}</td>
+                                                    <td>{{ $p->no_hp }}</td>
+                                                    <td>{{ $p->ekstrakulikuler->nama }}</td>
+                                                    <td>{{ $p->jadwalekstra->hari }}</td>
 
                                                     <td>
                                                         <!-- Bikin tombol edit dan delete -->
-                
                                                         <div class="btn-group">
-                                                            <a href="{{ route('guru.edit', [$t->id]) }}"
+                                                            <a href="{{ route('pembina.edit', [$p->id]) }}"
                                                                 class="btn btn-sm btn-warning mr-2">edit</a>
-                                                            <form method="POST" action="{{ url('/guru/' . $t->id) }}">
+                                                            <form method="POST" action="{{ url('/pembina/' . $p->id) }}">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button type="submit" class="btn btn-sm btn-danger mr-2">DELETE</button>

@@ -99,12 +99,10 @@
     </nav>
 
 
-    <div class="containerEkstra"></div>
-
-
-
-    <div class="container">
+    <div class="title">
         <h3 class="titleEkstrakulikuler">Ekstrakulikuler Drumband</h3>
+    </div>
+
 
         <div class="accordion" id="accordionExample">
             <div class="card">
@@ -120,11 +118,16 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="pembinaEkstrakulikuler">
-
+                            @if ($ekstrakulikuler->count() > 0)
+                            @php
+                               $id = 6; 
+                                $e = $ekstrakulikuler->find($id);
+                            @endphp
                             <div class="perPembina">
-                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
-                                <h5>Jabut Martono</h5>
+                                <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
+                                <h5>{{ $e->nama }}</h5>
                             </div>
+                             @endif
                         </div>
                     </div>
                 </div>
@@ -142,21 +145,18 @@
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                        <h4>Materi</h4>
-                        <p> Bermain alat musik pianika, drum</p>
-
-
-                        {{-- <h4>Target Ekstrakulikuler</h4>
-                        <div class="fasilitas d-flex my-4">
-
-                            <ul class="mx-3">
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                            </ul> --}}
-
+                        @if ($ekstrakulikuler->count() > 0)
+                        @php
+                       $id = 6; 
+                       $e = $ekstrakulikuler->find($id);
+                       @endphp
+                       <div class="perPembina">
+                       <h4>Materi</h4>
+                       <p>
+                       <li>{{ $e->materi }}</li>
+                       </p>
+                       </div>
+                       @endif
                     </div>
                 </div>
             </div>
@@ -173,38 +173,19 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
+                    @if ($ekstrakulikuler->count() > 0)
+                    @php
+                        $id = 6; 
+                        $e = $ekstrakulikuler->find($id);
+                    @endphp
                     <h4>Target</h4>
-                    <p>
-                        <li> Siswa mampu menggunakan alat musik sesuai bagiannya masing-masing</li>
-
-                    </p>
-
-                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table-bordered table table-hover table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Kejuaraan</th>
-                                    <th>Atas Nama</th>
-                                </tr>
-                            </thead>
-
-                                <tr>
-                                    <td>5</td>
-                                    <td>Juara 1 Lomba Mancing</td>
-                                    <td>Kimak Bersaudara</td>
-                                </tr> --}}
-                    </tbody>
-                    </table>
+                    <p>{{$e->target}}</p>
+                    @endif
                 </div>
             </div>
         </div>
     </div>
     </div>
-
-
-
 
     <!-- sosmed icon -->
     <div class="iconBox">
@@ -251,11 +232,6 @@
                     </div>
 
                 </div>
-
-
-
-
-
 
                 <div class="col-md-4">
                     <h4 class="my-4 text-center text-white">Tentang</h4>

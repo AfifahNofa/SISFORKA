@@ -120,15 +120,16 @@
                 <div class="card-body">
                     <div class="pembinaEkstrakulikuler">
 
-                        <div class="perPembina">
-                            <img src="images/karate1.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
-                        </div>
-
-                        <div class="perPembina">
-                            <img src="images/karate2.jpeg" alt="Pembina Ekstrakulikuler">
-                            <h5>KOSN Karate</h5>
-                        </div>
+                        @if ($ekstrakulikuler->count() > 0)
+                            @php
+                               $id = 3; 
+                                $e = $ekstrakulikuler->find($id);
+                            @endphp
+                            <div class="perPembina">
+                                <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
+                                <h5>{{ $e->nama }}</h5>
+                            </div>
+                        @endif
 
                     </div>
                 </div>
@@ -147,21 +148,18 @@
 
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <h4>Materi</h4>
+                    @if ($ekstrakulikuler->count() > 0)
+                    @php
+                        $id = 3; 
+                        $e = $ekstrakulikuler->find($id);
+                    @endphp
+                    <div class="perPembina">
+                        <h4>Materi</h4>
                     <p>
-                        <li>Gerakan Dasar Pukulan Ouzuki Jodan dan Gerakan Tendangan Maigeri Mawashi Keikomi Geri</li>
+                        <li>{{ $e->materi }}</li>
                     </p>
-
-                    {{-- <h4>Target Ekstrakulikuler</h4>
-                        <div class="fasilitas d-flex my-4">
-
-                            <ul class="mx-3">
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                            </ul> --}}
+                    </div>
+                    @endif
 
                 </div>
             </div>
@@ -179,14 +177,14 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
-                <h4>Target Ekstrakulikuler Karate</h4>
-                <p>
-                    Siswa mampu menguasai dan mempraktikkan gerakan dasar
-                    ouzuki chudan,ouzuki jodan, gerakan tendangan maegeri
-                    dengan baik dan benar
-
-                </p>
-
+                @if ($ekstrakulikuler->count() > 0)
+                @php
+                    $id = 3; 
+                    $e = $ekstrakulikuler->find($id);
+                @endphp
+                <h4>Target</h4>
+                <p>{{$e->target}}</p>
+                @endif
                 {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
                         <table class="table-bordered table table-hover table-striped">
@@ -203,8 +201,6 @@
                                     <td>Juara 1 Lomba Mancing</td>
                                     <td>Kimak Bersaudara</td>
                                 </tr> --}}
-                </tbody>
-                </table>
             </div>
         </div>
     </div>

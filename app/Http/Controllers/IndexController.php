@@ -21,30 +21,30 @@ class IndexController extends Controller
     {
         return view('user.visimisi');
     }
-    public function baca()
-    {
-        return view('user.ekstra.baca');
-    }
+    // public function baca()
+    // {
+    //     return view('user.ekstra.baca');
+    // }
     public function drumband()
     {
         return view('user.ekstra.drumband');
     }
-    public function karate()
-    {
-        return view('user.ekstra.karate');
-    }
+    // public function karate()
+    // {
+    //     return view('user.ekstra.karate');
+    // }
     public function menari()
     {
         return view('user.ekstra.menari');
     }
-    public function pramuka()
-    {
-        return view('user.ekstra.pramuka');
-    }
-    public function tik()
-    {
-        return view('user.ekstra.tik');
-    }
+    // public function pramuka()
+    // {
+    //     return view('user.ekstra.pramuka');
+    // }
+    // public function tik()
+    // {
+    //     return view('user.ekstra.tik');
+    // }
     public function artikel()
     {
         return view('user.artikel');
@@ -121,6 +121,24 @@ class IndexController extends Controller
     {
         $ekstrakulikuler = EkstraModel::all();
         return view('user.ekstra.karate')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showMenari()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.menari')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showTik()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.tik')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showDrumband()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.drumband')
             ->with('ekstrakulikuler', $ekstrakulikuler);
     }
     // public function showBaca()
