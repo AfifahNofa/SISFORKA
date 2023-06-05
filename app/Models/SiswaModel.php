@@ -14,6 +14,11 @@ class SiswaModel extends Model
     protected $fillable = [
         'kelas',
         'jumlah',
+        'guru_id',
     ];
+
+    public function guru(){
+        return $this->belongsTo(GuruModel::class);
+    }
 
 }

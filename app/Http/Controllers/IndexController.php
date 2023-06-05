@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArtikelModel;
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
 use App\Models\ppdbModel;
@@ -13,7 +14,9 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        // return view('user.index');
+        $artikel = ArtikelModel::all();
+        return view('user.index', ['artikel' => $artikel]);
     }
     public function dataekstra()
     {
@@ -23,37 +26,47 @@ class IndexController extends Controller
     {
         return view('user.visimisi');
     }
-    public function baca()
-    {
-        return view('user.ekstra.baca');
-    }
+    // public function baca()
+    // {
+    //     return view('user.ekstra.baca');
+    // }
     public function drumband()
     {
         return view('user.ekstra.drumband');
     }
-    public function karate()
-    {
-        return view('user.ekstra.karate');
-    }
+    // public function karate()
+    // {
+    //     return view('user.ekstra.karate');
+    // }
     public function menari()
     {
         return view('user.ekstra.menari');
     }
-    public function pramuka()
+    // public function pramuka()
+    // {
+    //     return view('user.ekstra.pramuka');
+    // }
+    // public function tik()
+    // {
+    //     return view('user.ekstra.tik');
+    // }
+    public function showArtikel()
     {
-        return view('user.ekstra.pramuka');
-    }
-    public function tik()
-    {
-        return view('user.ekstra.tik');
-    }
-    public function artikel()
-    {
-        return view('user.artikel');
+        $artikel = ArtikelModel::all();
+
+        return view('user.artikel', ['artikel' => $artikel]);
     }
     public function perArtikel()
     {
         return view('user.perArtikel');
+    }
+    public function perArtikel1()
+    {
+        return view('user.perArtikel1');
+    }
+    public function perArtikel2()
+    {
+        return view('user.perArtikel2');
     }
     public function ppdb()
     {
@@ -136,6 +149,24 @@ class IndexController extends Controller
     {
         $ekstrakulikuler = EkstraModel::all();
         return view('user.ekstra.karate')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showMenari()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.menari')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showTik()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.tik')
+            ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showDrumband()
+    {
+        $ekstrakulikuler = EkstraModel::all();
+        return view('user.ekstra.drumband')
             ->with('ekstrakulikuler', $ekstrakulikuler);
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EkstraController;
@@ -26,19 +27,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/visimisi', [IndexController::class, 'visimisi']);
-Route::get('/karate', [IndexController::class, 'karate']);
-Route::get('/menari', [IndexController::class, 'menari']);
-Route::get('/drumband', [IndexController::class, 'drumband']);
-Route::get('/tik', [IndexController::class, 'tik']);
+Route::get('/karate', [IndexController::class, 'showKarate']);
+Route::get('/menari', [IndexController::class, 'showMenari']);
+Route::get('/drumband', [IndexController::class, 'showDrumband']);
+Route::get('/tik', [IndexController::class, 'showTik']);
 Route::get('/pramuka', [IndexController::class, 'showPramuka']);
-Route::get('/baca', [IndexController::class, 'showbaca']);
-Route::get('/artikel', [IndexController::class, 'artikel']);
+Route::get('/baca', [IndexController::class, 'showBaca']);
+Route::get('/artikel', [IndexController::class, 'showArtikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
 Route::get('/datappdb', [IndexController::class, 'showppdb']);
 Route::get('/kalender', [IndexController::class, 'kalender']);
+// Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');
+
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
+Route::get('/kontak', [KontakController::class, 'index'])->name('kontak.index');
+// Route::get('/kontak', [KontakController::class, 'create'])->name('kontak.create');
+Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
 Route::get('/dataguru', [IndexController::class, 'showGuru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/dataekstra', [IndexController::class, 'dataekstra']);
@@ -60,6 +66,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/guru', GuruController::class);
     Route::resource('/siswa', SiswaController::class);
     Route::resource('/ekstrakulikuler', EkstraController::class);
+    Route::resource('/pembina', PembinaController::class);
     Route::resource('/prestasi', PrestasiController::class);
     Route::resource('/ppdb', ppdbController::class);
 });

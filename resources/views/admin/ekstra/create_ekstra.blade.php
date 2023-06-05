@@ -47,7 +47,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Foto</label>
-                                    <input type="file" class="form-control" required="required" name="foto" /><br />
+                                    <input type="file" class="form-control" required="required" name="foto" value="{{$ekstrakulikuler->foto}}"/><br>
+                                    <img width="150px" src="{{asset('storage/'.$ekstrakulikuler->foto)}}">
                                 </div>
                                 <div class="form-group">
                                     <label>Materi</label>

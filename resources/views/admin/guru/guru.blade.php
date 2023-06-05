@@ -14,12 +14,12 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Tabel Data Guru </h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Input Data</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">SDN Jatimulyo </h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -57,18 +57,14 @@
 
                                                     <td>
                                                         <!-- Bikin tombol edit dan delete -->
+                
                                                         <div class="btn-group">
-                                                            {{-- <a href="{{ route('mahasiswa.edit', [$m->id]) }}"
-                                                      class="btn btn-sm btn-warning mr-2">edit</a>
-                                                  <a href="{{ route('mahasiswa.show', [$m->id]) }}"
-                                                      class="btn btn-sm btn-primary mr-2">show</a>
-                                                  <a href="{{ route('mahasiswamatakuliah.show', [$m->id]) }}"
-                                                      class="btn btn-sm btn-success mr-2">nilai</a> --}}
+                                                            <a href="{{ route('guru.edit', [$t->id]) }}"
+                                                                class="btn btn-sm btn-warning mr-2">edit</a>
                                                             <form method="POST" action="{{ url('/guru/' . $t->id) }}">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit"
-                                                                    class="btn btn-sm btn-danger mr-2">DELETE</button>
+                                                                <button type="submit" class="btn btn-sm btn-danger mr-2">DELETE</button>
                                                             </form>
                                                         </div>
                                                     </td>

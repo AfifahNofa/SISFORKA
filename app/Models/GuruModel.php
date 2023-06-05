@@ -18,4 +18,13 @@ class GuruModel extends Model
         'jabatan',
     ];
 
+    public function siswa(){
+        return $this->hasOne(SiswaModel::class);
+    }
+
+    public function artikel()
+    {
+        return $this->hasMany(ArtikelModel::class);
+    }
+
 }

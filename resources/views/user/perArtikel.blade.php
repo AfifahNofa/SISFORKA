@@ -103,7 +103,7 @@
 
 
     <div class="container detailArtikel">
-        <h2>Cara Membuat Blog dengan Laravel untuk Pemula (Terlengkap!)</h2>
+        <h2>Pengumuman Pendaftaran Siswa Baru Tahun 2023/2024</h2>
     </div>
 
     <img src="images/ppdb1.jpeg" alt="Img Artikel" class="imgArtikel">
@@ -112,7 +112,7 @@
     <div class="container mainDetailArtikel">
         <div class="row">
             <div class="col-md-8">
-                <h3>Cara Membuat Blog dengan Laravel</h3>
+                <h3>Pengumuman Pendaftaran Siswa Baru Tahun 2023/2024</h3>
 
                 <p>Untuk membuat laravel blog, inilah beberapa langkah yang perlu Anda lakukan:</p>
 
