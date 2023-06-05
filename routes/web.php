@@ -6,6 +6,7 @@ use App\Http\Controllers\EkstraController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ppdbController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,7 @@ Route::get('/pramuka', [IndexController::class, 'showPramuka']);
 Route::get('/baca', [IndexController::class, 'showbaca']);
 Route::get('/artikel', [IndexController::class, 'artikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
-Route::get('/ppdb', [IndexController::class, 'ppdb']);
+Route::get('/datappdb', [IndexController::class, 'showppdb']);
 Route::get('/kalender', [IndexController::class, 'kalender']);
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
@@ -60,6 +61,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/siswa', SiswaController::class);
     Route::resource('/ekstrakulikuler', EkstraController::class);
     Route::resource('/prestasi', PrestasiController::class);
+    Route::resource('/ppdb', ppdbController::class);
 });
 
 Auth::routes();

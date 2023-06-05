@@ -109,7 +109,26 @@
 
 
     <div class="container ppdb">
-        <a href="{{ url('/ppdb') }}" class="text-decoration-none">
+        @if ($ppdb->count() > 0)
+            @foreach ($ppdb as $p)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>
+                        <div style="display: flex; justify-content: center;">
+                            <img src="{{ asset('storage/' . $p->foto) }}" alt="foto"
+                                style="max-width: 800px; max-height: 500px;">
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+        @else
+            <tr>
+                <td colspan="3" class="text-center">Data tidak ada</td>
+            </tr>
+        @endif
+    </div>
+
+    {{-- <a href="{{ url('/ppdb') }}" class="text-decoration-none">
             <div class="poster" style="text-align: center;">
                 <img src="images/ppdb1.jpeg" alt="poster1" width="800" height="500">
             </div>
@@ -119,13 +138,8 @@
             <div class="poster" style="text-align: center;">
                 <img src="images/ppdb2.jpeg" alt="poster1" width="800" height="500">
             </div>
-        </a>
+        </a> --}}
     </div>
-
-
-
-
-
     <!-- sosmed icon -->
     <div class="iconBox">
 
@@ -172,11 +186,6 @@
                     </div>
 
                 </div>
-
-
-
-
-
 
                 <div class="col-md-4">
                     <h4 class="my-4 text-center text-white">About</h4>
