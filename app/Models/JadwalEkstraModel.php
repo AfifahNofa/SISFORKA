@@ -5,20 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SiswaModel extends Model
+class JadwalEkstraModel extends Model
 {
     use HasFactory;
-    protected $table = 'siswa';
+    protected $table = 'jadwalekstra';
     protected $primaryKey = 'id';
     // protected $keyType = 'int';
     protected $fillable = [
-        'kelas',
-        'jumlah',
-        'guru_id',
+        'kode',
+        'hari',
+        'jam',
     ];
-
-    public function guru(){
-        return $this->belongsTo(GuruModel::class);
+    public function pembina(){
+        return $this->hasOne(PembinaModel::class);
     }
-
 }

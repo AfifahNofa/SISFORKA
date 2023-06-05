@@ -30,11 +30,11 @@
                 <h6 class="collapse-header">Halaman:</h6>
                 <a class="collapse-item" href="{{ url('/guru') }}">Data Guru</a>
                 <a class="collapse-item" href="{{ url('/siswa') }}">Data Siswa</a>
-                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Other Pages:</h6>
                 <a class="collapse-item" href="404.html">404 Page</a>
-                <a class="collapse-item " href="blank.html">Blank Page</a>
+                <a class="collapse-item " href="blank.html">Blank Page</a> --}}
             </div>
         </div>
     </li>
@@ -43,6 +43,24 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Ekstrakulikuler</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/pembina') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Pembina</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/jadwalekstra') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Jadwal Ekstrakulikuler</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('/prestasi') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Prestasi</span></a>
+        </li>
+
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/artikeladmin') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>

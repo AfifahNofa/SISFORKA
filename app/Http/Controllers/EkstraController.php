@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EkstraModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EkstraController extends Controller
 {
@@ -87,7 +88,10 @@ class EkstraController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ekstrakulikuler = EkstraModel::find($id);
+        return view('admin.ekstra.create_ekstra')
+            ->with('ekstrakulikuler', $ekstrakulikuler)
+            ->with('url_form', url('/ekstrakulikuler/' . $id));
     }
 
     /**
@@ -99,7 +103,39 @@ class EkstraController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ekstrakulikuler = EkstraModel::find($id);
+        if (!$ekstrakulikuler) {
+            return redirect()->route('ekstrakulikuler.index')->with('error', 'Data ekstrakulikuler tidak ditemukan');
+        }
+        $request->validate([
+            'kode' => 'required|string|max:6|unique:ekstrakulikuler,kode,'.$id,
+            'nama' => 'required|string|max:225',
+            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'materi' => 'required|string',
+            'target' => 'required|string',
+        ]);
+
+
+        // Mengisi data guru dengan nilai baru
+        $ekstrakulikuler->kode = $request->get('kode');
+        $ekstrakulikuler->nama = $request->get('nama');
+        $ekstrakulikuler->materi = $request->get('materi');
+        $ekstrakulikuler->target = $request->get('target');
+       
+    
+        // Menghapus gambar lama jika ada
+        if ($ekstrakulikuler->foto && file_exists(storage_path('app/public/'.$ekstrakulikuler->foto))) {
+            Storage::delete('public/'. $ekstrakulikuler->foto);
+        }
+    
+        // Mengunggah dan menyimpan gambar baru
+        $foto_name = $request->file('foto')->store('images', 'public');
+        $ekstrakulikuler->foto = $foto_name;
+
+        $ekstrakulikuler->save();
+    
+        return redirect()->route('ekstrakulikuler.index')
+            ->with('success', 'Data Ekstrakulikuler Berhasil Diperbarui');
     }
 
     /**

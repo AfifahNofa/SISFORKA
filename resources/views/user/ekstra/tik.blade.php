@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light navbarKu fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light navbarKu fixed-top">
         <div class="container">
 
             <a class="navbar-brand" href="#">
@@ -46,7 +46,8 @@
                 <h1>SD Negeri 1<br>Jatimulyo</h1>
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -61,7 +62,8 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             More
                         </a>
 
@@ -86,18 +88,16 @@
     </nav>
 
 
-    <div class="containerEkstra"></div>
-
-
-
-    <div class="container">
+    <div class="title">
         <h3 class="titleEkstrakulikuler">Ekstrakulikuler TIK</h3>
+    </div>
 
         <div class="accordion" id="accordionExample">
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
-                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             1. Pembina Ekstrakulikuler TIK
                         </button>
                     </h2>
@@ -107,10 +107,18 @@
                     <div class="card-body">
                         <div class="pembinaEkstrakulikuler">
 
+                            @if ($ekstrakulikuler->count() > 0)
+                            @php
+                               $id = 5; 
+                                $e = $ekstrakulikuler->find($id);
+                            @endphp
                             <div class="perPembina">
-                                <img src="images/pelatihJerman.jpg" alt="Pembina Ekstrakulikuler">
-                                <h5>Jabut Martono</h5>
+                                <img src="{{ asset('storage/' . $e->foto) }}" alt="Foto Ekstra">
+                                <h5>{{ $e->nama }}</h5>
                             </div>
+                             @endif
+
+
                         </div>
                     </div>
                 </div>
@@ -119,7 +127,8 @@
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             2. Materi Ekstrakulikuler TIK
                         </button>
                     </h2>
@@ -127,26 +136,18 @@
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
+                        @if ($ekstrakulikuler->count() > 0)
+                         @php
+                        $id = 5; 
+                        $e = $ekstrakulikuler->find($id);
+                        @endphp
+                        <div class="perPembina">
                         <h4>Materi</h4>
                         <p>
-                            <li>Pengenalan komputer hardware </li>
-                            <li>Microsoft word </li>
-                            <li>Microsoft Excel</li>
-                            <li>Power point interaktif </li>
+                        <li>{{ $e->materi }}</li>
                         </p>
-
-                        {{-- <h4>Target Ekstrakulikuler</h4>
-                        <div class="fasilitas d-flex my-4">
-
-                            <ul class="mx-3">
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                                <li>Rumput Sistetis</li>
-                            </ul> --}}
-
-                    </div>
+                        </div>
+                        @endif
                 </div>
             </div>
         </div>
@@ -154,40 +155,22 @@
         <div class="card">
             <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         3. Target Ekstrakulikuler TIK
                     </button>
                 </h2>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
+                    @if ($ekstrakulikuler->count() > 0)
+                    @php
+                        $id = 5; 
+                        $e = $ekstrakulikuler->find($id);
+                    @endphp
                     <h4>Target</h4>
-                    <p>
-                        <li>Siswa mampu mengenal hardware komputer</li>
-                        <li>Siswa mampu mengoperasionalkan microsoft dan microsoft excel </li>
-                        <li>Siswa mampu menoperasionalkan power point interaktif </li>
-
-
-                    </p>
-
-                    {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table-bordered table table-hover table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Kejuaraan</th>
-                                    <th>Atas Nama</th>
-                                </tr>
-                            </thead>
-
-                                <tr>
-                                    <td>5</td>
-                                    <td>Juara 1 Lomba Mancing</td>
-                                    <td>Kimak Bersaudara</td>
-                                </tr> --}}
-                    </tbody>
-                    </table>
+                    <p>{{$e->target}}</p>
+                    @endif
                 </div>
             </div>
         </div>
@@ -264,7 +247,8 @@
                     <form>
 
                         <div class="form-group">
-                            <input class="form-control" type="search" placeholder="Example@gmail.com" aria-label="Search">
+                            <input class="form-control" type="search" placeholder="Example@gmail.com"
+                                aria-label="Search">
                             <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
                         </div>
 

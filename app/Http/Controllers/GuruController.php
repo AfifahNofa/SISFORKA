@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\GuruModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GuruController extends Controller
 {
@@ -85,7 +86,10 @@ class GuruController extends Controller
      */
     public function edit($id)
     {
-        //
+        $guru = GuruModel::find($id);
+        return view('admin.guru.create_guru')
+            ->with('guru', $guru)
+            ->with('url_form', url('/guru/' . $id));
     }
 
     /**
@@ -96,9 +100,39 @@ class GuruController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+{
+    $guru = GuruModel::find($id);
+    if (!$guru) {
+        return redirect()->route('guru.index')->with('error', 'Data Guru tidak ditemukan');
     }
+
+    $request->validate([
+        'kode' => 'required|string|max:6|unique:guru,kode,'.$id,
+        'nama' => 'required|string|max:225',
+        'jabatan' => 'required|string',
+        'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+    ]);
+
+    // Mengisi data guru dengan nilai baru
+    $guru->kode = $request->get('kode');
+    $guru->nama = $request->get('nama');
+    $guru->jabatan = $request->get('jabatan');
+
+    // Menghapus gambar lama jika ada
+    if ($guru->foto && file_exists(storage_path('app/public/'.$guru->foto))) {
+        Storage::delete('public/'. $guru->foto);
+    }
+
+    // Mengunggah dan menyimpan gambar baru
+    $foto_name = $request->file('foto')->store('images', 'public');
+    $guru->foto = $foto_name;
+    
+    $guru->save();
+
+    return redirect()->route('guru.index')
+        ->with('success', 'Data Guru Berhasil Diperbarui');
+}
+
 
     /**
      * Remove the specified resource from storage.

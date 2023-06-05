@@ -14,7 +14,15 @@ class ArtikelModel extends Model
     protected $fillable = [
         'kode',
         'judul',
+        'ket',
         'foto',
         'tanggal_publish',
+        'url',
+        'guru_id',
     ];
+
+    public function guru()
+    {
+        return $this->belongsTo(GuruModel::class);
+    }
 }

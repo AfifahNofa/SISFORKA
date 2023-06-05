@@ -24,47 +24,33 @@
                         <div class="card-body">
                             <form method="POST" action="{{ $url_form }}" enctype="multipart/form-data">
                                 @csrf
-                                @if (isset($ekstrakulikuler))
+                                @if (isset($jadwalekstra))
                                     @method('PUT')
                                 @endif
                                 <div class="form-group">
                                     <label>Kode</label>
                                     <input class="form-control @error('kode') is-invalid @enderror"
-                                        value="{{ isset($ekstrakulikuler) ? $ekstrakulikuler->kode : old('kode') }}"
+                                        value="{{ isset($jadwalekstra) ? $jadwalekstra->kode : old('kode') }}"
                                         name="kode" type="text" />
                                     @error('kode')
                                         <span class="error invalid-feedback">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>Nama</label>
-                                    <input class="form-control @error('nama') is-invalid @enderror"
-                                        value="{{ isset($ekstrakulikuler) ? $ekstrakulikuler->nama : old('nama') }}"
-                                        name="nama" type="text" />
-                                    @error('nama')
+                                    <label>Hari</label>
+                                    <input class="form-control @error('hari') is-invalid @enderror"
+                                        value="{{ isset($jadwalekstra) ? $jadwalekstra->hari : old('hari') }}"
+                                        name="hari" type="text" />
+                                    @error('hari')
                                         <span class="error invalid-feedback">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="image">Foto</label>
-                                    <input type="file" class="form-control" required="required" name="foto" value="{{$ekstrakulikuler->foto}}"/><br>
-                                    <img width="150px" src="{{asset('storage/'.$ekstrakulikuler->foto)}}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Materi</label>
-                                    <input class="form-control @error('materi') is-invalid @enderror"
-                                        value="{{ isset($ekstrakulikuler) ? $ekstrakulikuler->materi : old('materi') }}"
-                                        name="materi" type="text" />
-                                    @error('materi')
-                                        <span class="error invalid-feedback">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label>Target</label>
-                                    <input class="form-control @error('target') is-invalid @enderror"
-                                        value="{{ isset($ekstrakulikuler) ? $ekstrakulikuler->target : old('target') }}"
-                                        name="target" type="text" />
-                                    @error('target')
+                                    <label>Jam</label>
+                                    <input class="form-control @error('jam') is-invalid @enderror"
+                                        value="{{ isset($jadwalekstra) ? $jadwalekstra->jam : old('jam') }}"
+                                        name="jam" type="text" />
+                                    @error('jam')
                                         <span class="error invalid-feedback">{{ $message }}</span>
                                     @enderror
                                 </div>

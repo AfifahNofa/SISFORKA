@@ -324,7 +324,7 @@
                     </p>
                 </a>
 
-                <a class="perProgramHome" href="{{ url('/prestasi') }}">
+                <a class="perProgramHome" href="{{ url('/dataprestasi') }}">
                     <img src="images/prestasi1.jpeg" alt="Foto Program">
                     <h3>Prestasi</h3>
                     <p>
@@ -355,38 +355,17 @@
         <h2>Artikel Terbaru</h2>
 
         <div class="artikelHome">
-
-
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                    delectus quasi amet libero iusto sequi at.
-                </p>
+            @if ($artikel->count() > 0)
+            @foreach ($artikel as $a)
+            <a href="{{ $a->url }}" class="text-decoration-none">
+                <a class="perArtikelHome">
+                <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Artikel">
+                <h3>{{ $a->judul }}</h3>
+                <small>Di tulis oleh : <span>{{ $a->guru->nama }}n</span></small>
+                <p>{{ $a->ket }}</p>
             </a>
-
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                    delectus quasi amet libero iusto sequi at.
-                </p>
-            </a>
-
-
-            <a class="perArtikelHome">
-                <img src="images/1.jpg" alt="Foto Artikel">
-                <h3>Tutorial Login Laravel 8</h3>
-                <small>Di tulis oleh : <span>Rifki Romadhan</span></small>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus explicabo
-                    delectus quasi amet libero iusto sequi at.
-                </p>
-            </a>
+            @endforeach
+            @endif
         </div>
     </div>
 
