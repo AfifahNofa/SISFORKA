@@ -7,7 +7,6 @@ use App\Http\Controllers\EkstraController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
-<<<<<<< HEAD
 use App\Http\Controllers\JadwalEkstrakulikulerController;
 use App\Http\Controllers\PembinaController;
 use App\Http\Controllers\KalenderAdminController;
@@ -16,9 +15,7 @@ use App\Http\Controllers\KontakAdminController;
 use App\Http\Controllers\KontakController;
 
 use App\Http\Controllers\SaranaController;
-=======
 use App\Http\Controllers\ppdbController;
->>>>>>> 729716593a5bb9ae60ee41053fc3d0a3a3182e71
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SaranaAdminController;
 use App\Http\Controllers\SiswaController;
@@ -81,15 +78,12 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/ekstrakulikuler', EkstraController::class);
     Route::resource('/pembina', PembinaController::class);
     Route::resource('/prestasi', PrestasiController::class);
-<<<<<<< HEAD
     Route::resource('/jadwalekstra', JadwalEkstrakulikulerController::class);
     Route::resource('/artikeladmin', ArtikelController::class);
     Route::resource('/kontakadmin', KontakAdminController::class);
     Route::resource('/kalenderadmin', KalenderAdminController::class);
     Route::resource('/saranaadmin', SaranaAdminController::class);
-=======
     Route::resource('/ppdb', ppdbController::class);
->>>>>>> 729716593a5bb9ae60ee41053fc3d0a3a3182e71
 });
 
 Auth::routes();
