@@ -78,6 +78,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Kalender</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/ppdb') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>PPDB</span></a>
+    </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/saranaadmin') }}">

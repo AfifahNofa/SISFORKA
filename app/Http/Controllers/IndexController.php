@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ArtikelModel;
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
+use App\Models\ppdbModel;
 use App\Models\PrestasiModel;
 use App\Models\SiswaModel;
 use Illuminate\Http\Request;
@@ -124,6 +125,13 @@ class IndexController extends Controller
         $prestasi = PrestasiModel::all();
 
         return view('user.dataprestasi', ['prestasi' => $prestasi]);
+    }
+
+    public function showppdb()
+    {
+        $ppdb = ppdbModel::all();
+
+        return view('user.datappdb', ['ppdb' => $ppdb]);
     }
     public function showBaca()
     {

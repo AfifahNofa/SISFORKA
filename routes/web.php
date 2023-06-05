@@ -7,6 +7,7 @@ use App\Http\Controllers\EkstraController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+<<<<<<< HEAD
 use App\Http\Controllers\JadwalEkstrakulikulerController;
 use App\Http\Controllers\PembinaController;
 use App\Http\Controllers\KalenderAdminController;
@@ -15,6 +16,9 @@ use App\Http\Controllers\KontakAdminController;
 use App\Http\Controllers\KontakController;
 
 use App\Http\Controllers\SaranaController;
+=======
+use App\Http\Controllers\ppdbController;
+>>>>>>> 729716593a5bb9ae60ee41053fc3d0a3a3182e71
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SaranaAdminController;
 use App\Http\Controllers\SiswaController;
@@ -43,9 +47,7 @@ Route::get('/pramuka', [IndexController::class, 'showPramuka']);
 Route::get('/baca', [IndexController::class, 'showBaca']);
 Route::get('/artikel', [IndexController::class, 'showArtikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
-Route::get('/perArtikel1', [IndexController::class, 'perArtikel1']);
-Route::get('/perArtikel2', [IndexController::class, 'perArtikel2']);
-Route::get('/ppdb', [IndexController::class, 'ppdb']);
+Route::get('/datappdb', [IndexController::class, 'showppdb']);
 Route::get('/kalender', [IndexController::class, 'kalender']);
 Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');
 Route::get('/galeri', [IndexController::class, 'galeri']);
@@ -64,7 +66,6 @@ Route::get('/datasiswa', [IndexController::class, 'showSiswa']);
 Route::get('/dataprestasi', [IndexController::class, 'showPrestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
 
-
 Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
 
@@ -80,11 +81,15 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/ekstrakulikuler', EkstraController::class);
     Route::resource('/pembina', PembinaController::class);
     Route::resource('/prestasi', PrestasiController::class);
+<<<<<<< HEAD
     Route::resource('/jadwalekstra', JadwalEkstrakulikulerController::class);
     Route::resource('/artikeladmin', ArtikelController::class);
     Route::resource('/kontakadmin', KontakAdminController::class);
     Route::resource('/kalenderadmin', KalenderAdminController::class);
     Route::resource('/saranaadmin', SaranaAdminController::class);
+=======
+    Route::resource('/ppdb', ppdbController::class);
+>>>>>>> 729716593a5bb9ae60ee41053fc3d0a3a3182e71
 });
 
 Auth::routes();
