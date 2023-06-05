@@ -201,7 +201,7 @@
                             <a href="" class="text-white">Artikel</a>
                             <a href="" class="text-white">Galeri</a>
                             <a href="" class="text-white">Contact Us</a>
-                            <a href="" class="text-white">dataekstrar</a>
+                            <a href="" class="text-white">Ekstrakulikuler</a>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">

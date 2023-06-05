@@ -41,6 +41,7 @@ Route::get('/baca', [IndexController::class, 'showBaca']);
 Route::get('/artikel', [IndexController::class, 'showArtikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
 Route::get('/perArtikel1', [IndexController::class, 'perArtikel1']);
+Route::get('/perArtikel2', [IndexController::class, 'perArtikel2']);
 Route::get('/ppdb', [IndexController::class, 'ppdb']);
 Route::get('/kalender', [IndexController::class, 'kalender']);
 // Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');

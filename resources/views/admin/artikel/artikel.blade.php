@@ -39,6 +39,7 @@
                                             <th>Foto</th>
                                             <th>Tanggal Publish</th>
                                             <th>Url</th>
+                                            <th>Penulis</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -58,6 +59,7 @@
                                                     </td>
                                                     <td>{{ $a->tanggal_publish }}</td>
                                                     <td>{{ $a->url }}</td>
+                                                    <td>{{ $a->guru->nama}}</td>
                                                     <td>
                                                         <div class="btn-group">
                                                             <a href="{{ route('artikeladmin.edit', [$a->id]) }}"

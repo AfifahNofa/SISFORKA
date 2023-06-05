@@ -13,7 +13,9 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        // return view('user.index');
+        $artikel = ArtikelModel::all();
+        return view('user.index', ['artikel' => $artikel]);
     }
     public function dataekstra()
     {
@@ -60,6 +62,10 @@ class IndexController extends Controller
     public function perArtikel1()
     {
         return view('user.perArtikel1');
+    }
+    public function perArtikel2()
+    {
+        return view('user.perArtikel2');
     }
     public function ppdb()
     {

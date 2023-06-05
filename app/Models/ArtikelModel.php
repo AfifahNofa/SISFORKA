@@ -18,5 +18,11 @@ class ArtikelModel extends Model
         'foto',
         'tanggal_publish',
         'url',
+        'guru_id',
     ];
+
+    public function guru()
+    {
+        return $this->belongsTo(GuruModel::class);
+    }
 }

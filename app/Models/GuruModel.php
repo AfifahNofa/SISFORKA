@@ -22,4 +22,9 @@ class GuruModel extends Model
         return $this->hasOne(SiswaModel::class);
     }
 
+    public function artikel()
+    {
+        return $this->hasMany(ArtikelModel::class);
+    }
+
 }

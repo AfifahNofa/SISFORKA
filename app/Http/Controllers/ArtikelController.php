@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Models\ArtikelModel;
+use App\Models\GuruModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,7 +17,8 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $artikel = ArtikelModel::all();
+        // $artikel = ArtikelModel::all();
+        $artikel = ArtikelModel::with('guru')->get();
         return view('admin.artikel.artikel')
         ->with('artikel', $artikel);
     }
@@ -28,8 +30,10 @@ class ArtikelController extends Controller
      */
     public function create()
     {
+        $guru = GuruModel::all();
         return view('admin.artikel.create_artikel')
-        ->with('url_form', route('artikeladmin.store'));
+            ->with('guru', $guru)
+            ->with('url_form', route('artikeladmin.store'));
 
     }
 
@@ -48,6 +52,7 @@ class ArtikelController extends Controller
             'foto' => 'required',
             'tanggal_publish' => 'required|date',
             'url' => 'required',
+            'guru_id' => 'required',
         ]);
         $foto_name = null;
         if ($request->file('foto')) {
@@ -62,6 +67,12 @@ class ArtikelController extends Controller
         $artikel->foto = $foto_name;
         $artikel->tanggal_publish = $request->input('tanggal_publish');
         $artikel->url = $request->input('url');
+        $artikel->save();
+
+        $guru = new GuruModel;
+        $guru->id = $request->get('guru_id');
+    
+        $artikel->guru()->associate($guru);
         $artikel->save();
 
         return redirect()->route('artikeladmin.index')->with('success', 'Artikel berhasil ditambahkan');
@@ -87,9 +98,11 @@ class ArtikelController extends Controller
      */
     public function edit($id)
     {
-        $artikel = ArtikelModel::find($id);
+        $artikel = ArtikelModel::with('guru')->where('id', $id)->first();
+        $guru = GuruModel::all(); //mendapatkan data dari tabel kelas
         return view('admin.artikel.create_artikel')
                     ->with('artikel', $artikel)
+                    ->with('guru', $guru)
                     ->with('url_form', url('/artikeladmin/' . $id));
     }
 
@@ -132,6 +145,12 @@ class ArtikelController extends Controller
     $foto_name = $request->file('foto')->store('images', 'public');
     $artikel->foto = $foto_name;
     
+    $artikel->save();
+
+    $guru = new GuruModel();
+    $guru->id = $request->get('guru_id');
+    
+    $artikel->guru()->associate($guru);
     $artikel->save();
 
     return redirect('artikeladmin')
