@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KalenderModel;
+use App\Models\SaranaModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class KalenderController extends Controller
+class SaranaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class KalenderController extends Controller
      */
     public function index()
     {
-        $kalender = KalenderModel::all();
-        return view('user.kalender')
-        ->with('kalender', $kalender);
+        $sarana = SaranaModel::all();
+        return view('user.sarana')
+        ->with('sarana', $sarana);
     }
 
     /**
@@ -27,8 +27,9 @@ class KalenderController extends Controller
      */
     public function create()
     {
-        return view('user.kalender')
-        ->with('url_form', route('kalender.store'));
+        return view('user.sarana')
+        ->with('url_form', route('sarana.store'));
+
     }
 
     /**
@@ -40,22 +41,21 @@ class KalenderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'foto' => 'required',
+            'judul' => 'required|string|max:225',
+            'foto' => 'nullable|image',
+            'ket' => 'nullable|string|max:225',
         ]);
-        $foto_name = null;
-        if ($request->file('foto')) {
-            $foto = $request->file('foto');
-            $foto_name = time() . '_' . $foto->getClientOriginalName();
-            $foto_name = $request->file('foto')->store('images', 'public');
+
+        $data = $request->only(['judul', 'ket']);
+
+        if ($request->hasFile('foto')) {
+            $foto = $request->file('foto')->store('public/images');
+            $data['foto'] = $foto;
         }
-        $kalender = new KalenderModel();
 
-        $kalender->foto = $foto_name;
+        SaranaModel::create($data);
 
-        $kalender->save();
-
-        return redirect()->route('kalender.index')
-        ->with('success', 'kalender berhasil ditambahkan');
+        return redirect()->route('saranas.index')->with('success', 'Sarana created successfully.');
     }
 
     /**
@@ -66,7 +66,7 @@ class KalenderController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('saranas.show', compact('sarana'));
     }
 
     /**
@@ -100,8 +100,8 @@ class KalenderController extends Controller
      */
     public function destroy($id)
     {
-        KalenderModel::where('id', '=', $id)->delete();
-        return redirect('kalenderadmin')
-            ->with('success', 'Data kalender Berhasil Dihapus');
+        saranaModel::where('id', '=', $id)->delete();
+        return redirect('saranaadmin')
+            ->with('success', 'Data sarana Berhasil Dihapus');
     }
 }

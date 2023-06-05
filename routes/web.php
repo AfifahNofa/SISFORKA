@@ -11,6 +11,8 @@ use App\Http\Controllers\KalenderAdminController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\KontakAdminController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\SaranaAdminController;
+use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -38,15 +40,16 @@ Route::get('/baca', [IndexController::class, 'showbaca']);
 Route::get('/artikel', [IndexController::class, 'artikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
 Route::get('/ppdb', [IndexController::class, 'ppdb']);
-Route::get('/kalender', [IndexController::class, 'kalender']);
+// Route::get('/kalender', [IndexController::class, 'kalender']);
 Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');
-
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
 Route::get('/kontak', [KontakController::class, 'index'])->name('kontak.index');
 // Route::get('/kontak', [KontakController::class, 'create'])->name('kontak.create');
 Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
+Route::get('/sarana', [SaranaController::class, 'index'])->name('sarana.index');
+Route::post('/sarana', [SaranaController::class, 'store'])->name('sarana.store');
 Route::get('/dataguru', [IndexController::class, 'showGuru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/dataekstra', [IndexController::class, 'dataekstra']);
@@ -72,6 +75,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/artikeladmin', ArtikelController::class);
     Route::resource('/kontakadmin', KontakAdminController::class);
     Route::resource('/kalenderadmin', KalenderAdminController::class);
+    Route::resource('/saranaadmin', SaranaAdminController::class);
 });
 
 Auth::routes();

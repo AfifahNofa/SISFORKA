@@ -61,6 +61,12 @@
             <span>Kalender</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/saranaadmin') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Sarana dan Prasarana</span></a>
+    </li>
+
 
 
     <!-- Divider -->
