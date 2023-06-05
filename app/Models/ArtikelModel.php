@@ -14,7 +14,9 @@ class ArtikelModel extends Model
     protected $fillable = [
         'kode',
         'judul',
+        'ket',
         'foto',
         'tanggal_publish',
+        'url',
     ];
 }

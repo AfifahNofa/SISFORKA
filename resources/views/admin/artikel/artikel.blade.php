@@ -35,8 +35,10 @@
                                             <th>No</th>
                                             <th>Kode</th>
                                             <th>Judul</th>
+                                            <th>Keterangan</th>
                                             <th>Foto</th>
                                             <th>Tanggal Publish</th>
+                                            <th>Url</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -47,6 +49,7 @@
                                                     <td>{{ ++$ar }}</td>
                                                     <td>{{ $a->kode }}</td>
                                                     <td>{{ $a->judul }}</td>
+                                                    <td>{{ $a->ket }}</td>
                                                     <td>
                                                         @if ($a->foto)
                                                             <img style="max-width:100px;max-height:100px"
@@ -54,23 +57,19 @@
                                                         @endif
                                                     </td>
                                                     <td>{{ $a->tanggal_publish }}</td>
+                                                    <td>{{ $a->url }}</td>
                                                     <td>
                                                         <div class="btn-group">
-
-
-                                                            <form method="POST" action="{{ url('/artikel/' . $a->id) }}">
+                                                            <a href="{{ route('artikeladmin.edit', [$a->id]) }}"
+                                                                class="btn btn-sm btn-warning mr-2">edit</a>
+                                                                <form method="POST" action="{{ url('/artikeladmin/' . $a->id) }}">
                                                                     @csrf
-                                                                    @method('EDIT')
+                                                                    @method('DELETE')
                                                                     <button type="submit"
-                                                                        class="btn btn-sm btn-success mr-2">Edit</button>
-                                                            </form>
-                                                            <form method="POST" action="{{ url('/artikel/' . $a->id) }}">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit"
-                                                                    class="btn btn-sm btn-danger mr-2">DELETE</button>
-                                                            </form>
+                                                                        class="btn btn-sm btn-danger mr-2">DELETE</button>
+                                                                </form>
                                                         </div>
+       
                                                     </td>
                                                 </tr>
                                             @endforeach

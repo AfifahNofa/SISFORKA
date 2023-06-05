@@ -133,35 +133,23 @@
 
     <div class="container artikel">
 
-        <a href="{{ url('/perArtikel') }}" class="text-decoration-none">
+
+            @if ($artikel->count() > 0)
+            @foreach ($artikel as $a)
+            <a href="{{ $a->url }}" class="text-decoration-none">
             <div class="perArtikel">
-                <img src="images/ppdb1.jpeg" alt="Artikel">
+                <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Artikel">
                 <div class="textArtikel">
-                    <h3>Pengumuman Pendaftaran Siswa Baru Tahun 2023/2024</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
-                        temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
-                        eveniet! Repellat architecto eos aut, ipsum laborum ratione?
-                    </p>
+                    <h3>{{ $a->judul }}</h3>
+                    <p>{{ $a->ket }}</p>
                 </div>
             </div>
+            @endforeach
+            @endif
         </a>
 
-        <a href="perArtikel.html" class="text-decoration-none">
-            <div class="perArtikel">
-                <img src="images/sdn5.jpeg" alt="Artikel">
-                <div class="textArtikel">
-                    <h3>Pelatihan Perilaku Ramah Lingkungan Hidup</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi eaque officiis dignissimos
-                        temporibus reprehenderit distinctio. Ipsam laudantium explicabo sed ratione nisi officiis
-                        eveniet! Repellat architecto eos aut, ipsum laborum ratione?
-                    </p>
-                </div>
-            </div>
-        </a>
 
-        <a href="perArtikel.html" class="text-decoration-none">
+        {{-- <a href="perArtikel.html" class="text-decoration-none">
             <div class="perArtikel">
                 <img src="images/sdn10.jpeg" alt="Artikel">
                 <div class="textArtikel">
@@ -188,7 +176,7 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
 
        

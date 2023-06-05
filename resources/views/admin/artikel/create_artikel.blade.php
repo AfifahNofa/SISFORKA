@@ -43,6 +43,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label>Keterangan</label>
+                                <input class="form-control @error('ket') is-invalid @enderror" value="{{ isset($artikel) ? $artikel->ket : old('ket') }}" name="ket" type="text" />
+                                @error('ket')
+                                <span class="error invalid-feedback">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label for="image">Foto</label>
                                 <input type="file" class="form-control" required="required" name="foto" /><br />
                             </div>
@@ -50,6 +57,13 @@
                                 <label>Tanggal Publish</label>
                                 <input class="form-control @error('tanggal_publish') is-invalid @enderror" value="{{ isset($artikel) ? $artikel->tanggal_publish : old('tanggal_publish') }}" name="tanggal_publish" type="date" />
                                 @error('tanggal_publish')
+                                <span class="error invalid-feedback">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>URL</label>
+                                <input class="form-control @error('url') is-invalid @enderror" value="{{ isset($artikel) ? $artikel->url : old('url') }}" name="url" type="text" />
+                                @error('url')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>

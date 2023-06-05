@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArtikelModel;
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
 use App\Models\PrestasiModel;
@@ -46,13 +47,19 @@ class IndexController extends Controller
     // {
     //     return view('user.ekstra.tik');
     // }
-    public function artikel()
+    public function showArtikel()
     {
-        return view('user.artikel');
+        $artikel = ArtikelModel::all();
+
+        return view('user.artikel', ['artikel' => $artikel]);
     }
     public function perArtikel()
     {
         return view('user.perArtikel');
+    }
+    public function perArtikel1()
+    {
+        return view('user.perArtikel1');
     }
     public function ppdb()
     {

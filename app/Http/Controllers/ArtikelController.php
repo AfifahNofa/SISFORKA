@@ -44,8 +44,10 @@ class ArtikelController extends Controller
         $request->validate([
             'kode' => 'required|unique:artikel',
             'judul' => 'required',
+            'ket' => 'required',
             'foto' => 'required',
             'tanggal_publish' => 'required|date',
+            'url' => 'required',
         ]);
         $foto_name = null;
         if ($request->file('foto')) {
@@ -56,8 +58,10 @@ class ArtikelController extends Controller
         $artikel = new ArtikelModel();
         $artikel->kode = $request->input('kode');
         $artikel->judul = $request->input('judul');
+        $artikel->ket = $request->input('ket');
         $artikel->foto = $foto_name;
         $artikel->tanggal_publish = $request->input('tanggal_publish');
+        $artikel->url = $request->input('url');
         $artikel->save();
 
         return redirect()->route('artikeladmin.index')->with('success', 'Artikel berhasil ditambahkan');
@@ -84,8 +88,9 @@ class ArtikelController extends Controller
     public function edit($id)
     {
         $artikel = ArtikelModel::find($id);
-        return view('admin.artikel.create')
-                    ->with('artikel', $artikel);
+        return view('admin.artikel.create_artikel')
+                    ->with('artikel', $artikel)
+                    ->with('url_form', url('/artikeladmin/' . $id));
     }
 
     /**
@@ -97,28 +102,41 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'kode' => 'required|unique:artikel,kode,' . $id,
-            'judul' => 'nullable|max:225',
-            'foto' => 'nullable',
-            'tanggal_publish' => 'required|date',
-        ]);
-
         $artikel = ArtikelModel::find($id);
-        $foto_name = null;
+    if (!$artikel) {
+        return redirect()->route('artikel.index')->with('error', 'Data artikel tidak ditemukan');
+    }
+
+    $request->validate([
+        'kode' => 'required|unique:artikel,kode,' . $id,
+        'judul' => 'nullable|max:225',
+        'ket' => 'required',
+        'foto' => 'nullable',
+        'tanggal_publish' => 'required|date',
+        'url' => 'required',
+    ]);
+
+    // Mengisi data guru dengan nilai baru
+    $artikel->kode = $request->input('kode');
+    $artikel->judul = $request->input('judul');
+    $artikel->ket = $request->input('ket');
+    $artikel->tanggal_publish = $request->input('tanggal_publish');
+    $artikel->url = $request->input('url');
+
+    // Menghapus gambar lama jika ada
     if ($artikel->foto && file_exists(storage_path('app/public/'.$artikel->foto))) {
         Storage::delete('public/'. $artikel->foto);
     }
-    if ($request->hasFile('image')) {
-        $foto_name = $request->file('image')->store('images', 'public');
-        $artikel->foto = $foto_name;
-    }
 
-    $artikel->update($request->except(['_token', '_method', 'submit']));
+    // Mengunggah dan menyimpan gambar baru
+    $foto_name = $request->file('foto')->store('images', 'public');
+    $artikel->foto = $foto_name;
+    
+    $artikel->save();
 
-    // Jika data berhasil diupdate, akan kembali ke halaman utama
     return redirect('artikeladmin')
-        ->with('success', 'artikel berhasil diupdate');
+    ->with('success', 'artikel berhasil diupdate');
+        
     }
 
 
