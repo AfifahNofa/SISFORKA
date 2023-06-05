@@ -46,7 +46,6 @@ Route::get('/sarana', [IndexController::class, 'sarana']);
 Route::get('/dataprestasi', [IndexController::class, 'showPrestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
 
-
 Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
 
