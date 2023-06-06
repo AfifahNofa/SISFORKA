@@ -112,12 +112,6 @@ class IndexController extends Controller
         return view('user.dataprestasi', ['prestasi' => $prestasi]);
     }
 
-    public function showppdb()
-    {
-        $ppdb = ppdbModel::all();
-
-        return view('user.datappdb', ['ppdb' => $ppdb]);
-    }
     public function showBaca()
     {
         $ekstrakulikuler = EkstraModel::all();
@@ -154,9 +148,10 @@ class IndexController extends Controller
         return view('user.ekstra.drumband')
             ->with('ekstrakulikuler', $ekstrakulikuler);
     }
+
     public function showPpdb()
     {
-        $ppdb = PpdbModel::all();
+        $ppdb = ppdbModel::all();
         return view('user.datappdb')
             ->with('ppdb', $ppdb);
     }
