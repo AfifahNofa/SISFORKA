@@ -5,21 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class EkstraModel extends Model
+class SaranaModel extends Model
 {
     use HasFactory;
-    protected $table = 'ekstrakulikuler';
+    protected $table = 'sarana';
     protected $primaryKey = 'id';
     // protected $keyType = 'int';
     protected $fillable = [
-        'kode',
-        'nama',
+        'judul',
         'foto',
-        'materi',
-        'target',
-        'url',
+        'ket',
     ];
-    public function pembina(){
-        return $this->hasMany(PembinaModel::class);
-    }
 }

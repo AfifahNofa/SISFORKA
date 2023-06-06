@@ -9,11 +9,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\JadwalEkstrakulikulerController;
 use App\Http\Controllers\PembinaController;
-use App\Http\Controllers\KalenderAdminController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\KontakAdminController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\ppdbController;
 use App\Http\Controllers\PrestasiController;
+use App\Http\Controllers\SaranaController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -42,10 +43,6 @@ Route::get('/artikel', [IndexController::class, 'showArtikel']);
 Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
 Route::get('/perArtikel1', [IndexController::class, 'perArtikel1']);
 Route::get('/perArtikel2', [IndexController::class, 'perArtikel2']);
-Route::get('/ppdb', [IndexController::class, 'ppdb']);
-Route::get('/kalender', [IndexController::class, 'kalender']);
-// Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender.index');
-
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
@@ -54,9 +51,11 @@ Route::get('/kontak', [KontakController::class, 'index'])->name('kontak.index');
 Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
 Route::get('/dataguru', [IndexController::class, 'showGuru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
-Route::get('/dataekstra', [IndexController::class, 'dataekstra']);
+Route::get('/dataekstra', [IndexController::class, 'showDataekstra']);
 Route::get('/datasiswa', [IndexController::class, 'showSiswa']);
-Route::get('/sarana', [IndexController::class, 'sarana']);
+Route::get('/datappdb', [IndexController::class, 'showPpdb']);
+Route::get('/datasarana', [IndexController::class, 'showSarana']);
+Route::get('/datakalender', [IndexController::class, 'showKalender']);
 Route::get('/dataprestasi', [IndexController::class, 'showPrestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
 
@@ -79,13 +78,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/jadwalekstra', JadwalEkstrakulikulerController::class);
     Route::resource('/artikeladmin', ArtikelController::class);
     Route::resource('/kontakadmin', KontakAdminController::class);
-    Route::resource('/kalenderadmin', KalenderAdminController::class);
+    Route::resource('/kalender', KalenderController::class);
+    Route::resource('/ppdb', ppdbController::class);
+    Route::resource('/sarana', SaranaController::class);
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

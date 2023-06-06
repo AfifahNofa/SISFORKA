@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KalenderModel;
+use App\Models\ppdbModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class KalenderController extends Controller
+class ppdbController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class KalenderController extends Controller
      */
     public function index()
     {
-        $kalender = KalenderModel::all();
-        return view('admin.kalender.kalender')
-        ->with('kalender', $kalender);
+        $ppdb = ppdbModel::all();
+        return view('admin.ppdb.ppdb')
+            ->with('ppdb', $ppdb);
     }
 
     /**
@@ -27,8 +27,8 @@ class KalenderController extends Controller
      */
     public function create()
     {
-        return view('admin.kalender.create_kalender')
-        ->with('url_form', route('kalender.store'));
+        return view('admin.ppdb.create_ppdb')
+            ->with('url_form', route('ppdb.store'));
     }
 
     /**
@@ -42,19 +42,22 @@ class KalenderController extends Controller
         $request->validate([
             'foto' => 'required|image|max:2048',
         ]);
+
         $foto_name = null;
         if ($request->file('foto')) {
             $foto = $request->file('foto');
             $foto_name = time() . '_' . $foto->getClientOriginalName();
             $foto_name = $request->file('foto')->store('images', 'public');
         }
-        $kalender = new KalenderModel();
 
-        $kalender->foto = $foto_name;
+        // Menyimpan foto jika ada
+        $ppdb = new ppdbModel();
+        $ppdb->foto = $foto_name;
+        $ppdb->save();
 
-        $kalender->save();
-
-        return redirect()->route('kalender.index')->with('success', 'kalender berhasil ditambahkan');
+        //jika data berhasil ditambahkan, akan kembali ke halaman utama
+        return redirect('ppdb')
+            ->with('success', 'Data PPDB Berhasil Ditambahkan');
     }
 
     /**
@@ -67,19 +70,12 @@ class KalenderController extends Controller
     {
         //
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        $kalender = KalenderModel::find($id);
-        return view('admin.kalender.create_kalender')
-                    ->with('kalender', $kalender)
-                    ->with('url_form', route('kalender.update', [$id]));
+        $ppdb = ppdbModel::find($id);
+        return view('admin.ppdb.create_ppdb')
+            ->with('ppdb', $ppdb)
+            ->with('url_form', route('ppdb.update', [$id]));
     }
 
     /**
@@ -89,11 +85,12 @@ class KalenderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-        $kalender = kalenderModel::find($id);
-        if (!$kalender) {
-            return redirect()->route('kalender.index')->with('error', 'Data kalender tidak ditemukan');
+        $ppdb = ppdbModel::find($id);
+        if (!$ppdb) {
+            return redirect()->route('ppdb.index')->with('error', 'Data PPDB tidak ditemukan');
         }
 
         $request->validate([
@@ -103,30 +100,35 @@ class KalenderController extends Controller
 
         // Menghapus gambar lama jika ada
         if ($request->hasFile('foto')) {
-            if ($kalender->foto && file_exists(storage_path('app/public/' . $kalender->foto))) {
-                Storage::delete('public/' . $kalender->foto);
+            if ($ppdb->foto && file_exists(storage_path('app/public/' . $ppdb->foto))) {
+                Storage::delete('public/' . $ppdb->foto);
             }
             // Mengunggah dan menyimpan gambar baru
             $foto_name = $request->file('foto')->store('images', 'public');
-            $kalender->foto = $foto_name;
+            $ppdb->foto = $foto_name;
         }
 
-        $kalender->save();
+        $ppdb->save();
 
-        return redirect()->route('kalender.index')
-            ->with('success', 'Data Kalender Berhasil Diperbarui');
+        return redirect()->route('ppdb.index')
+            ->with('success', 'Data PPDB Berhasil Diperbarui');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        KalenderModel::where('id', '=', $id)->delete();
-        return redirect('kalender')
-            ->with('success', 'Data kalender Berhasil Dihapus');
+        $ppdb = ppdbModel::find($id);
+        if (!$ppdb) {
+            return redirect()->route('ppdb.index')->with('error', 'Data PPDB tidak ditemukan');
+        }
+
+        // Menghapus gambar jika ada
+        if ($ppdb->foto && file_exists(storage_path('app/public/' . $ppdb->foto))) {
+            Storage::delete('public/' . $ppdb->foto);
+        }
+
+        // Menghapus data ppdb
+        $ppdb->delete();
+        return redirect('ppdb')
+            ->with('success', 'Data PPDB Berhasil Dihapus');
     }
 }

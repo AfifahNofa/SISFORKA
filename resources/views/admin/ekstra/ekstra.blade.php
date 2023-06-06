@@ -39,6 +39,7 @@
                                             <th>Foto</th>
                                             <th>Materi</th>
                                             <th>Target</th>
+                                            <th>URL</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -57,6 +58,7 @@
                                                     </td>
                                                     <td>{{ $k->materi }}</td>
                                                     <td>{{ $k->target }}</td>
+                                                    <td>{{ $k->url }}</td>
 
                                                     <td>
                                                         <!-- Bikin tombol edit dan delete -->

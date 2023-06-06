@@ -69,6 +69,13 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label>URL</label>
+                                    <input class="form-control @error('url') is-invalid @enderror" value="{{ isset($ekstrakulikuler) ? $ekstrakulikuler->url : old('url') }}" name="url" type="text" />
+                                    @error('url')
+                                    <span class="error invalid-feedback">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
                                     <input type="submit" value="Submit">
                                 </div>
                             </form>

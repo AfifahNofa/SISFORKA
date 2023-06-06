@@ -75,7 +75,7 @@ class ArtikelController extends Controller
         $artikel->guru()->associate($guru);
         $artikel->save();
 
-        return redirect()->route('artikeladmin.index')->with('success', 'Artikel berhasil ditambahkan');
+        return redirect()->route('artikel.index')->with('success', 'Artikel berhasil ditambahkan');
 
     }
 

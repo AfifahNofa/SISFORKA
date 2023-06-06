@@ -14,7 +14,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Kalender</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Sarana dan Prasarana</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -28,43 +28,46 @@
                                         {{ session('success') }}
                                     </div>
                                 @endif
-                                <a href="{{ url('kalender/create') }}" class="btn btn-sm btn-success my-2">Tambah Data</a>
+                                <a href="{{ url('sarana/create') }}" class="btn btn-sm btn-success my-2">Tambah Data</a>
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Judul</th>
                                             <th>Foto</th>
+                                            <th>Keterangan</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if ($kalender->count() > 0)
-                                            @foreach ($kalender as $ar => $a)
-                                                <tr>
-                                                    <td>{{ $ar + 1 }}</td>
-                                                    <td>
-                                                        @if ($a->foto)
-                                                        <img style="max-width: 800px; max-height: 500px; display: inline-block; vertical-align: middle;"
-                                                                src="{{ asset('storage/' . $a->foto) }}" />
-                                                        @endif
-                                                    </td>
+                                        @if ($sarana->count() > 0)
+                                        @foreach ($sarana as $sa => $a)
+                                            <tr>
+                                                <td>{{ ++$sa }}</td>
+                                                <td>{{ $a->judul }}</td>
+                                                <td>
+                                                    @if ($a->foto)
+                                                        <img style="max-width:100px;max-height:100px"
+                                                            src="{{ asset('storage/' .$a->foto) }}" />
+                                                    @endif
+                                                </td>
+                                                <td>{{ $a->ket }}</td>
 
-                                                    <td>
-                                                        <div class="btn-group">
-
-                                                            <div class="btn-group">
-                                                                <a href="{{ route('kalender.edit', [$a->id]) }}"
-                                                                    class="btn btn-sm btn-warning mr-2">edit</a>
-                                                                <form method="POST" action="{{ url('/kalender/' . $a->id) }}">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-sm btn-danger mr-2">DELETE</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <a href="{{ route('sarana.edit', [$a->id]) }}"
+                                                            class="btn btn-sm btn-warning mr-2">Edit</a>
+                                                        <form method="POST"
+                                                            action="{{ route('sarana.destroy', [$a->id]) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit"
+                                                                class="btn btn-sm btn-danger mr-2">Delete</button>
+                                                        </form>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         @else
                                             <tr>
                                                 <td colspan="6" class="text-center">Data tidak ada</td>
@@ -93,9 +96,4 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-
-
-<!-- /.content -->
 @endsection
-
-

@@ -185,22 +185,7 @@
                 <h4>Target</h4>
                 <p>{{$e->target}}</p>
                 @endif
-                {{-- <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table-bordered table table-hover table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Kejuaraan</th>
-                                    <th>Atas Nama</th>
-                                </tr>
-                            </thead>
-
-                                <tr>
-                                    <td>5</td>
-                                    <td>Juara 1 Lomba Mancing</td>
-                                    <td>Kimak Bersaudara</td>
-                                </tr> --}}
+               
             </div>
         </div>
     </div>
@@ -256,18 +241,13 @@
 
                 </div>
 
-
-
-
-
-
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
+                    <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
+                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
+                        <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
 

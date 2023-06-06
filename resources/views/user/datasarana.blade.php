@@ -81,7 +81,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            <a class="dropdown-item" href="{{ url('/datasarana') }}">Sarana dan Prasarana</a>
 
                         </div>
                     </li>
@@ -130,76 +130,17 @@
     </div>
     <div class="containerGuruHome container">
         <div class="guruHome">
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-            <h3>Tempat Ibadah</h3>
-            <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Kelas</h3>
-        <p>Jumlah 1</p>
-         </a>
-
-         <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Lab.Komputer</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Lab.Komputer</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Lab.Bahasa Inggris</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Perpustakaan</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Perpustakaan</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Ruang Kesehatan</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Lapangan Olahraga</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Lapangan Olahraga</h3>
-        <p>Jumlah 1</p>
-        </a>
-
-        <a class="perGuruHome">
-            <img src="images/erna.jpeg" alt="Foto Artikel">
-        <h3>Ruang Pertemuan</h3>
-        <p>Jumlah 1</p>
-        </a>
+            @if ($sarana->count() > 0)
+                @foreach ($sarana as $a)
+                    <a class="perGuruHome">
+                        <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Guru">
+                        <h3>{{ $a->judul }}</h3>
+                        <p>{{ $a->ket }}</p>
+                    </a>
+                @endforeach
+            @endif
         </div>
     </div>
-
-
-
 
     <!-- sosmed icon -->
     <div class="iconBox">
@@ -247,20 +188,15 @@
                 </div>
 
 
-
-
-
-
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
+                    <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Kontak</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
+                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
+                        <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
-
 
                 <div class="col-md-4 text-center">
                     <h4 class="my-4 text-white">Hubungi Kami</h4>

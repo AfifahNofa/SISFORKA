@@ -69,35 +69,58 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasarana') }}">Sarana dan Prasarana</a>
+
+                        </div>
                     </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
+                            Program
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
+                            <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datappdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datakalender') }}">Kalender Akademik</a>
                         </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
+
+
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
 
         </div>
@@ -109,22 +132,24 @@
 
 
     <div class="container ppdb">
-        <a href="{{ url('/ppdb') }}" class="text-decoration-none">
-            <div class="poster" style="text-align: center;">
-                <img src="images/ppdb1.jpeg" alt="poster1" width="800" height="500">
-            </div>
-        </a>
-        <p></p>
-        <a href="{{ url('/ppdb') }}" class="text-decoration-none">
-            <div class="poster" style="text-align: center;">
-                <img src="images/ppdb2.jpeg" alt="poster1" width="800" height="500">
-            </div>
-        </a>
+        @if ($ppdb->count() > 0)
+            @foreach ($ppdb as $p)
+                <tr>
+
+                    <td>
+                        <div style="display: flex; justify-content: center;">
+                            <img src="{{ asset('storage/' . $p->foto) }}" alt="foto"
+                                style="max-width: 800px; max-height: 500px;">
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+        @else
+            <tr>
+                <td colspan="3" class="text-center">Data tidak ada</td>
+            </tr>
+        @endif
     </div>
-
-
-
-
 
     <!-- sosmed icon -->
     <div class="iconBox">
@@ -167,27 +192,19 @@
                             <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
                             </p>
                         </div>
-
-
                     </div>
 
                 </div>
-
-
-
-
-
 
                 <div class="col-md-4">
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
+                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
+                        <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
-
 
                 <div class="col-md-4 text-center">
                     <h4 class="my-4 text-white">Hubungi Kami</h4>

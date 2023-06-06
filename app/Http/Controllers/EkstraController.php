@@ -46,6 +46,7 @@ class EkstraController extends Controller
             'foto' => 'required|image|max:2048',
             'materi' => 'required|string',
             'target' => 'required|string',
+            'url' => 'required|string',
         ]);
 
         $foto_name = null;
@@ -62,6 +63,7 @@ class EkstraController extends Controller
         $ekstrakulikuler->foto = $foto_name;
         $ekstrakulikuler->materi = $request->get('materi');
         $ekstrakulikuler->target = $request->get('target');
+        $ekstrakulikuler->url = $request->get('url');
         $ekstrakulikuler->save();
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
@@ -113,6 +115,7 @@ class EkstraController extends Controller
             'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'materi' => 'required|string',
             'target' => 'required|string',
+            'url' => 'required|string',
         ]);
 
 
@@ -121,6 +124,7 @@ class EkstraController extends Controller
         $ekstrakulikuler->nama = $request->get('nama');
         $ekstrakulikuler->materi = $request->get('materi');
         $ekstrakulikuler->target = $request->get('target');
+        $ekstrakulikuler->url = $request->get('url');
        
     
         // Menghapus gambar lama jika ada

@@ -10,7 +10,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ url('/home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -74,9 +74,21 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('/kalenderadmin') }}">
+        <a class="nav-link" href="{{ url('/kalender') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Kalender</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/ppdb') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>PPDB</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/sarana') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Sarana</span></a>
     </li>
 
 

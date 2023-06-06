@@ -267,21 +267,15 @@
 
                 </div>
 
-
-
-
-
-
                 <div class="col-md-4">
-                    <h4 class="my-4 text-center text-white">Tentang</h4>
+                    <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
+                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
+                        <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
-
 
                 <div class="col-md-4 text-center">
                     <h4 class="my-4 text-white">Hubungi Kami</h4>

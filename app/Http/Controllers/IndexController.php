@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\ArtikelModel;
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
+use App\Models\KalenderModel;
+use App\Models\PpdbModel;
 use App\Models\PrestasiModel;
+use App\Models\SaranaModel;
 use App\Models\SiswaModel;
 use Illuminate\Http\Request;
 
@@ -17,38 +20,17 @@ class IndexController extends Controller
         $artikel = ArtikelModel::all();
         return view('user.index', ['artikel' => $artikel]);
     }
-    public function dataekstra()
+    public function showDataekstra()
     {
-        return view('user.dataekstra');
+        $dataekstra = EkstraModel::all();
+
+        return view('user.dataekstra', ['dataekstra' => $dataekstra]);
     }
     public function visimisi()
     {
         return view('user.visimisi');
     }
-    // public function baca()
-    // {
-    //     return view('user.ekstra.baca');
-    // }
-    public function drumband()
-    {
-        return view('user.ekstra.drumband');
-    }
-    // public function karate()
-    // {
-    //     return view('user.ekstra.karate');
-    // }
-    public function menari()
-    {
-        return view('user.ekstra.menari');
-    }
-    // public function pramuka()
-    // {
-    //     return view('user.ekstra.pramuka');
-    // }
-    // public function tik()
-    // {
-    //     return view('user.ekstra.tik');
-    // }
+
     public function showArtikel()
     {
         $artikel = ArtikelModel::all();
@@ -71,9 +53,11 @@ class IndexController extends Controller
     {
         return view('user.ppdb');
     }
-    public function kalender()
+    public function showKalender()
     {
-        return view('user.kalender');
+        $kalender = KalenderModel::all();
+
+        return view('user.kalender', ['kalender' => $kalender]);
     }
     public function galeri()
     {
@@ -95,9 +79,11 @@ class IndexController extends Controller
     // {
     //     return view('user.datasiswa');
     // }
-    public function sarana()
+    public function showSarana()
     {
-        return view('user.sarana');
+        $sarana = SaranaModel::all();
+
+        return view('user.datasarana', ['sarana' => $sarana]);
     }
     public function dataprestasi()
     {
@@ -160,6 +146,12 @@ class IndexController extends Controller
         $ekstrakulikuler = EkstraModel::all();
         return view('user.ekstra.drumband')
             ->with('ekstrakulikuler', $ekstrakulikuler);
+    }
+    public function showPpdb()
+    {
+        $ppdb = PpdbModel::all();
+        return view('user.datappdb')
+            ->with('ppdb', $ppdb);
     }
 
     // public function showBaca()

@@ -81,7 +81,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/sarana') }}">Sarana dan Prasarana</a>
+                            <a class="dropdown-item" href="{{ url('/datasarana') }}">Sarana dan Prasarana</a>
 
                         </div>
                     </li>
@@ -97,9 +97,9 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/ppdb') }}">PPDB</a>
+                            <a class="dropdown-item" href="{{ url('/datappdb') }}">PPDB</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kalender') }}">Kalender Akademik</a>
+                            <a class="dropdown-item" href="{{ url('/datakalender') }}">Kalender Akademik</a>
                         </div>
                     </li>
 
@@ -129,8 +129,21 @@
         <h1 style="font-size: 30px;">INFORMASI KALENDER AKADEMIK TAHUN AJARAN 2022-2023</h1>
     </div>
 
-
     <div class="container kalender">
+        @if ($kalender->count() > 0)
+            @foreach ($kalender as $a)
+                        <div class="poster" style="text-align: center;">
+                            <img src="{{ asset('storage/' . $a->foto) }}" alt="foto"
+                                style="max-width: 12000px; max-height: 5000px;">
+                        </div>
+            @endforeach
+        @else
+            <tr>
+                <td colspan="3" class="text-center">Data tidak ada</td>
+            </tr>
+        @endif
+    </div>
+    {{-- <div class="container kalender">
         <a href="{{ url('/kalender') }}" class="text-decoration-none">
             <div class="poster" style="text-align: center;">
                 <img src="images/kalender1.jpg" alt="poster1" width="800" height="500">
@@ -143,7 +156,7 @@
                 <img src="images/kalender2.jpg" alt="poster1" width="800" height="500">
             </div>
         </a>
-    </div>
+    </div> --}}
 
 
 
@@ -197,17 +210,13 @@
                 </div>
 
 
-
-
-
-
                 <div class="col-md-4">
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
-                        <a href="" class="text-white">Artikel</a>
-                        <a href="" class="text-white">Galeri</a>
-                        <a href="" class="text-white">Contact Us</a>
-                        <a href="" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
+                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
+                        <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
 
