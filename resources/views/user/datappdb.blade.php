@@ -135,7 +135,6 @@
         @if ($ppdb->count() > 0)
             @foreach ($ppdb as $p)
                 <tr>
-
                     <td>
                         <div style="display: flex; justify-content: center;">
                             <img src="{{ asset('storage/' . $p->foto) }}" alt="foto"

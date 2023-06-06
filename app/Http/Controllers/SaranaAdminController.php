@@ -6,7 +6,7 @@ use App\Models\SaranaModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class SaranaController extends Controller
+class SaranaAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,8 +26,7 @@ class SaranaController extends Controller
      */
     public function create()
     {
-        return view('admin.sarana.create_sarana')
-            ->with('url_form', route('sarana.store'));
+        return view('admin.sarana.create_sarana')->with('url_form', route('saranaadmin.store'));
     }
 
     /**
@@ -38,27 +37,33 @@ class SaranaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'judul' => 'required|string|max:225',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'ket' => 'nullable|string|max:225',
         ]);
-        $foto_name = null;
-        if ($request->file('foto')) {
-            $foto = $request->file('foto');
-            $foto_name = time() . '_' . $foto->getClientOriginalName();
-            $foto_name = $request->file('foto')->store('images', 'public');
+
+        $judul = $request->input('judul');
+        $ket = $request->input('ket');
+
+        // Handle file upload if 'foto' field is present
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $filePath = 'images/' . $fileName;
+            $file->move('storage', $filePath);
+        } else {
+            $filePath = null;
         }
-     
+
         $sarana = new SaranaModel();
-        $sarana->judul = $request->input('judul');
-        $sarana->foto = $foto_name;
-        $sarana->ket = $request->input('ket');
+        $sarana->judul = $judul;
+        $sarana->foto = $filePath;
+        $sarana->ket = $ket;
         $sarana->save();
 
-       
-
-        return redirect()->route('sarana.index')->with('success', 'Sarana berhasil ditambahkan');
+        return redirect()->back()->with('success', 'Sarana created successfully.');
     }
 
     /**
@@ -69,6 +74,7 @@ class SaranaController extends Controller
      */
     public function show($id)
     {
+        // Implementation for show method if needed
     }
 
     /**
@@ -80,9 +86,7 @@ class SaranaController extends Controller
     public function edit($id)
     {
         $sarana = SaranaModel::find($id);
-        return view('admin.sarana.create_sarana')
-                ->with('sarana', $sarana)
-                 ->with('url_form', url('/sarana/'. $id));
+        return view('admin.sarana.create_sarana')->with('sarana', $sarana);
     }
 
     /**
@@ -94,35 +98,34 @@ class SaranaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $sarana = SaranaModel::find($id);
-        if (!$sarana) {
-            return redirect()->route('sarana.index')->with('error', 'Data sarana tidak ditemukan');
-        }
-    
         $request->validate([
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-    
-        // Mengisi data sarana dengan nilai baru
+
+        $sarana = SaranaModel::find($id);
+
+        if ($request->hasFile('foto')) {
+            // Delete old foto if it exists
+            if ($sarana->foto && file_exists(storage_path('app/public/' . $sarana->foto))) {
+                Storage::delete('public/' . $sarana->foto);
+            }
+
+            // Upload new foto
+            $file = $request->file('foto');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() . '.' . $extension;
+            $filePath = 'images/' . $fileName;
+            $file->move('storage', $filePath);
+
+            $sarana->foto = $filePath;
+        }
+
         $sarana->judul = $request->input('judul');
         $sarana->ket = $request->input('ket');
         $sarana->save();
-    
-        // Menghapus gambar lama jika ada
-        if ($sarana->foto && file_exists(storage_path('app/public/'.$sarana->foto))) {
-            Storage::delete('public/'. $sarana->foto);
-        }
-    
-        // Mengunggah dan menyimpan gambar baru
-        $foto_name = $request->file('foto')->store('images', 'public');
-        $sarana->foto = $foto_name;
-        
-        $sarana->save();
 
-    
-        return redirect('sarana')
-        ->with('success', 'sarana berhasil diupdate');
-
+        return redirect()->route('saranaadmin.index')
+        ->with('success', 'Sarana berhasil diupdate');
     }
 
     /**
@@ -133,8 +136,15 @@ class SaranaController extends Controller
      */
     public function destroy($id)
     {
-        saranaModel::where('id', '=', $id)->delete();
-        return redirect('sarana')
-            ->with('success', 'Data sarana Berhasil Dihapus');
+        $sarana = SaranaModel::find($id);
+
+        // Delete the associated foto if it exists
+        if ($sarana->foto && file_exists(storage_path('app/public/' . $sarana->foto))) {
+            Storage::delete('public/' . $sarana->foto);
+        }
+
+        $sarana->delete();
+
+        return redirect('saranaadmin')->with('success', 'Data sarana berhasil dihapus');
     }
 }

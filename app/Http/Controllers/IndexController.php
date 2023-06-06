@@ -6,7 +6,7 @@ use App\Models\ArtikelModel;
 use App\Models\EkstraModel;
 use App\Models\GuruModel;
 use App\Models\KalenderModel;
-use App\Models\PpdbModel;
+use App\Models\ppdbModel;
 use App\Models\PrestasiModel;
 use App\Models\SaranaModel;
 use App\Models\SiswaModel;
@@ -110,6 +110,13 @@ class IndexController extends Controller
         $prestasi = PrestasiModel::all();
 
         return view('user.dataprestasi', ['prestasi' => $prestasi]);
+    }
+
+    public function showppdb()
+    {
+        $ppdb = ppdbModel::all();
+
+        return view('user.datappdb', ['ppdb' => $ppdb]);
     }
     public function showBaca()
     {

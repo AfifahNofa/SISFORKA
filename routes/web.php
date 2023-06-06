@@ -49,6 +49,8 @@ Route::get('/kontak', [IndexController::class, 'kontak']);
 Route::get('/kontak', [KontakController::class, 'index'])->name('kontak.index');
 // Route::get('/kontak', [KontakController::class, 'create'])->name('kontak.create');
 Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
+Route::get('/sarana', [SaranaController::class, 'index'])->name('sarana.index');
+Route::post('/sarana', [SaranaController::class, 'store'])->name('sarana.store');
 Route::get('/dataguru', [IndexController::class, 'showGuru']);
 Route::get('/datasiswa', [IndexController::class, 'datasiswa']);
 Route::get('/dataekstra', [IndexController::class, 'showDataekstra']);
@@ -58,7 +60,6 @@ Route::get('/datasarana', [IndexController::class, 'showSarana']);
 Route::get('/datakalender', [IndexController::class, 'showKalender']);
 Route::get('/dataprestasi', [IndexController::class, 'showPrestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
-
 
 Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
