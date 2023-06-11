@@ -10,9 +10,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Artikel SDN Jatimulyo 1</title>
+    <title>Kalender</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -70,53 +71,90 @@
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
+                            Profil
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/galeri') }}">Galeri</a>
+                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
+                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datasarana') }}">Sarana dan Prasarana</a>
+
                         </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Program
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datappdb') }}">PPDB</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('/datakalender') }}">Kalender Akademik</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
 
+
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Kategori" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
-
         </div>
     </nav>
 
-    <div class="title">
-        <h2>Galeri Pramuka</h2>
+    <div class="container titleArtikel" style="text-align: center;">
+        <h1 style="font-size: 30px;">INFORMASI KALENDER AKADEMIK TAHUN AJARAN 2022-2023</h1>
     </div>
 
-    <div class="container perGaleri">
-        <img src="images/5e72f65c1f909-teamwork-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f68fbd34a-excellent-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f6adbf417-commitment2-desktop.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f7134ca67-integrity-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f74b99ff0-humility-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f65c1f909-teamwork-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f68fbd34a-excellent-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f72cca561-respect-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f74b99ff0-humility-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f7134ca67-integrity-desktop2.jpg" alt="Galeri Pramuka">
-        <img src="images/5e72f6adbf417-commitment2-desktop.jpg" alt="Galeri Pramuka">
+    <div class="container kalender">
+        @if ($kalender->count() > 0)
+            @foreach ($kalender as $a)
+                        <div class="poster" style="text-align: center;">
+                            <img src="{{ asset('storage/' . $a->foto) }}" alt="foto"
+                                style="max-width: 12000px; max-height: 5000px;">
+                        </div>
+            @endforeach
+        @else
+            <tr>
+                <td colspan="3" class="text-center">Data tidak ada</td>
+            </tr>
+        @endif
     </div>
+    {{-- <div class="container kalender">
+        <a href="{{ url('/kalender') }}" class="text-decoration-none">
+            <div class="poster" style="text-align: center;">
+                <img src="images/kalender1.jpg" alt="poster1" width="800" height="500">
+            </div>
+        </a>
+        <p></p>
+        <p></p>
+        <a href="{{ url('/kalender') }}" class="text-decoration-none">
+            <div class="poster" style="text-align: center;">
+                <img src="images/kalender2.jpg" alt="poster1" width="800" height="500">
+            </div>
+        </a>
+    </div> --}}
+
+
 
 
 
@@ -148,7 +186,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -158,23 +196,20 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
+                            </p>
                         </div>
+
 
                     </div>
 
                 </div>
 
 
-
-
-
-
                 <div class="col-md-4">
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
-                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
                         <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
@@ -197,12 +232,12 @@
         </div>
     </div>
 
-
     <div class="footerCopyright">
         <p class="text-white">
             <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
+
 </body>
 
 </html>

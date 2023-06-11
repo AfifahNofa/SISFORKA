@@ -57,7 +57,7 @@ class IndexController extends Controller
     {
         $kalender = KalenderModel::all();
 
-        return view('user.kalender', ['kalender' => $kalender]);
+        return view('user.datakalender', ['kalender' => $kalender]);
     }
     public function galeri()
     {

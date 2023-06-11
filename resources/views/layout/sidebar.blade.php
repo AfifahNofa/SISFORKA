@@ -53,13 +53,13 @@
         <a class="nav-link" href="{{ url('/jadwalekstra') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Jadwal Ekstrakulikuler</span></a>
-        </li>
+    </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('/prestasi') }}">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Prestasi</span></a>
-        </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/prestasi') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Prestasi</span></a>
+    </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/artikeladmin') }}">
@@ -84,17 +84,11 @@
             <span>PPDB</span></a>
     </li>
 
-    <li class="nav-item">
+    {{-- <li class="nav-item">
         <a class="nav-link" href="{{ url('/saranaadmin') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Sarana dan Prasarana</span></a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link" href="{{ url('/ppdb') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>PPDB</span></a>
-    </li>
+    </li> --}}
 
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/sarana') }}">

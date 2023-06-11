@@ -16,8 +16,8 @@ class KalenderController extends Controller
     public function index()
     {
         $kalender = KalenderModel::all();
-        return view('user.kalender')
-        ->with('kalender', $kalender);
+        return view('user.datakalender')
+            ->with('kalender', $kalender);
     }
 
     /**
@@ -28,7 +28,7 @@ class KalenderController extends Controller
     public function create()
     {
         return view('admin.kalender.create_kalender')
-        ->with('url_form', route('kalender.store'));
+            ->with('url_form', route('kalender.store'));
     }
 
     /**
@@ -78,8 +78,8 @@ class KalenderController extends Controller
     {
         $kalender = KalenderModel::find($id);
         return view('admin.kalender.create_kalender')
-                    ->with('kalender', $kalender)
-                    ->with('url_form', route('kalender.update', [$id]));
+            ->with('kalender', $kalender)
+            ->with('url_form', route('kalender.update', [$id]));
     }
 
     /**

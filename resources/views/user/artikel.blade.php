@@ -108,10 +108,6 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
-                    </li>
-
-                    <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
@@ -134,25 +130,25 @@
     <div class="container artikel">
 
 
-            @if ($artikel->count() > 0)
+        @if ($artikel->count() > 0)
             @foreach ($artikel as $a)
-            <a href="{{ $a->url }}" class="text-decoration-none">
-            <div class="perArtikel">
-                <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Artikel">
-                <div class="textArtikel">
-                    <h3>{{ $a->judul }}</h3>
-                    <p>{{ $a->ket }}</p>
-                </div>
-            </div>
+                <a href="{{ $a->url }}" class="text-decoration-none">
+                    <div class="perArtikel">
+                        <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Artikel">
+                        <div class="textArtikel">
+                            <h3>{{ $a->judul }}</h3>
+                            <p>{{ $a->ket }}</p>
+                        </div>
+                    </div>
             @endforeach
-            @endif
+        @endif
         </a>
     </div>
 
 
-       
 
-{{--     
+
+    {{--
     <div class="container artikelPagination">
         <i class="fas fa-angle-left"></i>
         <span>1</span>
@@ -216,7 +212,6 @@
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
-                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
                         <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>

@@ -106,11 +106,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
                     </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
-                    </li>
-
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
@@ -199,7 +194,6 @@
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
-                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
                         <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>

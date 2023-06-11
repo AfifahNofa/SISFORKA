@@ -83,4 +83,3 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/ppdb', ppdbController::class);
     Route::resource('/sarana', SaranaController::class);
 });
-

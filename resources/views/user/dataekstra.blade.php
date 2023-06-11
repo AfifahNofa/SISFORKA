@@ -108,10 +108,6 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
-                    </li>
-
-                    <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
@@ -133,14 +129,14 @@
 
     <div class="container ekstrakulikuler">
         @if ($dataekstra->count() > 0)
-        @foreach ($dataekstra as $e)
-        <a href="{{ $e->url }}" class="perEkstrakulikuler">
-            <div class="gambarEkstrakulikuler">
-            <img src="{{ asset('storage/' . $e->foto) }}" alt="FotoEkstra">
-            </div>
-            <p>{{ $e->nama }}</p>
-        </a>
-        @endforeach
+            @foreach ($dataekstra as $e)
+                <a href="{{ $e->url }}" class="perEkstrakulikuler">
+                    <div class="gambarEkstrakulikuler">
+                        <img src="{{ asset('storage/' . $e->foto) }}" alt="FotoEkstra">
+                    </div>
+                    <p>{{ $e->nama }}</p>
+                </a>
+            @endforeach
         @endif
     </div>
 
@@ -196,7 +192,6 @@
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
-                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
                         <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
