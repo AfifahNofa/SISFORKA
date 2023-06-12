@@ -61,17 +61,18 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Data Guru</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                            <a href="{{ url('/guru') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Data Guru
+                                                </div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                            </a>
                                         </div>
-                                        {{-- <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -79,9 +80,10 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Data Siswa</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                                            <a href="{{ url('/siswa') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    Data Siswa</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
                                         </div>
                                         {{-- <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -97,14 +99,15 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Ekstrakulikuler
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">6</div>
+                                            <a href="{{ url('/ekstrakulikuler') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                    Ekstrakulikuler
                                                 </div>
-                                            </div>
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">6</div>
+                                                    </div>
+                                                </div>
                                         </div>
                                         {{-- <div class="col-auto">
                                             <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -120,9 +123,82 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pembina</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                            <a href="{{ url('/pembina') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Pembina</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                        </div>
+                                        {{-- <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <a href="{{ url('/jadwalekstra') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Jadwal Ekstrakulikuler</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                        </div>
+                                        {{-- <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <a href="{{ url('/prestasi') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Prestasi</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                        </div>
+                                        {{-- <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <a href="{{ url('/artikel') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Artikel</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                        </div>
+                                        {{-- <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <a href="{{ url('/kontak') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Kontak</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                         </div>
                                         {{-- <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -137,9 +213,15 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Sarana dan Prasarana</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                            <a href="{{ url('/sarana') }}" style="text-decoration: none;">
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Sarana
+                                                    dan
+                                                    Prasarana
+                                                </div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                    12
+                                                </div>
                                         </div>
                                         {{-- <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -152,44 +234,49 @@
                     </div>
                 </div>
 
-        
-            <!-- End of Main Content -->
 
-           
+                <!-- End of Main Content -->
+
+
+            </div>
+            <!-- End of Content Wrapper -->
+            <!-- Footer -->
+            @include('layout.footer')
+            <!-- End of Footer -->
+
         </div>
-        <!-- End of Content Wrapper -->
-        <!-- Footer -->
-        @include('layout.footer')
-        <!-- End of Footer -->
+        <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin keluar dari halaman ini?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" Jika Anda Ingin Keluar</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ url('/') }}">Logout</a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Yakin keluar dari halaman
+                            ini?
+                        </h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Pilih
+                        "Logout" Jika Anda Ingin Keluar
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="{{ url('/') }}">Logout</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    @include('layout.script')
+        @include('layout.script')
 
 
 </body>
