@@ -128,8 +128,6 @@
     </div>
 
     <div class="container artikel">
-
-
         @if ($artikel->count() > 0)
             @foreach ($artikel as $a)
                 <a href="{{ $a->url }}" class="text-decoration-none">

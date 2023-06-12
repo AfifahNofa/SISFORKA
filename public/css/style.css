@@ -388,7 +388,7 @@ body {
 
 .containerGuruHome .guruHome .perGuruHome img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   border-radius: 5%;
   margin-bottom: 10px;
 }
@@ -435,8 +435,49 @@ body {
     height: auto;
     object-fit: cover;
 }
+/* sarana */
+.containerSaranaHome {
+  padding-top: 50px;
+}
+.containerSaranaHome .saranaHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
 
+.containerSaranaHome .saranaHome .perSaranaHome {
+  width: 200px;
+  margin: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.containerSaranaHome .saranaHome .perSaranaHome p {
+  font-size: .9rem;
+  color: #000;
+  text-align: center;
+}
+.containerSaranaHome .saranaHome .perSaranaHome h3 {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 900;
+  color: #000;
+}
 
+.containerSaranaHome .saranaHome .perSaranaHome img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
 /* icon */
 
 .iconBox {

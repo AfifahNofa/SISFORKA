@@ -124,11 +124,11 @@
     <div class="title">
         <h1 class="text-center">Sarana Dan Prasarana SDN Jatimulyo 1</h1>
     </div>
-    <div class="containerGuruHome container">
-        <div class="guruHome">
+    <div class="containerSaranaHome container">
+        <div class="saranaHome">
             @if ($sarana->count() > 0)
                 @foreach ($sarana as $a)
-                    <a class="perGuruHome">
+                    <a class="perSaranaHome">
                         <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Guru">
                         <h3>{{ $a->judul }}</h3>
                         <p>{{ $a->ket }}</p>

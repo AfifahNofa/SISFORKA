@@ -30,14 +30,14 @@
                             @endif
                             <div class="form-group">
                                 <label>Kelas</label>
-                                <input class="form-control @error('kode') is-invalid @enderror" value="{{ isset($siswa) ? $siswa->kelas : old('kelas') }}" name="kelas" type="text" />
+                                <input class="form-control @error('kelas') is-invalid @enderror" value="{{ isset($siswa) ? $siswa->kelas : old('kelas') }}" name="kelas" type="text" />
                                 @error('kelas')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Jumlah</label>
-                                <input class="form-control @error('nama') is-invalid @enderror" value="{{ isset($siswa) ? $siswa->nama : old('jumlah') }}" name="jumlah" type="text" />
+                                <input class="form-control @error('jumlah') is-invalid @enderror" value="{{ isset($siswa) ? $siswa->jumlah : old('jumlah') }}" name="jumlah" type="text" />
                                 @error('jumlah')
                                 <span class="error invalid-feedback">{{ $message }}</span>
                                 @enderror

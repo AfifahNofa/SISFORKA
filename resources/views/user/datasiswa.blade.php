@@ -124,12 +124,14 @@
     <div class="title">
         <h1 class="text-center">Detail Data Siswa</h1>
     </div>
+    <div class="container">
     <table class="table-bordered table table-hover table-striped">
         <thead class="thead-dark">
             <tr>
                 <th>No</th>
                 <th>Kelas</th>
                 <th>Jumlah</th>
+                <th>Wali Kelas</th>
             </tr>
         </thead>
 
@@ -140,6 +142,7 @@
                     <td>{{ ++$s }}</td>
                     <td>{{ $st->kelas }}</td>
                     <td>{{ $st->jumlah }}</td>
+                    <td>{{$st->guru->nama}}</td>
                 </tr>
             @endforeach
         @else
@@ -147,44 +150,10 @@
                 <td colspan="6" class="text-center">Data tidak ada</td>
             </tr>
         @endif
-            {{-- <tr>
-                <td>1</td>
-                <td>Kelas I</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Kelas II</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Kelas III</td>
-                <td>32</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Kelas IV</td>
-                <td>33</td>
-            </tr>
-
-            <tr>
-                <td>5</td>
-                <td>Kelas V</td>
-                <td>30</td>
-            </tr>
-
-            <tr>
-                <td>6</td>
-                <td>Kelas IV</td>
-                <td>32</td>
-            </tr> --}}
 
         </tbody>
     </table>
+    </div>
 
     <!--
     <div class="container artikelPagination">

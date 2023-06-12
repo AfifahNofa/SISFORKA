@@ -44,10 +44,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="image">Foto</label>
-                                <input type="file" class="form-control" required="required" name="foto" value="{{$guru->foto}}"/><br>
-                                <img width="100px" src="{{asset('storage/'.$guru->foto)}}">
+                                <input type="file" class="form-control" required="required" name="foto" /><br />
                             </div>
-                            <div class="form-group">
+                             <div class="form-group">
                                 <label>Jabatan</label>
                                 <input class="form-control @error('jabatan') is-invalid @enderror" value="{{ isset($guru) ? $guru->jabatan : old('jabatan') }}" name="jabatan" type="text" />
                                 @error('jabatan')

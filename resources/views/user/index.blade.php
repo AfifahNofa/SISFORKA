@@ -350,7 +350,6 @@
 
     <div class="containerArtikelHome container">
         <h2>Artikel Terbaru</h2>
-
         <div class="artikelHome">
             @if ($artikel->count() > 0)
             @foreach ($artikel as $a)
@@ -360,7 +359,7 @@
                 <h3>{{ $a->judul }}</h3>
                 <small>Di tulis oleh : <span>{{ $a->guru->nama }}n</span></small>
                 <p>{{ $a->ket }}</p>
-            </a>
+            
             @endforeach
             @endif
         </div>

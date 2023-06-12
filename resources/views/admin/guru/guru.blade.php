@@ -49,7 +49,7 @@
                                                     <td>{{ $t->nama }}</td>
                                                     <td>
                                                         @if ($t->foto)
-                                                            <img style="max-width:100px;max-height:100px"
+                                                            <img style="max-width:100px;max-height:150px"
                                                                 src="{{ asset('storage/' . $t->foto) }}" />
                                                         @endif
                                                     </td>
