@@ -14,12 +14,12 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Data Pembina Ekstrakulikuler</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">SDN Jatimulyo </h6>
+                            <h6 class="m-0 font-weight-bold text-primary">SDN Jatimulyo 1</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -64,7 +64,8 @@
                                                             <form method="POST" action="{{ url('/pembina/' . $p->id) }}">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit" class="btn btn-sm btn-danger mr-2">DELETE</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-danger mr-2">DELETE</button>
                                                             </form>
                                                         </div>
                                                     </td>

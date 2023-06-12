@@ -14,7 +14,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tabel Data Jadwak Ekstrakurikuler</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Data Jadwal Ekstrakurikuler</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -54,10 +54,12 @@
                                                         <div class="btn-group">
                                                             <a href="{{ route('jadwalekstra.edit', [$j->id]) }}"
                                                                 class="btn btn-sm btn-warning mr-2">edit</a>
-                                                            <form method="POST" action="{{ url('/jadwalekstra/' . $j->id) }}">
+                                                            <form method="POST"
+                                                                action="{{ url('/jadwalekstra/' . $j->id) }}">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit" class="btn btn-sm btn-danger mr-2">DELETE</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-sm btn-danger mr-2">DELETE</button>
                                                             </form>
                                                         </div>
                                                     </td>
