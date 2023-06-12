@@ -245,11 +245,8 @@
                     <form>
 
                         <div class="form-group">
-                            <input class="form-control" type="search" placeholder="Example@gmail.com"
-                                aria-label="Search">
-                            <button class="btn btn-success btn-newsletter" type="submit">Kirim</button>
+                            <a href="{{ url('/kontak') }}" class="btn btn-success btn-newsletter">Kontak</a>
                         </div>
-
                     </form>
                 </div>
             </div>
