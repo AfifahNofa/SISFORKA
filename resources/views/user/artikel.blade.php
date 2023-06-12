@@ -143,9 +143,6 @@
         </a>
     </div>
 
-
-
-
     {{--
     <div class="container artikelPagination">
         <i class="fas fa-angle-left"></i>

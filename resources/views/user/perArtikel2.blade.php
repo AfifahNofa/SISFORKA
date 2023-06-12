@@ -296,15 +296,6 @@
                                             </li>
 
                                         </ul>
-                                        <form class="form-inline my-2 my-lg-0">
-
-                                            <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                                            <button class="btn btn-success sm-0" type="submit">
-                                                <i class="fas fa-search"></i>
-                                            </button>
-
-                                        </form>
                                     </div>
 
                                 </div>

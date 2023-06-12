@@ -57,9 +57,6 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/galeri') }}">Galeri</a>
-                    </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
@@ -74,15 +71,6 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control sm-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-
-                    <button class="btn btn-success sm-0" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </form>
             </div>
         </div>
     </nav>
@@ -233,7 +221,6 @@
                     <h4 class="my-4 text-center text-white">About</h4>
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
-                        <a href="{{ url('/galeri') }}" class="text-white">Galeri</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
                         <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
