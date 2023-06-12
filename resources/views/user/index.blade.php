@@ -294,8 +294,8 @@
                 </div>
 
                 <div class="perBox">
-                    <a class="dropdown-item" href="{{ url('/sarana') }}">
-                        <img src="images/1.jpg" alt="API">
+                    <a class="dropdown-item" href="{{ url('/datasarana') }}">
+                        <img src="images/kelas.jpeg" alt="API">
                         <h3>Sarana dan Prasarana</h3>
                     </a>
                 </div>
@@ -359,7 +359,7 @@
                 <h3>{{ $a->judul }}</h3>
                 <small>Di tulis oleh : <span>{{ $a->guru->nama }}n</span></small>
                 <p>{{ $a->ket }}</p>
-            
+
             @endforeach
             @endif
         </div>
