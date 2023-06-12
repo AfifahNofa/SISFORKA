@@ -16,7 +16,7 @@ class KalenderController extends Controller
     public function index()
     {
         $kalender = KalenderModel::all();
-        return view('user.datakalender')
+        return view('admin.kalender.kalender')
             ->with('kalender', $kalender);
     }
 
