@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ppdb', function (Blueprint $table) {
+            $table->id();
             $table->string('foto')->nullable();
             $table->timestamps();
         });
