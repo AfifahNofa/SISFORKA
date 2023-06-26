@@ -62,8 +62,6 @@ class IndexController extends Controller
         ]);
     }
 
-    public function downloadKalender()
-
     public function galeri()
     {
         return view('user.galeri');
