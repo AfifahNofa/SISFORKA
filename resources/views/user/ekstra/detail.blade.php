@@ -10,9 +10,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>PPDB</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <title>Ekstrakulikuler {{ $ekstra->nama }} SDN Jatimulyo 1 </title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo1.jpeg') }}" type="image/x-icon">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -53,8 +53,8 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="images/logo1.jpeg" alt="Logo SDN 1 Jatimulyo">
-                <h1>SD Negeri <br>Jatimulyo 1</h1>
+                <img src="{{ asset('images/logo1.jpeg') }}" alt="Logo SDN 1 Jatimulyo">
+                <h1>SD Negeri 1<br>Jatimulyo</h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -68,82 +68,104 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profil
-                        </a>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datasarana') }}">Sarana dan Prasarana</a>
-
-                        </div>
-                    </li>
 
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Program
+                            More
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakurikuler</a>
+                            <a class="dropdown-item" href="{{ url('/ekstrakulikuler') }}">Ekstrakulikuler</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datappdb') }}">PPDB</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datakalender') }}">Kalender Akademik</a>
+                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
                     </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
-                    </li>
-
-
                 </ul>
             </div>
-
         </div>
     </nav>
 
-    <div class="container titleArtikel" style="text-align: center;">
-        <h1 style="font-size: 45px;">INFORMASI PPDB 2023</h1>
+
+    <div class="title">
+        <h1 class="text-center">Ekstrakulikuler {{ $ekstra->nama }}</h1>
+        <!-- <p class="text-center">Choose The Category To See Our Galery</p> -->
+        {{-- <p class="text-center">Pilih Kategori Untuk Melihat Galeri Kami</p> --}}
     </div>
 
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        1. Ekstrakulikuler {{ $ekstra->nama }}
+                    </button>
+                </h2>
+            </div>
 
-    <div class="container ppdb">
-        @if ($ppdb->count() > 0)
-            @foreach ($ppdb as $p)
-                <tr>
-                    <td>
-                        <div style="display: flex; justify-content: center;">
-                            <img src="{{ asset('storage/' . $p->foto) }}" alt="foto"
-                                style="max-width: 800px; max-height: 500px;">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="pembinaEkstrakulikuler">
+
+                        <div class="perPembina">
+                            <img src="{{ asset('storage/' . $ekstra->foto) }}" alt="Foto Ekstra">
+                            <h5>{{ $ekstra->nama }}</h5>
                         </div>
-                    </td>
-                </tr>
-            @endforeach
-        @else
-            <tr>
-                <td colspan="3" class="text-center">Data tidak ada</td>
-            </tr>
-        @endif
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        2. Materi Ekstrakulikuler {{ $ekstra->nama }}
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+
+                    <div class="perPembina">
+                        <h4>Materi</h4>
+                        <p>
+                            <li>{{ $ekstra->materi }}</li>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    3. Target Ekstrakulikuler {{ $ekstra->nama }}
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+
+                <h4>Target</h4>
+                <p>{{ $ekstra->target }}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
 
     <!-- sosmed icon -->
     <div class="iconBox">
@@ -173,7 +195,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -183,9 +205,10 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
-                            </p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
+
+
                     </div>
 
                 </div>
@@ -195,9 +218,10 @@
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
-                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakurikuler</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
                     </div>
                 </div>
+
 
                 <div class="col-md-4 text-center">
                     <h4 class="my-4 text-white">Hubungi Kami</h4>
@@ -206,19 +230,18 @@
                         <div class="form-group">
                             <a href="{{ url('/kontak') }}" class="btn btn-success btn-newsletter">Kontak</a>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+
     <div class="footerCopyright">
         <p class="text-white">
             <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
-
 </body>
 
 </html>

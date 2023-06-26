@@ -19,7 +19,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data Ekstrakulikuler</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Data Ekstrakurikuler</h6>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="{{ $url_form }}" enctype="multipart/form-data">
@@ -47,8 +47,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Foto</label>
-                                    <input type="file" class="form-control" required="required" name="foto" value="{{$ekstrakulikuler->foto}}"/><br>
+                                    <input type="file" class="form-control" required="required" name="foto" value="{{ isset($ekstrakulikuler) ? $ekstrakulikuler->foto : old('foto') }}"/><br>
+
+                                    @if(isset($ekstrakulikuler))
                                     <img width="150px" src="{{asset('storage/'.$ekstrakulikuler->foto)}}">
+                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <label>Materi</label>

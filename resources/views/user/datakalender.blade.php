@@ -11,8 +11,8 @@
     <meta name="description" content="">
 
     <title>Kalender</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    <link rel="shortcut icon" href="{{ asset('/images/logo1.jpeg') }}" type="image/x-icon">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -53,8 +53,8 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="images/logo1.jpeg" alt="Logo SDN 1 Jatimulyo">
-                <h1>SD Negeri 1<br>Jatimulyo</h1>
+                <img src="{{ asset('images/logo1.jpeg') }}" alt="Logo SDN 1 Jatimulyo">
+                <h1>SD Negeri <br>Jatimulyo 1</h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -93,7 +93,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakurikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
@@ -122,8 +122,26 @@
     </nav>
 
     <div class="container titleArtikel" style="text-align: center;">
-        <h1 style="font-size: 30px;">INFORMASI KALENDER AKADEMIK TAHUN AJARAN 2022-2023</h1>
+        <h1 style="font-size: 30px;">INFORMASI KALENDER AKADEMIK </h1>
     </div>
+
+    <div class="dropdown text-center">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Pilih Tahun Ajaran
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            @foreach ($tahun_ajaran as $tahun)
+                 <a class="dropdown-item" href="{{ url('/datakalender/'.$tahun) }}">INFORMASI KALENDER AKADEMIK TAHUN AJARAN {{ $tahun }}</a>
+                <div class="dropdown-divider"></div>
+            @endforeach
+    	 </div>
+    </div>
+<br>
+    <div class="text-center">
+        <button class="btn btn-primary" onclick="downloadFileAsli()">Download</button>
+      </div>
+
 
     <div class="container kalender">
         @if ($kalender->count() > 0)
@@ -211,7 +229,7 @@
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
-                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakurikuler</a>
                     </div>
                 </div>
 
@@ -223,7 +241,7 @@
                         <div class="form-group">
                             <a href="{{ url('/kontak') }}" class="btn btn-success btn-newsletter">Kontak</a>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
@@ -235,6 +253,30 @@
             <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
+
+    <script>
+        function downloadFileAsli() {
+            const files = [
+                @foreach ($kalender as $k)
+                    @if($k->file_asli)
+                        '{{ asset('storage/' . $k->file_asli ) }}',
+                    @endif
+                @endforeach
+            ];
+
+            for(let file of files) {
+                downloadURI(file)
+            }
+        }
+
+        function downloadURI(uri)
+        {
+            var link = document.createElement("a");
+            link.download = uri.split('/').splice(-1);
+            link.href = uri;
+            link.click();
+        }
+    </script>
 
 </body>
 

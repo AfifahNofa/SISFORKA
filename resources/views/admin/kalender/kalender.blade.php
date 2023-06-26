@@ -33,6 +33,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Tahun Ajaran</th>
                                             <th>Foto</th>
                                             <th>Action</th>
                                         </tr>
@@ -42,6 +43,7 @@
                                             @foreach ($kalender as $ar => $a)
                                                 <tr>
                                                     <td>{{ $ar + 1 }}</td>
+                                                    <td>{{$a->tahun_ajaran}}</td>
                                                     <td>
                                                         @if ($a->foto)
                                                         <img style="max-width: 800px; max-height: 500px; display: inline-block; vertical-align: middle;"

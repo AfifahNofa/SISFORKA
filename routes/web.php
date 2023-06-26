@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EkstraController;
+use App\Http\Controllers\EkstrakulikulerController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
@@ -33,16 +35,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/visimisi', [IndexController::class, 'visimisi']);
-Route::get('/karate', [IndexController::class, 'showKarate']);
-Route::get('/menari', [IndexController::class, 'showMenari']);
-Route::get('/drumband', [IndexController::class, 'showDrumband']);
-Route::get('/tik', [IndexController::class, 'showTik']);
-Route::get('/pramuka', [IndexController::class, 'showPramuka']);
-Route::get('/baca', [IndexController::class, 'showBaca']);
+Route::get('/ekstra/{ekstra}', [EkstrakulikulerController::class, 'detail']);
+Route::get('/ekstra', [IndexController::class, 'showEkstra']);
+Route::get('/artikel/{artikel}', [ArticleController::class, 'detail']);
 Route::get('/artikel', [IndexController::class, 'showArtikel']);
-Route::get('/perArtikel', [IndexController::class, 'perArtikel']);
-Route::get('/perArtikel1', [IndexController::class, 'perArtikel1']);
-Route::get('/perArtikel2', [IndexController::class, 'perArtikel2']);
 Route::get('/galeri', [IndexController::class, 'galeri']);
 Route::get('/perGaleri', [IndexController::class, 'perGaleri']);
 Route::get('/kontak', [IndexController::class, 'kontak']);
@@ -57,7 +53,7 @@ Route::get('/dataekstra', [IndexController::class, 'showDataekstra']);
 Route::get('/datasiswa', [IndexController::class, 'showSiswa']);
 Route::get('/datappdb', [IndexController::class, 'showPpdb']);
 Route::get('/datasarana', [IndexController::class, 'showSarana']);
-Route::get('/datakalender', [IndexController::class, 'showKalender']);
+Route::get('/datakalender/{tahun_ajaran?}', [IndexController::class, 'showKalender']);
 Route::get('/dataprestasi', [IndexController::class, 'showPrestasi']);
 Route::get('/welcome', [IndexController::class, 'welcome']);
 

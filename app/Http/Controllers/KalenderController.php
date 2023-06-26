@@ -40,17 +40,34 @@ class KalenderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'tahun_ajaran' => 'required',
             'foto' => 'required|image|max:2048',
+            'file_asli' => 'required'
         ]);
+
         $foto_name = null;
+        $file_name = null;
+
         if ($request->file('foto')) {
             $foto = $request->file('foto');
-            $foto_name = time() . '_' . $foto->getClientOriginalName();
-            $foto_name = $request->file('foto')->store('images', 'public');
+            $foto_name = $foto->store('images', 'public');
         }
+
+        if ($request->file('file_asli')) {
+            $file = $request->file('file_asli');
+            $file_name = $file->storeAs(
+                'kalender',
+                $file->getClientOriginalName(),
+                'public'
+            );
+        }
+
+
         $kalender = new KalenderModel();
 
         $kalender->foto = $foto_name;
+        $kalender->file_asli = $file_name;
+        $kalender->tahun_ajaran = $request->tahun_ajaran;
 
         $kalender->save();
 
@@ -67,7 +84,6 @@ class KalenderController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -97,10 +113,12 @@ class KalenderController extends Controller
         }
 
         $request->validate([
+            'tahun_ajaran' => 'required',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'file_asli' => 'nullable',
         ]);
 
-
+        $kalender->tahun_ajaran = $request->tahun_ajaran;
         // Menghapus gambar lama jika ada
         if ($request->hasFile('foto')) {
             if ($kalender->foto && file_exists(storage_path('app/public/' . $kalender->foto))) {
@@ -109,6 +127,19 @@ class KalenderController extends Controller
             // Mengunggah dan menyimpan gambar baru
             $foto_name = $request->file('foto')->store('images', 'public');
             $kalender->foto = $foto_name;
+        }
+
+
+        if ($request->hasFIle('file_asli')) {
+            if ($kalender->file_asli && file_exists(storage_path('app/public/' . $kalender->file_asli))) {
+                Storage::delete('public/' . $kalender->file_asli);
+            }
+            $file = $request->file('file_asli');
+            $kalender->file_asli =  $file->storeAs(
+                'kalender',
+                $file->getClientOriginalName(),
+                'public'
+            );
         }
 
         $kalender->save();

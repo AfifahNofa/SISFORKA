@@ -55,7 +55,7 @@
 
             <a class="navbar-brand" href="#">
                 <img src="images/logo1.jpeg" alt="Logo SMK N 2 Purbalingga">
-                <h1>SD Negeri 1<br>Jatimulyo</h1>
+                <h1>SD Negeri <br>Jatimulyo 1</h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -94,7 +94,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakurikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
@@ -218,7 +218,7 @@
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
-                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakurikuler</a>
                     </div>
                 </div>
 

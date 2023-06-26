@@ -54,7 +54,7 @@
 
             <a class="navbar-brand" href="#">
                 <img src="images/logo1.jpeg" alt="Logo SDN 1 Jatimulyo">
-                <h1>SD Negeri 1<br>Jatimulyo</h1>
+                <h1>SD Negeri <br>Jatimulyo 1</h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -123,22 +123,45 @@
 
 
     <div class="title">
-        <h1 class="text-center">Ekstrakulikuler</h1>
-        <p class="text-center">Beberapa Ekstrakulikuler Yang Dimiliki SDN Jatimulyo 1</p>
+        <h1 class="text-center">Ekstrakurikuler</h1>
+        <p class="text-center">Beberapa Ekstrakurikuler Yang Dimiliki SDN Jatimulyo 1</p>
     </div>
 
     <div class="container ekstrakulikuler">
         @if ($dataekstra->count() > 0)
             @foreach ($dataekstra as $e)
-                <a href="{{ $e->url }}" class="perEkstrakulikuler">
+                <a href="{{ url('ekstra/' . $e->url) }}" class="perEkstrakulikuler">
                     <div class="gambarEkstrakulikuler">
                         <img src="{{ asset('storage/' . $e->foto) }}" alt="FotoEkstra">
                     </div>
                     <p>{{ $e->nama }}</p>
+                    <button class="btn btn-primary btn-sm detailButton" data-toggle="modal" data-target="#ekstraDetailModal_{{ $e->id }}">Detail</button>
                 </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="ekstraDetailModal_{{ $e->id }}" tabindex="-1" role="dialog" aria-labelledby="ekstraDetailModalLabel_{{ $e->id }}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="ekstraDetailModalLabel_{{ $e->id }}">{{ $e->nama }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>{{ $e->deskripsi }}</p>
+                                <!-- tambahkan detail lainnya sesuai kebutuhan -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endforeach
         @endif
     </div>
+
 
 
     <!-- sosmed icon -->
@@ -193,7 +216,7 @@
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
-                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakurikuler</a>
                     </div>
                 </div>
 

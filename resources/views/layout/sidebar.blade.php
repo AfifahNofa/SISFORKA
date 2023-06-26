@@ -41,7 +41,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/ekstrakulikuler') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Ekstrakulikuler</span></a>
+            <span>Ekstrakurikuler</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/pembina') }}">
@@ -52,7 +52,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ url('/jadwalekstra') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Jadwal Ekstrakulikuler</span></a>
+            <span>Jadwal Ekstrakurikuler</span></a>
     </li>
 
     <li class="nav-item">

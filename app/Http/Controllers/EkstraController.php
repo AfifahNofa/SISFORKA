@@ -125,19 +125,19 @@ class EkstraController extends Controller
         $ekstrakulikuler->materi = $request->get('materi');
         $ekstrakulikuler->target = $request->get('target');
         $ekstrakulikuler->url = $request->get('url');
-       
-    
+
+
         // Menghapus gambar lama jika ada
         if ($ekstrakulikuler->foto && file_exists(storage_path('app/public/'.$ekstrakulikuler->foto))) {
             Storage::delete('public/'. $ekstrakulikuler->foto);
         }
-    
+
         // Mengunggah dan menyimpan gambar baru
         $foto_name = $request->file('foto')->store('images', 'public');
         $ekstrakulikuler->foto = $foto_name;
 
         $ekstrakulikuler->save();
-    
+
         return redirect()->route('ekstrakulikuler.index')
             ->with('success', 'Data Ekstrakulikuler Berhasil Diperbarui');
     }

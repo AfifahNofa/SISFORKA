@@ -52,7 +52,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="images/logo1.jpeg" alt="Logo SMK N 2 Purbalingga">
-                <h1>SD Negeri 1<br>Jatimulyo</h1>
+                <h1>SD Negeri <br>Jatimulyo 1</h1>
             </a>
 
             <button class="navbar-toggler hamburger" type="button" data-toggle="collapse"
@@ -92,7 +92,7 @@
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakulikuler</a>
+                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakurikuler</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
                             <div class="dropdown-divider"></div>
@@ -127,7 +127,7 @@
     <ul id="autoWidth" class="cs-hidden">
         <li class="item-a">
             <section class="slideshow">
-                <img class="satu" src="images/banner-shd.png" alt="Team Work">
+                <img class="satu" src="images/sdn1.jpeg" alt="Team Work">
                 <div class="shadow"></div>
                 <div class="container">
                     <div class="mainText">
@@ -142,7 +142,7 @@
 
         <li class="item-a">
             <section class="slideshow">
-                <img class="dua" src="images/banner-shd.png" alt="Team Work">
+                <img class="dua" src="images/sdn3.jpeg" alt="Team Work">
                 <div class="shadow"></div>
                 <div class="container">
                     <div class="mainText">
@@ -156,7 +156,7 @@
 
         <li class="item-a">
             <section class="slideshow">
-                <img class="tiga" src="images/banner-shd.png" alt="Team Work">
+                <img class="tiga" src="images/sdn7.jpeg" alt="Team Work">
                 <div class="shadow"></div>
                 <div class="container">
                     <div class="mainText">
@@ -170,7 +170,7 @@
 
         <li class="item-a">
             <section class="slideshow">
-                <img class="empat" src="images/banner-shd.png" alt="Team Work">
+                <img class="empat" src="images/sdn8.jpeg" alt="Team Work">
                 <div class="shadow"></div>
                 <div class="container">
                     <div class="mainText">
@@ -184,7 +184,7 @@
 
         <li class="item-a">
             <section class="slideshow">
-                <img class="lima" src="images/banner-shd.png" alt="Team Work">
+                <img class="lima" src="images/sdn9.jpeg" alt="Team Work">
                 <div class="shadow"></div>
                 <div class="container">
                     <div class="mainText">
@@ -199,7 +199,7 @@
 
         <li class="item-a">
             <section class="slideshow">
-                <img class="enam" src="images/banner-shd.png" alt="Team Work">
+                <img class="enam" src="images/sdn2.jpeg" alt="Team Work">
                 <div class="shadow"></div>
                 <div class="container">
                     <div class="mainText">
@@ -313,7 +313,7 @@
 
                 <a class="perProgramHome" href="{{ url('/dataekstra') }}">
                     <img src="images/ekstra1.jpeg" alt="Foto Program">
-                    <h3>Ekstrakulikuler</h3>
+                    <h3>Ekstrakurikuler</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quo, iure repellendus
                         explicabo
@@ -357,7 +357,7 @@
                 <a class="perArtikelHome">
                 <img src="{{ asset('storage/' . $a->foto) }}" alt="Foto Artikel">
                 <h3>{{ $a->judul }}</h3>
-                <small>Di tulis oleh : <span>{{ $a->guru->nama }}n</span></small>
+                <small>Di tulis oleh : <span>{{ $a->guru->nama }}</span></small>
                 <p>{{ $a->ket }}</p>
 
             @endforeach
@@ -420,7 +420,7 @@
                     <div class="footerAbout">
                         <a href="{{ url('/artikel') }}" class="text-white">Artikel</a>
                         <a href="{{ url('/kontak') }}" class="text-white">Contact Us</a>
-                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakulikuler</a>
+                        <a href="{{ url('/dataekstra') }}" class="text-white">Ekstrakurikuler</a>
                     </div>
                 </div>
 

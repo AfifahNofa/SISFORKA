@@ -30,9 +30,20 @@
                             @endif
 
                             <div class="form-group">
-                                <label for="image">Foto</label>
-                                <input type="file" class="form-control" required="required" name="foto" /><br />
+                                <label for="text">Tahun Ajaran</label>
+                                <input type="text" class="form-control" @if(!isset($kalender)) required @endif name="tahun_ajaran" placeholder="gunakan tanda hubung antar tahun (contoh: 2022-2023)"/><br />
                             </div>
+
+                            <div class="form-group">
+                                <label for="image">Foto</label>
+                                <input type="file" class="form-control" @if(!isset($kalender)) required @endif name="foto" /><br />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image">File Asli</label>
+                                <input type="file" class="form-control" @if(!isset($kalender)) required @endif name="file_asli" /><br />
+                            </div>
+
 
                             <div class="form-group">
                                 <input type="submit" value="Submit">

@@ -10,9 +10,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>PPDB</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <title>Artikel SDN Jatimulyo 1</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo1.jpeg') }}" type="image/x-icon">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -53,7 +53,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="images/logo1.jpeg" alt="Logo SDN 1 Jatimulyo">
+                <img src="{{ asset('images/logo1.jpeg') }}" alt="Logo SDN 1 Jatimulyo">
                 <h1>SD Negeri <br>Jatimulyo 1</h1>
             </a>
 
@@ -71,49 +71,19 @@
                     <li class="nav-item active">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Profil
+                            More
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/visimisi') }}">Visi Misi</a>
+                            <a class="dropdown-item" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/dataguru') }}">Data Guru</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datasiswa') }}">Data Siswa</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datasarana') }}">Sarana dan Prasarana</a>
-
+                            <a class="dropdown-item" href="{{ url('/kontak') }}">Kontak Kami</a>
                         </div>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Program
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                            <a class="dropdown-item" href="{{ url('/dataekstra') }}">Ekstrakurikuler</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/dataprestasi') }}">Prestasi</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datappdb') }}">PPDB</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/datakalender') }}">Kalender Akademik</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/artikel') }}">Artikel</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
                     </li>
 
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/login') }}">Login</a>
                     </li>
-
 
                 </ul>
             </div>
@@ -121,46 +91,62 @@
         </div>
     </nav>
 
-    <div class="container titleArtikel" style="text-align: center;">
-        <h1 style="font-size: 45px;">INFORMASI PPDB 2023</h1>
+
+
+    <div class="container detailArtikel">
+        <h2>{{ $artikel->judul }}</h2>
     </div>
 
+    <img src="{{ asset('storage/' . $artikel->foto) }}" alt="Img Artikel" class="imgArtikel">
 
-    <div class="container ppdb">
-        @if ($ppdb->count() > 0)
-            @foreach ($ppdb as $p)
-                <tr>
-                    <td>
-                        <div style="display: flex; justify-content: center;">
-                            <img src="{{ asset('storage/' . $p->foto) }}" alt="foto"
-                                style="max-width: 800px; max-height: 500px;">
+
+    <div class="container mainDetailArtikel">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>{{ $artikel->judul }}</h3>
+                <p>
+                    {{ $artikel->ket }}
+                </p>
+            </div>
+            <div class="col-md-4 infoPenulis ">
+                <div class="">
+                    <div class="shareArtikel mb-4">
+                        <p>Share</p>
+
+                        <div class="containerIconShare">
+
+                            <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="iconShare fb">
+                                <i class="fab text-white fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="iconShare ig">
+                                <i class="fab text-white fa-instagram"></i>
+                            </a>
+
+                            <a href="https://youtube.com/@sdnjatimulyo1245" class="iconShare yt">
+                                <i class="fab text-white fa-youtube"></i>
+                            </a>
+
                         </div>
-                    </td>
-                </tr>
-            @endforeach
-        @else
-            <tr>
-                <td colspan="3" class="text-center">Data tidak ada</td>
-            </tr>
-        @endif
+                    </div>
+
+                    <hr>
+
+
+
+                    <div class="penulis">
+                        <p class="mt-3 mb-4">PUBLISHED BY</p>
+                        <h4>{{ $artikel->guru->nama }}</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+
 
     <!-- sosmed icon -->
-    <div class="iconBox">
-
-        <a href="https://www.facebook.com/profile.php?id=100009870373192&mibextid=ZbWKwL" class="perIconBox fb">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://instagram.com/sdnjatimulyo1?igshid=NTc4MTIwNjQ2YQ==" class="perIconBox ig">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://youtube.com/@sdnjatimulyo1245" class="perIconBox yt">
-            <i class="fab fa-youtube"></i>
-        </a>
-
-    </div>
 
     <div class="footer">
 
@@ -173,7 +159,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-envelope"></i>
-                            <p class="text-white">sdnjatimulyo144@gmail.com</p>
+                            <p class="text-white">sdnjatimulyo144@gmail.com </p>
                         </div>
 
                         <div class="perFooterContactUs">
@@ -183,8 +169,7 @@
 
                         <div class="perFooterContactUs">
                             <i class="fas text-white fa-road"></i>
-                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang
-                            </p>
+                            <p class="text-white">Jl. Pisang Kipas No.36, RT.07, RW.04 Kec.Lowokwaru Kota.Malang</p>
                         </div>
                     </div>
 
@@ -199,8 +184,9 @@
                     </div>
                 </div>
 
+
                 <div class="col-md-4 text-center">
-                    <h4 class="my-4 text-white">Hubungi Kami</h4>
+                    <h4 class="my-4 text-white">Newsletter</h4>
                     <form>
 
                         <div class="form-group">
@@ -213,11 +199,15 @@
         </div>
     </div>
 
+
     <div class="footerCopyright">
         <p class="text-white">
             <i class="far fa-copyright"></i>copyright By : <span>SDN Jatimulyo 1</span>
         </p>
     </div>
+
+
+    <script></script>
 
 </body>
 
