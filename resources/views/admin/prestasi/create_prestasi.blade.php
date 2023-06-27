@@ -32,14 +32,14 @@
                                     <input type="file" class="form-control" required="required" name="foto" /><br />
                                 </div>
                                 <div class="form-group">
-                                    <label>Keterangan</label>
-                                    <input class="form-control @error('keterangan') is-invalid @enderror"
-                                        value="{{ isset($prestasi) ? $prestasi->keterangan : old('keterangan') }}"
-                                        name="keterangan" type="text" />
+                                    <label for="keterangan">Keterangan</label>
+                                    <textarea class="form-control @error('keterangan') is-invalid @enderror" name="keterangan" id="keterangan"
+                                        rows="4">{{ isset($prestasi) ? $prestasi->keterangan : old('keterangan') }}</textarea>
                                     @error('keterangan')
                                         <span class="error invalid-feedback">{{ $message }}</span>
                                     @enderror
                                 </div>
+
                                 <div class="form-group">
                                     <input type="submit" value="Submit">
                                 </div>

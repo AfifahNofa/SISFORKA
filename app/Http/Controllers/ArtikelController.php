@@ -20,7 +20,7 @@ class ArtikelController extends Controller
         // $artikel = ArtikelModel::all();
         $artikel = ArtikelModel::with('guru')->get();
         return view('admin.artikel.artikel')
-        ->with('artikel', $artikel);
+            ->with('artikel', $artikel);
     }
 
     /**
@@ -34,7 +34,6 @@ class ArtikelController extends Controller
         return view('admin.artikel.create_artikel')
             ->with('guru', $guru)
             ->with('url_form', route('artikeladmin.store'));
-
     }
 
     /**
@@ -71,12 +70,12 @@ class ArtikelController extends Controller
 
         $guru = new GuruModel;
         $guru->id = $request->get('guru_id');
-    
+
         $artikel->guru()->associate($guru);
         $artikel->save();
 
-        return redirect()->route('artikel.index')->with('success', 'Artikel berhasil ditambahkan');
-
+        return redirect('artikeladmin')
+            ->with('success', 'Artikel berhasil ditambahkan');
     }
 
     /**
@@ -101,9 +100,9 @@ class ArtikelController extends Controller
         $artikel = ArtikelModel::with('guru')->where('id', $id)->first();
         $guru = GuruModel::all(); //mendapatkan data dari tabel kelas
         return view('admin.artikel.create_artikel')
-                    ->with('artikel', $artikel)
-                    ->with('guru', $guru)
-                    ->with('url_form', url('/artikeladmin/' . $id));
+            ->with('artikel', $artikel)
+            ->with('guru', $guru)
+            ->with('url_form', url('/artikeladmin/' . $id));
     }
 
     /**
@@ -116,46 +115,45 @@ class ArtikelController extends Controller
     public function update(Request $request, $id)
     {
         $artikel = ArtikelModel::find($id);
-    if (!$artikel) {
-        return redirect()->route('artikel.index')->with('error', 'Data artikel tidak ditemukan');
-    }
+        if (!$artikel) {
+            return redirect()->route('artikel.index')->with('error', 'Data artikel tidak ditemukan');
+        }
 
-    $request->validate([
-        'kode' => 'required|unique:artikel,kode,' . $id,
-        'judul' => 'nullable|max:225',
-        'ket' => 'required',
-        'foto' => 'nullable',
-        'tanggal_publish' => 'required|date',
-        'url' => 'required',
-    ]);
+        $request->validate([
+            'kode' => 'required|unique:artikel,kode,' . $id,
+            'judul' => 'nullable|max:225',
+            'ket' => 'required',
+            'foto' => 'nullable',
+            'tanggal_publish' => 'required|date',
+            'url' => 'required',
+        ]);
 
-    // Mengisi data guru dengan nilai baru
-    $artikel->kode = $request->input('kode');
-    $artikel->judul = $request->input('judul');
-    $artikel->ket = $request->input('ket');
-    $artikel->tanggal_publish = $request->input('tanggal_publish');
-    $artikel->url = $request->input('url');
+        // Mengisi data guru dengan nilai baru
+        $artikel->kode = $request->input('kode');
+        $artikel->judul = $request->input('judul');
+        $artikel->ket = $request->input('ket');
+        $artikel->tanggal_publish = $request->input('tanggal_publish');
+        $artikel->url = $request->input('url');
 
-    // Menghapus gambar lama jika ada
-    if ($artikel->foto && file_exists(storage_path('app/public/'.$artikel->foto))) {
-        Storage::delete('public/'. $artikel->foto);
-    }
+        // Menghapus gambar lama jika ada
+        if ($artikel->foto && file_exists(storage_path('app/public/' . $artikel->foto))) {
+            Storage::delete('public/' . $artikel->foto);
+        }
 
-    // Mengunggah dan menyimpan gambar baru
-    $foto_name = $request->file('foto')->store('images', 'public');
-    $artikel->foto = $foto_name;
-    
-    $artikel->save();
+        // Mengunggah dan menyimpan gambar baru
+        $foto_name = $request->file('foto')->store('images', 'public');
+        $artikel->foto = $foto_name;
 
-    $guru = new GuruModel();
-    $guru->id = $request->get('guru_id');
-    
-    $artikel->guru()->associate($guru);
-    $artikel->save();
+        $artikel->save();
 
-    return redirect('artikeladmin')
-    ->with('success', 'artikel berhasil diupdate');
-        
+        $guru = new GuruModel();
+        $guru->id = $request->get('guru_id');
+
+        $artikel->guru()->associate($guru);
+        $artikel->save();
+
+        return redirect('artikeladmin')
+            ->with('success', 'artikel berhasil diupdate');
     }
 
 
